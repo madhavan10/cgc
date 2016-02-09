@@ -1,0 +1,188 @@
+.description-page {
+    padding-top: 50px;
+}
+
+.Article-coverImage {
+    position: relative;
+    transition: height 0.3s ease 0s;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.3) 74%, rgba(0,0,0,1) 100%
+      ),url('background-images/Sevilla.jpg');
+    
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    max-width: 1920px;
+    max-height: 1080px;
+    
+}
+
+.Article-coverImage h1 {
+    border-top: 2px #E6C571 solid;
+    position: absolute;
+    color: #FFFFE5;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1); /*rgba(245, 245, 255, 0.35) 0 0px 0px, rgba(0, 0, 30, 0.08) 0px 2px 2px, rgba(0, 0, 30, 0.20) 0px 2px 1px, rgba(0, 0, 30, 0.40) 0px 2px 1px, rgba(0, 0, 0, 0.08) -5px 5px 2px;*/ 
+    background: rgb(33, 40, 52); /* fallback color */
+    background: rgba(33, 40, 52, 0.28);
+    border-radius: 1.5px 1.5px 1.5px 1.5px;
+    top: 20%;
+    width:90%;
+    margin-left: 5%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.FlexEmbed--2by1:before{
+    padding-bottom: 20%;
+}
+
+
+.FlexEmbed:before {
+    content: "";
+    display: block;
+    width: 100%;
+}
+
+.festival-location {
+	position:absolute;
+	bottom: 4%;
+	color: #fff;
+	left: 4.5%;
+	font-family: 'Roboto';
+	font-weight: 400;
+}
+
+#town, #country {
+	color: #E8E8E8;
+	font-size: 24px;
+	font-family: 'Roboto';
+ 	font-weight: 300 bold;
+ }
+
+#month, #date, #year {
+	color: #CECECE;
+	font-size: 24px;
+	font-family: 'Roboto';
+	font-weight: 300;
+}
+
+.dot {
+	color: #E8E8E8;
+	font-size: 18px;
+	font-family: 'Roboto';
+	font-weight: 300;
+}
+
+.main-content {
+    padding: 1% 0% 3% 1.5% ;
+    position: relative; 
+    background: rgba(255,255,255, 1);
+    margin:-1% 2.5% 1% 2.5%;
+    box-shadow:
+    inset 0 7em 10em -5em rgba(255,255,255,0.6),
+    0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+    0 1em 2em -0.75em rgba(100,100,100,0.75),
+    0 1em 3em -0.5em rgba(100,100,100,0.5),
+    0 3em 3em -0.25em rgba(100,100,100,0.2);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    max-width: 98%;	
+}
+
+.description {
+	text-overflow: ellipsis;
+        text-align: justify;
+	overflow: hidden;
+	height: 200px;
+	margin-bottom: 20px;
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.description:hover {
+	-webkit-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
+        box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
+
+}
+
+.share-buttons {
+    left: 2%; /* not all sure about this value, since the fb and tweet buttons have fixed widths... */
+    padding-top: 20px;
+}
+
+.twitter-share-button {
+    vertical-align: bottom; /* align twitter button with fb button */
+}
+
+.borderless-thumbnail {
+    position: absolute;
+    border-width: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.festival-image {
+    position: relative;
+    background-image: url('images/Wide.jpg');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    left: 9%;
+    width: 88%;
+    border: 3px #fff solid;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+	        
+}
+
+.FlexEmbed--3by1:before{
+    padding-bottom: 50%;
+}
+
+.image-overlay {
+    position: relative;
+    margin-top: -5.5%;
+}
+
+.main-info {
+    margin-left: -2.2%;
+    font-family: 'Roboto';
+    min-height: 550px;
+    
+}
+
+.main-info li span{
+	color: #424B54;
+}
+
+.main-info li span:hover, .main-info li span:active {
+        background-color: #E6C571;
+        color: #32393f;
+}
+
+.nav > li > span {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.nav-stacked > li.active > span,
+.nav-stacked > li.active > span:focus,
+.nav-stacked > li.active > span:hover {
+    background-color: #19273f !important;
+    color: #fff;
+}
+
+
