@@ -1,10 +1,30 @@
 .home-page {
-    padding-top: 50px;
+    padding-top: 80px; /* temporarily increased from 50px */
 }
 
 #calendar {
-    width: 60%;
+    width: 40%;
+    //max-height: 500px;
+    //overflow: auto;
     margin: auto;
-    /*text-align: center;*/
 }
 
+.gc-slider {
+    position: relative;
+    margin: auto;
+    width: 60%;
+    height: 300px;
+    
+    border-width: 5px;
+    border-style: double;
+}
+
+.gc-active-slide {
+    list-style-type:none;
+}
+
+.gc-slide-img {
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+}

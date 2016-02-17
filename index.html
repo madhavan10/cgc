@@ -29,6 +29,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main-info.js"></script>
         <script src="js/text-expand.js"></script>
+        <script src="js/gc-slider.js"></script>
         <script src="bower_components/moment/min/moment.min.js"></script>
         <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
         <script>
@@ -37,67 +38,11 @@ $('#calendar').fullCalendar({
 		header: {
 			left: 'prev,next today',
 			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
+			right: 'month'
 		},
-		defaultDate: '2016-01-12',
+		defaultDate: '2016-02-17',
 		editable: true,
 		eventLimit: true, // allow "more" link when too many events
-		events: [
-			{
-				title: 'All Day Event',
-				start: '2016-01-01'
-			},
-			{
-				title: 'Long Event',
-				start: '2016-01-07',
-				end: '2016-01-10'
-			},
-			{
-				id: 999,
-				title: 'Repeating Event',
-				start: '2016-01-09T16:00:00'
-			},
-			{
-				id: 999,
-				title: 'Repeating Event',
-				start: '2016-01-16T16:00:00'
-			},
-			{
-				title: 'Conference',
-				start: '2016-01-11',
-				end: '2016-01-13'
-			},
-			{
-				title: 'Meeting',
-				start: '2016-01-12T10:30:00',
-				end: '2016-01-12T12:30:00'
-			},
-			{
-				title: 'Lunch',
-				start: '2016-01-12T12:00:00'
-			},
-			{
-				title: 'Meeting',
-				start: '2016-01-12T14:30:00'
-			},
-			{
-				title: 'Happy Hour',
-				start: '2016-01-12T17:30:00'
-			},
-			{
-				title: 'Dinner',
-				start: '2016-01-12T20:00:00'
-			},
-			{
-				title: 'Birthday Party',
-				start: '2016-01-13T07:00:00'
-			},
-			{
-				title: 'Click for Google',
-				url: 'http://google.com/',
-				start: '2016-01-28'
-			}
-		]
 	});
 		
 	    });
@@ -121,6 +66,18 @@ $('#calendar').fullCalendar({
             </div>
         </div>
 
+        <div class = "gc-slider">
+            <li class = "gc-slide">
+                <img class = "gc-slide-img" src = "css/images/mustache.jpg">
+            </li>
+            <li class = "gc-slide">
+                <img class = "gc-slide-img" src = "css/images/sevilla_painting.jpg">
+            </li>
+            <li class = "gc-slide">
+                <img class = "gc-slide-img" src = "css/images/Wide.jpg">
+            </li>
+        </div>
+
         <div class="footer">
                     
                 <div class="footer-links">
@@ -131,12 +88,21 @@ $('#calendar').fullCalendar({
                         <li class="foot-link" id="faq"><a href="#">FAQ</a></li>
                     </ul>
                 </div>	
+                
                 <div class="social-media">
                     <ul>
-                        <li class="social-link" id="facebook"><img src="css/icons/facebook48px.png"/></li>
-                        <li class="social-link" id="twitter"><img src="css/icons/twitter48px.png"/></li>
-                        <li class="social-link" id="linked-in"><img src="css/icons/linkedin48px.png"/></li>
-                        <li class="social-link" id="youtube"><img src="css/icons/youtube48px.png"/></li>
+                        <li class="social-link" id="facebook">
+                            <a href ="http://www.facebook.com"><img src="css/icons/facebook48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="twitter">
+                            <a href="http://www.twitter.com"><img src="css/icons/twitter48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="linked-in">
+                            <a href="http://www.linkedin.com"><img src="css/icons/linkedin48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="youtube">
+                            <a href="http://www.youtube.com"><img src="css/icons/youtube48px.png"/></a>
+                        </li>
                     </ul>
                 </div>
 
