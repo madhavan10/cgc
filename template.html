@@ -16,13 +16,6 @@
     
     <body>
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script> 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -31,7 +24,7 @@
         <script src="js/text-expand.js"></script>
         <script src="js/gc-slider.js"></script>
         <script src="bower_components/moment/min/moment.min.js"></script>
-
+         
         <div class="main-navigation nav">
             <ul class="pull-left">
                 <li id="logo" class="left-nav"><a href="#">CGC HOME</a></li>
@@ -45,42 +38,7 @@
             </ul>
         </div>
 
-        <div class="home-page">
-            <div class = "gc-slider">
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/mustache.jpg">
-                </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/sevilla_painting.jpg">
-                </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/Wide.jpg">
-                </div>
-            </div>
-
-            <!--Scripts for fullcalender--!>
-            <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-            <script>
-	        $(document).ready(function() {
-                    $('#calendar').fullCalendar({
-		        header: {
-			    left: 'prev,next today',
-			    center: 'title',
-			    right: 'month'
-		        },
-		        
-                        defaultDate: '2016-02-17',
-		        editable: true,
-		        eventLimit: true, // allow "more" link when too many events
-	            });
 		
-	        });
-            </script> 
-            <div class="gc-calendar">
-                <div id="calendar"></div>
-            </div>
-        </div> <!--close home-page--!>
-
         <div class="footer">
                     
                 <div class="footer-links">

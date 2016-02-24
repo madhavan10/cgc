@@ -3,7 +3,7 @@
 @import url('home-page.css');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic');
-
+@import url('registration-form.css');
 
 a:focus { 
     outline: none; 
@@ -100,18 +100,18 @@ body {
 }
 
 .footer a:link, .footer a:visited {
-	color: #ffffff;
-	text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .footer a:hover, .footer a:active {
-	color: #bbbbbb;
-	outline: none;
-	text-decoration: none;
+    color: #bbbbbb;
+    outline: none;
+    text-decoration: none;
 }
 .footer-links {
-	padding-bottom: 50px;
-	text-align: center;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
 .foot-link, .social-link {
@@ -119,28 +119,28 @@ body {
 }
 
 .foot-link {
-	padding:0% 6% 0px 6%;
+    padding:0% 6% 0px 6%;
 }
 
 .social-media {
-	text-align: center;
-	margin-left: -2.5%;
-	padding-bottom: 0px;
+    text-align: center;
+    margin-left: -2.5%;
+    padding-bottom: 0px;
 }
 
 .social-link {
-	margin: 0% 0.3% 0% 0.3%;
+    margin: 0% 0.3% 0% 0.3%;
 }
 
 .company-name {
-	text-align: center;
-	font-family: 'Lato';
-	font-weight: 900;
-	font-size: 30px;
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 30px;
 }
 
 .copyright {
-	color: #b2a8a8;
-	text-align: center;
+    color: #b2a8a8;
+    text-align: center;
 }
 

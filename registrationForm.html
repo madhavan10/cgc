@@ -31,7 +31,23 @@
         <script src="js/text-expand.js"></script>
         <script src="js/gc-slider.js"></script>
         <script src="bower_components/moment/min/moment.min.js"></script>
-
+        <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script>
+	    $(document).ready(function() {
+$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month'
+		},
+		defaultDate: '2016-02-17',
+		editable: true,
+		eventLimit: true, // allow "more" link when too many events
+	});
+		
+	    });
+        </script> 
+ 
         <div class="main-navigation nav">
             <ul class="pull-left">
                 <li id="logo" class="left-nav"><a href="#">CGC HOME</a></li>
@@ -44,43 +60,53 @@
                 <li class="right-nav" id="login"><a href="#">LOG IN</a></li>
             </ul>
         </div>
+        
+        <div class="gc-registration-form">
+            <form method="post" autocomplete="off">
+        	<fieldset>
+    		    <legend>Register</legend>
+                    <div> 
+                        <label for="firstName">First Name</label>
+                        <br/>
+        		<input type="text" id="firstName" />
+                    </div>
 
-        <div class="home-page">
-            <div class = "gc-slider">
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/mustache.jpg">
-                </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/sevilla_painting.jpg">
-                </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/Wide.jpg">
-                </div>
-            </div>
+                    <p></p>
+                    
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <br/>
+        		<input type="text" id="lastName" />
+                    </div>
+                    
+                    <p></p>
+                    
+                    <div>
+                        <label for="email">Email address</label>
+                        <br/>
+        		<input type="email" id="email" />
+                    </div>
+                   
+                    <p></p>
 
-            <!--Scripts for fullcalender--!>
-            <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-            <script>
-	        $(document).ready(function() {
-                    $('#calendar').fullCalendar({
-		        header: {
-			    left: 'prev,next today',
-			    center: 'title',
-			    right: 'month'
-		        },
-		        
-                        defaultDate: '2016-02-17',
-		        editable: true,
-		        eventLimit: true, // allow "more" link when too many events
-	            });
+                    <div>
+                        <label for="password">Password</label>
+                        <br/>
+                        <input type="password" id="password">
+                    </div>
+
+                    <p></p>
+                    
+                    <div class="button">
+                        <button type="submit">Create My Account</button>
+                    </div>
+                    
+                    <p></p>
+
+  		</fieldset>
+            </form>
+        </div> <!--close gc-registration-form--!>
 		
-	        });
-            </script> 
-            <div class="gc-calendar">
-                <div id="calendar"></div>
-            </div>
-        </div> <!--close home-page--!>
-
         <div class="footer">
                     
                 <div class="footer-links">

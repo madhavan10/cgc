@@ -1,12 +1,5 @@
 .home-page {
-    padding-top: 80px; /* temporarily increased from 50px */
-}
-
-#calendar {
-    width: 40%;
-    //max-height: 500px;
-    //overflow: auto;
-    margin: auto;
+    padding-top: 60px; /* temporarily increased from 50px */
 }
 
 .gc-slider {
@@ -28,3 +21,16 @@
     width: 100%;
     max-height: 100%;
 }
+
+.gc-calendar {
+    padding-top: 20px;
+}
+
+#calendar {
+    width: 40%;
+    //max-height: 500px;
+    //overflow: auto;
+    margin: auto;
+}
+
+
