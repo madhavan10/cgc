@@ -16,13 +16,6 @@
     
     <body>
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script> 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -31,23 +24,7 @@
         <script src="js/text-expand.js"></script>
         <script src="js/gc-slider.js"></script>
         <script src="bower_components/moment/min/moment.min.js"></script>
-        <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-        <script>
-	    $(document).ready(function() {
-$('#calendar').fullCalendar({
-		header: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'month'
-		},
-		defaultDate: '2016-02-17',
-		editable: true,
-		eventLimit: true, // allow "more" link when too many events
-	});
-		
-	    });
-        </script> 
- 
+
         <div class="main-navigation nav">
             <ul class="pull-left">
                 <li id="logo" class="left-nav"><a href="#">CGC HOME</a></li>
@@ -65,43 +42,37 @@ $('#calendar').fullCalendar({
             <form method="post" autocomplete="off">
         	<fieldset>
     		    <legend>Register</legend>
-                    <div> 
+                    <div class="question"> 
                         <label for="firstName">First Name</label>
                         <br/>
-        		<input type="text" id="firstName" />
+        		<input type="text" id="firstName" name="userFirstName" />
                     </div>
 
-                    <p></p>
                     
-                    <div>
+                    <div class="question">
                         <label for="lastName">Last Name</label>
                         <br/>
-        		<input type="text" id="lastName" />
+        		<input type="text" id="lastName" name="userLastName" />
                     </div>
                     
-                    <p></p>
                     
-                    <div>
+                    <div class="question">
                         <label for="email">Email address</label>
                         <br/>
-        		<input type="email" id="email" />
+        		<input type="email" id="email" name="userEmail" />
                     </div>
                    
-                    <p></p>
 
-                    <div>
+                    <div class="question">
                         <label for="password">Password</label>
                         <br/>
-                        <input type="password" id="password">
+                        <input type="password" id="password" name="userPassword" />
                     </div>
 
-                    <p></p>
                     
                     <div class="button">
                         <button type="submit">Create My Account</button>
-                    </div>
-                    
-                    <p></p>
+                    </div>           
 
   		</fieldset>
             </form>
