@@ -1,0 +1,36 @@
+.gc-registration-form {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 5%
+}
+
+form {
+    width: 600px;
+    padding 1em;
+    border 1px solid #CCC;
+    border-radius: 1em;
+}
+
+form div + div {
+    /* puts space between form elements */
+    margin-top: 1em;
+}
+
+input {
+    width: 250px;
+    
+    /* I took this shit from the mozilla guide on forms, 
+     * Not sure what all of it does */
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus {
+    border-color: #212834;
+}
+
+.question {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
