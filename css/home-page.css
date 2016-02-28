@@ -1,5 +1,9 @@
 .home-page {
     padding-top: 60px; /* temporarily increased from 50px */
+	padding-bottom: 60px; 
+	
+	font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .gc-slider {
@@ -8,8 +12,30 @@
     width: 60%;
     height: 300px;
     
-    border-width: 5px;
-    border-style: double;
+    /*border-width: 5px;
+    border-style: double;*/
+}
+
+.gc-slider-navigation {
+    position: absolute;
+    z-index: 1;
+    top: 260px;
+    left: 48%;
+}
+
+.gc-slider-navigation div + div {
+    //margin: 5px;
+}
+
+#gc-left-slide-arrow, #gc-right-slide-arrow {
+    color: #ffffff;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    background: rgb(00, 00, 00); /* fallback color */
+    background: rgba(00, 00, 00, 0.5);
 }
 
 .gc-active-slide {
@@ -27,7 +53,8 @@
 }
 
 #calendar {
-    width: 40%;
+
+    width: 60%;
     //max-height: 500px;
     //overflow: auto;
     margin: auto;
