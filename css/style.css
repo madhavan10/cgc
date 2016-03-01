@@ -24,19 +24,9 @@ body {
     background-color: #212834;
     letter-spacing: 0.2px;
     border-top: 0.01px #000000 solid;
-    -webkit-box-shadow:inset 0px 0px 5px rgba(0,0,0,.8)
-                            0px 0px 0px 
-                            0px 0px 0px
-                            0px 0px 0px ;
-    -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,.8)
-    						0px 0px 0px 
-                            0px 0px 0px
-                            0px 0px 0px ;
-    box-shadow: inset 0px 0px 5px rgba(0,0,0,.8)
-    						0px 0px 0px 
-                            0px 0px 0px
-                            0px 0px 0px ;
-    
+    -webkit-box-shadow: 0 8px 6px -6px #000000;
+    -moz-box-shadow: 0 8px 6px -6px #000000;
+    box-shadow: 0 8px 6px -6px #000000;
     
 }
 
@@ -98,8 +88,8 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 15px;
     letter-spacing: 0.2px;
-    position:fixed
-    bottom:0;
+    bottom: 0;
+    
     
 }
 

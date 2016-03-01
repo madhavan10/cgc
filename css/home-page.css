@@ -1,5 +1,5 @@
 .home-page {
-    padding-top: 60px; /* temporarily increased from 50px */
+    padding-top: 80px; /* temporarily increased from 50px */
 	padding-bottom: 60px; 
 	
 	font-family: 'Roboto', sans-serif;
@@ -10,7 +10,7 @@
     position: relative;
     margin: auto;
     width: 60%;
-    height: 300px;
+    height: 320px;
     
     /*border-width: 5px;
     border-style: double;*/
@@ -19,13 +19,10 @@
 .gc-slider-navigation {
     position: absolute;
     z-index: 1;
-    top: 260px;
+    top: 280px;
     left: 48%;
 }
 
-.gc-slider-navigation div + div {
-    //margin: 5px;
-}
 
 .gc-find-festival {
 	margin: auto;
@@ -37,8 +34,8 @@
 	color: #000000;
 	text-align: center;
 	border-radius: 10px 10px 10px 10px;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 	white-space: nowrap;
 }
 

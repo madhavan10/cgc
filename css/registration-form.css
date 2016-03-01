@@ -6,7 +6,6 @@
     padding-top: 50px;
     padding-bottom: 30px;
     padding-left: 5%;
-    margin-bottom: 350px;
     background-color: #ffffff;
     margin: 0px 20% 70px 20%;
     box-shadow:
@@ -19,7 +18,7 @@
 }
 
 form {
-    width: 600px;
+    width: 60%;
     padding 1em;
     border 1px solid #CCC;
     border-radius: 1em;
