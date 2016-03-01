@@ -1,7 +1,21 @@
+.gc-nav-separation {
+	height: 100px;
+}
+
 .gc-registration-form {
-    padding-top: 60px;
-    padding-bottom: 20px;
-    padding-left: 5%
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    margin-bottom: 350px;
+    background-color: #ffffff;
+    margin: 0px 20% 70px 20%;
+    box-shadow:
+    inset 0 7em 10em -5em rgba(255,255,255,0.6),
+    0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+    0 1em 2em -0.75em rgba(100,100,100,0.75),
+    0 1em 3em -0.5em rgba(100,100,100,0.5),
+    0 3em 3em -0.25em rgba(100,100,100,0.2);
+
 }
 
 form {

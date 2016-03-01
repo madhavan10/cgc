@@ -37,6 +37,7 @@ body {
                             0px 0px 0px
                             0px 0px 0px ;
     
+    
 }
 
 .main-navigation a:link, .main-navigation a:visited {
@@ -97,6 +98,9 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 15px;
     letter-spacing: 0.2px;
+    position:fixed
+    bottom:0;
+    
 }
 
 .footer a:link, .footer a:visited {

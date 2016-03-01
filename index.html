@@ -51,18 +51,24 @@
                     <div class="glyphicon glyphicon-chevron-left" id="gc-left-slide-arrow" aria-hidden="true"></div>
                     <div class="glyphicon glyphicon-chevron-right" id="gc-right-slide-arrow" aria-hidden="true"></div>
                 </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/mustache.jpg">
-                </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/sevilla_painting.jpg">
-                </div>
-                <div class = "gc-slide">
-                    <img class = "gc-slide-img" src = "css/images/Wide.jpg">
+                <div class = "gc-slide-array">
+                    <div class = "gc-slide" id="gc-slide-0">
+                        <img class = "gc-slide-img" src = "css/images/mustache.jpg">
+                    </div>
+                    <div class = "gc-slide" id="gc-slide-1">
+                        <img class = "gc-slide-img" src = "css/images/sevilla_painting.jpg">
+                    </div>
+                    <div class = "gc-slide" id="gc-slide-2">
+                        <img class = "gc-slide-img" src = "css/images/Wide.jpg">
+                    </div>
                 </div>
             </div>
 
-            <!--Scripts for fullcalender--!>
+            <div class="gc-find-festival">
+                <a href="#">FIND A FESTIVAL</a>
+            </div>
+
+            <!--Scripts for fullcalendar--!>
             <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
             <script>
 	        $(document).ready(function() {
