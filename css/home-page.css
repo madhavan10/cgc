@@ -29,9 +29,8 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size: 20px;
-	background-color: #E6C571;
+	background-color: #212834;
 	width: 60%;
-	color: #000000;
 	text-align: center;
 	border-radius: 10px 10px 10px 10px;
 	margin-top: 40px;
@@ -40,7 +39,7 @@
 }
 
 .gc-find-festival a:link, .gc-find-festival a:visited {
-	color: #000000;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -50,6 +49,10 @@
 	text-align:center;
 	/*padding: 22px 40.5% 23px 40.5%;*/
 	border-radius: 10px 10px 10px 10px;
+}
+
+.gc-find-festival:hover > a, .gc-find-festival:active > a {
+    color: #000;
 }
 
 #gc-left-slide-arrow, #gc-right-slide-arrow {

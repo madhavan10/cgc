@@ -16,13 +16,6 @@
     
     <body>
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script> 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -31,20 +24,17 @@
         <script src="js/text-expand.js"></script>
         <script src="js/gc-slider.js"></script>
         <script src="bower_components/moment/min/moment.min.js"></script>
-
+         
         <div class="main-navigation nav">
-            <ul class="pull-left">
-                <li id="logo" class="left-nav"><a href="#">CGC HOME</a></li>
-            </ul>
-
-            <ul class="pull-right">
-                <li class="right-nav"><a href="#">HOME</a></li>
-                <li class="right-nav"><a href="#">FIND A FESTIVAL</a></li>
-                <li class="right-nav"><a href="#">LIST YOUR OWN</a></li>
-                <li class="right-nav" id="login"><a href="#">LOG IN</a></li>
+            <ul class="row">
+                <li id="logo" class="col-md-offset-1 col-md-2 nav-item"><a href="#">CGC</a></li>
+                <li class="col-md-2 nav-item"><a href="#">HOME</a></li>
+                <li class="col-md-2 nav-item"><a href="#">FIND A FESTIVAL</a></li>
+                <li class="col-md-2 nav-item"><a href="#">LIST YOUR OWN</a></li>
+                <li class="col-md-2 nav-item" id="login"><a href="#">LOG IN</a></li>
             </ul>
         </div>
-
+        
         <div class="home-page">
             <div class = "gc-slider">
                 <div class="gc-slider-navigation">
@@ -94,11 +84,11 @@
         <div class="footer">
                     
                 <div class="footer-links">
-                    <ul>
-                        <li class="foot-link" id="about-us"><a href="#">About Us</a></li>
-                        <li class="foot-link" id="contact-us"><a href="#">Contact Us</a></li>
-                        <li class="foot-link" id="advertising"><a href="#">Advertising</a></li>
-                        <li class="foot-link" id="faq"><a href="#">FAQ</a></li>
+                    <ul class="row">
+                        <li class="foot-link col-md-offset-2 col-md-2" id="about-us"><a href="#">About Us</a></li>
+                        <li class="foot-link col-md-2" id="contact-us"><a href="#">Contact Us</a></li>
+                        <li class="foot-link col-md-2" id="advertising"><a href="#">Advertising</a></li>
+                        <li class="foot-link col-md-2" id="faq"><a href="#">FAQ</a></li>
                     </ul>
                 </div>	
                 

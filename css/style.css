@@ -23,6 +23,7 @@ body {
     padding: 15px;
     background-color: #212834;
     letter-spacing: 0.2px;
+    list-style-type: none;
     border-top: 0.01px #000000 solid;
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
     -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
@@ -61,8 +62,13 @@ body {
     padding-right: 10px;
 }
 
+.nav-item {
+    list-style-type: none;
+    text-align: center;
+}
+
 #login {
-    padding:17px 5px 13px 11px;
+    //padding:17px 5px 13px 11px;
     color: #341E00;  
 }
 
@@ -87,10 +93,9 @@ body {
     background-color: #212834;
     font-family: 'Roboto', sans-serif;
     padding: 15px;
+    padding-top: 50px;
     letter-spacing: 0.2px;
     bottom: 0;
-    
-    
 }
 
 .footer a:link, .footer a:visited {
@@ -102,10 +107,11 @@ body {
     color: #bbbbbb;
     outline: none;
     text-decoration: none;
+    
 }
 .footer-links {
     padding-bottom: 50px;
-    text-align: center;
+    //text-align: center;
 }
 
 .foot-link, .social-link {
@@ -113,7 +119,7 @@ body {
 }
 
 .foot-link {
-    padding:0% 6% 0px 6%;
+    text-align: center;
 }
 
 .social-media {
