@@ -1,5 +1,5 @@
 .home-page {
-    padding-top: 80px; /* temporarily increased from 50px */
+    padding-top: 70px; /* temporarily increased from 50px */
 	padding-bottom: 60px; 
 	
 	font-family: 'Roboto', sans-serif;
@@ -9,11 +9,9 @@
 .gc-slider {
     position: relative;
     margin: auto;
-    width: 60%;
+    width: 70%;
     height: 320px;
-    
-    /*border-width: 5px;
-    border-style: double;*/
+    z-index: 0;    
 }
 
 .gc-slider-navigation {
@@ -23,37 +21,6 @@
     left: 48%;
 }
 
-
-.gc-find-festival {
-	margin: auto;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size: 20px;
-	background-color: #212834;
-	width: 60%;
-	text-align: center;
-	border-radius: 10px 10px 10px 10px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	white-space: nowrap;
-}
-
-.gc-find-festival a:link, .gc-find-festival a:visited {
-	color: #fff;
-	text-decoration: none;
-}
-
-.gc-find-festival:hover, .gc-find-festival:active {
-	background-color: #edca74;
-	text-decoration: none; 
-	text-align:center;
-	/*padding: 22px 40.5% 23px 40.5%;*/
-	border-radius: 10px 10px 10px 10px;
-}
-
-.gc-find-festival:hover > a, .gc-find-festival:active > a {
-    color: #000;
-}
 
 #gc-left-slide-arrow, #gc-right-slide-arrow {
     color: #ffffff;
@@ -78,11 +45,19 @@
 
 .gc-calendar {
     padding-top: 20px;
+    margin: 10px 15% 15px 15%;
+    box-shadow:
+    inset 0 7em 10em -5em rgba(255,255,255,0.6),
+    0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+    0 1em 2em -0.75em rgba(100,100,100,0.75),
+    0 1em 3em -0.5em rgba(100,100,100,0.5),
+    0 3em 3em -0.25em rgba(100,100,100,0.2);
+    z-index: 999;
 }
 
 #calendar {
-
-    width: 60%;
+	padding-bottom: 30px;
+    width: 90%;
     //max-height: 500px;
     //overflow: auto;
     margin: auto;

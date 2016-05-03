@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Classical Guitar Calendar</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <!-- My Style Sheets -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div id="fb-root"></div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main-info.js"></script>
+        <script src="js/text-expand.js"></script>
+        <script src="js/gc-slider.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
+         
+        <div class="main-navigation nav">
+            <ul class="row">
+                <li id="logo" class="col-md-offset-1 col-md-2 nav-item"><a href="#">CGC</a></li>
+                <li class="col-md-2 nav-item"><a href="#">HOME</a></li>
+                <li class="col-md-2 nav-item"><a href="#">FIND A FESTIVAL</a></li>
+                <li class="col-md-2 nav-item"><a href="#">LIST YOUR OWN</a></li>
+                <li class="col-md-2 nav-item" id="login"><a href="#">LOG IN</a></li>
+            </ul>
+        </div>
+        
+        <div class="gc-nav-separation"></div>
+
+        <div class="gc-festival-registration">
+            <script src="js/festival-registration.js"></script>
+            <form method="post" autocomplete="off">
+                <fieldset id="event-basics">
+                    <legend>Your Event</legend>
+                    
+                    <div class="question">
+                        <label for="event-type">What is the type of your event?</label>
+                        <br/>
+                        <input id="festival-radio-button" class="gc-event-radio" type="radio" name="eventType" />
+                        <label for="festival">Guitar Festival</label>
+                        <br/>
+                        <input id="competition-radio-button" class="gc-event-radio" type="radio" name="eventType" />
+                        <label for="competition">Guitar Competition</label>
+                        <br/>
+                        <input id="festival-competition-radio-button" class="gc-event-radio" type="radio" name="eventType" />
+                        <label for="festival-competition">Guitar Festival and Competition</label>
+                        <br/>
+                        <input id="workshop-radio-button" class="gc-event-radio" type="radio" name="eventType" />
+                        <label for="workshop">Workshop or Academy</label>
+                    </div>
+
+                    <div class="question">
+                        <label for="event-name">What is the name of the event?</label>
+                        <br/>
+                        <input type="text" id="event-name" name="eventName" />
+                    </div>
+
+                    <div class="question">
+                        <label for="event-start-date">When does the event begin?</label>
+                        <br/>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker1').datetimepicker();
+                        });
+                    </script>
+                    
+                    <div class="question">
+                        <label for="event-end-date">When does the event end?</label>
+                        <br/>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker1').datetimepicker();
+                        });
+                    </script>
+                        
+                    <div class="question">
+                        <label for="event-country">What country does your event take place in?</label>
+                        <br/>
+                        <input type="text" id="event-country" name="eventCountry" />
+                    </div>
+
+                    <div class="question">
+                        <label for="event-city">What city does your event take place in?</label>
+                        <br/>
+                        <input type="text" id="event-city" name="eventCity" />
+                    </div>
+
+                    <div class="question">
+                        <label for="event-description">Give a brief description of your event.</label>
+                        <br/>
+                        <textarea id="event-description"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <label for="schedule">What is the complete schedule for your event?</label>
+                        <p class="gc-question-subtext">You may use any format you find acceptable.</p>
+                        <textarea id="schedule"></textarea>
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="festival-questions" class="gc-event-questions">
+                    <legend>Guitar Festival</legend>
+                    <div class="question">
+                        <label for="guest-list">List the guests of your festival.</label>
+                        <p class="gc-question-subtext">This includes any invited artists, teachers, artisans, or scholars.</p>
+                        <textarea id="guest-list"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <label for="whether-masterclasses">Does your festival offer masterclasses to the participants?</label>
+                        <br/>
+                        <input id="yes-masterclasses-radio" type="radio" name="whether-masterclasses" />
+                        <label for="yes">Yes</label>
+                        <br/>
+                        <input id="no-masterclasses-radio" type="radio" name="whether-masterclasses" />
+                        <label for="no">No</label>
+                    </div>
+                </fieldset>
+
+                <fieldset id="festival-masterclass-questions">
+                    <legend>Masterclasses</legend>
+                    <div class="question">
+                        <label for="masterclass-teachers">List the teachers who will be available for masterclasses.</label>
+                        <br/>
+                        <textarea id="masterclass-teachers"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <label for="masterclass-pricing">What are the fees for the masterclasses and how many classes does each student receive?</label>
+                        <br/>
+                        <textarea id="masterclass-pricing"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset id="practical-information-questions">
+                    <legend>Practical Information</legend>
+                    <div class="question">
+                        <label for="event-fees">What are the fees for participating in your event? Provide details.</label>
+                        <br/>
+                        <textarea id="event-fees"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <label for="how-to-register">How can one register for your event?</label>
+                        <p class="gc-question-subtext">Provide a link for online registration if applicable.</p>
+                        <textarea id="how-to-register"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <label for="contact-information">What is the contact information for your event?</label>
+                        <p class="gc-question-subtext">Email address, telephone numbers, website address.</p>
+                        <textarea id="contact-information"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <label for="venue-addresses">Provide the names and addresses of all the venues for the event.</label>
+                        <br/>
+                        <textarea id="venue-addresses"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <label for="accommodation">What arrangements are in place for the accommodation of the participants during their stay?</label>
+                        <p class="gc-question-subtext">Do you have arrangements with nearby hotels, hostels, or host families?</p>
+                        <textarea id="accommodation"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <label for="travel-info">What are the best ways for participants to travel to your event?</label>
+                        <p class="gc-question-subtext">Nearby train stations, bus stations, airports, etc.</p>
+                        <textarea id="travel-info"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <label for="other-facilities">Are there any other facilities available to the participants?</label>
+                        <p class="gc-question-subtext">Practice rooms, cafeteria, etc.</p>
+                        <textarea id="other-facilities"></textarea>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="fc-masterclass-questions">
+                    <legend>Masterclasses</legend>
+                    <div class="question">
+                        <label for="masterclass-teachers">List the teachers who will be available for masterclasses.</label>
+                        <br/>
+                        <textarea id="masterclass-teachers"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <label for="masterclass-pricing">What are the fees for the masterclasses and how many classes does each student receive?</label>
+                        <br/>
+                        <textarea id="masterclass-pricing"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset id="competition-questions" class="gc-event-questions">
+                    <legend>Competition</legend> 
+                    <div class="question">
+                        <label for="competition-rules">Detail the rules for the competition.</label>
+                        <p class="gc-question-subtext">This includes eligibility, program requirements, etc.</p>
+                        <textarea id="competition-rules"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <label for="prizes">What are the prizes for the winners of the competition?</label>
+                        <br/>
+                        <textarea id="prizes"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <label for="jury">What can you tell us about the jury?</label>
+                        <p class="gc-question-subtext">Number of jury members, names of the jury members, etc.</p>
+                        <textarea id="jury"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset id="workshop-questions" class="gc-event-questions">
+                    <legend>Workshop or Academy</legend>
+                    <div class="question">
+                        <label for="workshop-teachers">Who will be teaching?</label>
+                        <br/>
+                        <textarea id="workshop-teachers"></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="workshop-accommodation">What arrangements are there for the accommodation of participants during their stay?</label>
+                        <br/>
+                        <textarea id="workshop-accommodation"></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="workshop-meals">What are the meal arrangements for the participants?</label>
+                        <br/>
+                        <textarea id="workshop-meals"></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="workshop-practice-facilities">What practice facilities are available to the participants?</label>
+                        <br/>
+                        <textarea id="workshop-practice-facilities"></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="workshop-lessons">How many lessons does each student receive and with whom?</label>
+                        <br/>
+                        <textarea id="workshop-lessons"></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="workshop-other-guests">Will there be other guests present at the workshop apart from the teachers?</label>
+                        <p class="gc-question-subtext">Concertists, lecturers, artisans, etc.</p>
+                        <textarea id="workshop-other-guests"></textarea>
+                    </div>
+
+                </fieldset>
+
+
+            </form>
+        </div>
+
+
+
+
+        <div class="footer">
+                    
+                <div class="footer-links">
+                    <ul class="row">
+                        <li class="foot-link col-md-offset-2 col-md-2" id="about-us"><a href="#">About Us</a></li>
+                        <li class="foot-link col-md-2" id="contact-us"><a href="#">Contact Us</a></li>
+                        <li class="foot-link col-md-2" id="advertising"><a href="#">Advertising</a></li>
+                        <li class="foot-link col-md-2" id="faq"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>  
+                
+                <div class="gc-footer-line"></div>
+                
+                <div class="social-media">
+                    <ul>
+                        <li class="social-link" id="facebook">
+                            <a href ="http://www.facebook.com"><img src="css/icons/facebook48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="twitter">
+                            <a href="http://www.twitter.com"><img src="css/icons/twitter48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="linked-in">
+                            <a href="http://www.linkedin.com"><img src="css/icons/linkedin48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="youtube">
+                            <a href="http://www.youtube.com"><img src="css/icons/youtube48px.png"/></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="company-name">
+                    <a href="">GuitarConnect</a>
+                </div>  
+                <div class="copyright">
+                    <a href="">©2016 Guitar Connect - All rights reserved</a>
+                </div>
+        </div>  
+    </body>
+</html>

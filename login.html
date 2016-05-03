@@ -24,61 +24,48 @@
         <script src="js/text-expand.js"></script>
         <script src="js/gc-slider.js"></script>
         <script src="bower_components/moment/min/moment.min.js"></script>
-         
+
         <div class="main-navigation nav">
-            <ul class="row">
-                <li id="logo" class="col-md-offset-1 col-md-2 nav-item"><a href="#">CGC</a></li>
-                <li class="col-md-2 nav-item"><a href="#">HOME</a></li>
-                <li class="col-md-2 nav-item"><a href="#">FIND A FESTIVAL</a></li>
-                <li class="col-md-2 nav-item"><a href="#">LIST YOUR OWN</a></li>
-                <li class="col-md-2 nav-item" id="login"><a href="#">LOG IN</a></li>
+            <ul class="pull-left">
+                <li id="logo" class="left-nav"><a href="#">CGC HOME</a></li>
+            </ul>
+
+            <ul class="pull-right">
+                <li class="right-nav"><a href="#">HOME</a></li>
+                <li class="right-nav"><a href="#">FIND A FESTIVAL</a></li>
+                <li class="right-nav"><a href="#">LIST YOUR OWN</a></li>
+                <li class="right-nav" id="login"><a href="#">LOG IN</a></li>
             </ul>
         </div>
         
-        <div class="home-page">
-            <div class = "gc-slider">
-                <div class="gc-slider-navigation">
-                    <div class="glyphicon glyphicon-chevron-left" id="gc-left-slide-arrow" aria-hidden="true"></div>
-                    <div class="glyphicon glyphicon-chevron-right" id="gc-right-slide-arrow" aria-hidden="true"></div>
-                </div>
-                <div class = "gc-slide-array">
-                    <div class = "gc-slide" id="gc-slide-0">
-                        <img class = "gc-slide-img" src = "css/images/mustache.jpg">
+        <div class="gc-nav-separation"></div>
+        
+        <div class="gc-login-form">
+            <form method="post" autocomplete="off">
+        	<fieldset>
+    		    <legend>Log In</legend>
+                    <div class="question">
+                        <label for="email">Email address</label>
+                        <br/>
+        		<input type="email" id="email" name="userEmail" />
                     </div>
-                    <div class = "gc-slide" id="gc-slide-1">
-                        <img class = "gc-slide-img" src = "css/images/sevilla_painting.jpg">
-                    </div>
-                    <div class = "gc-slide" id="gc-slide-2">
-                        <img class = "gc-slide-img" src = "css/images/Wide.jpg">
-                    </div>
-                </div>
-            </div>
+                   
 
-            
+                    <div class="question">
+                        <label for="password">Password</label>
+                        <br/>
+                        <input type="password" id="password" name="userPassword" />
+                    </div>
 
-            <!--Scripts for fullcalendar--!>
-            <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-            <script>
-	        $(document).ready(function() {
-                    $('#calendar').fullCalendar({
-		        header: {
-			    left: 'prev,next today',
-			    center: 'title',
-			    right: '0',
-		        },
-		        
-                        defaultDate: '2016-02-17',
-		        editable: true,
-		        eventLimit: true, // allow "more" link when too many events
-	            });
+                    
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>           
+
+  		</fieldset>
+            </form>
+        </div> <!--close gc-registration-form--!>
 		
-	        });
-            </script> 
-            <div class="gc-calendar">
-                <div id="calendar"></div>
-            </div>
-        </div> <!--close home-page--!>
-
                 <div class="footer">
                     
                 <div class="footer-links">

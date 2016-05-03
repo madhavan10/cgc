@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Classical Guitar Calendar</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <!-- My Style Sheets -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div id="fb-root"></div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main-info.js"></script>
+        <script src="js/text-expand.js"></script>
+        <script src="js/gc-slider.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
+         
+        <div class="main-navigation nav">
+            <ul class="row">
+                <li id="logo" class="col-md-offset-1 col-md-2 nav-item"><a href="#">CGC</a></li>
+                <li class="col-md-2 nav-item"><a href="#">HOME</a></li>
+                <li class="col-md-2 nav-item"><a href="#">FIND A FESTIVAL</a></li>
+                <li class="col-md-2 nav-item"><a href="#">LIST YOUR OWN</a></li>
+                <li class="col-md-2 nav-item" id="login"><a href="#">LOG IN</a></li>
+            </ul>
+        </div>
+        <div class="description-page">    
+            <div class="cover-photo">
+                
+                <div class="Article-coverImage FlexEmbed FlexEmbed--2by1 row-fluid">
+                    <div class="festival-title">
+                        <h1>Sevilla Guitar Festival and Competition</h1> 
+                    </div>
+                    <div class="festival-location">
+                        <span>
+                            <span id="town">Seville</span>
+                            <span class="dot">,</span>
+                            <span id="country">Spain</span>
+                            <span class="dot">:</span>
+                            <span id="month">August</span>
+                            <span id="date">23-29</span>
+                            <span class="dot">,</span>
+                            <span id="year">2015</span>
+                        </span>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            
+            <div class="main-content">
+
+                <div class="row">
+                        <div class="col-md-offset-2 col-md-6 col-lg-offset-3 col-lg-5 description">
+                            <p>Description text goes here...For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability. 
+
+        Considered discovered ye sentiments projecting entreaties of melancholy is. In expression an solicitude principles in do. Hard do me sigh with west same lady. Their saved linen downs tears son add music. Expression alteration entreaties mrs can terminated estimating. Her too add narrow having wished. To things so denied admire. Am wound worth water he linen at vexed. 
+
+        Far concluded not his something extremity. Want four we face an he gate. On he of played he ladies answer little though nature. Blessing oh do pleasure as so formerly. Took four spot soon led size you. Outlived it received he material. Him yourself joy moderate off repeated laughter outweigh screened. 
+
+        Cause dried no solid no an small so still widen. Ten weather evident smiling bed against she examine its. Rendered far opinions two yet moderate sex striking. Sufficient motionless compliment by stimulated assistance at. Convinced resolving extensive agreeable in it on as remainder. Cordially say affection met who propriety him. Are man she towards private weather pleased. In more part he lose need so want rank no. At bringing or he sensible pleasure. Prevent he parlors do waiting be females an message society. 
+
+        Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgence one ow
+
+        </p>
+                        </div>
+                        <!--
+                        <div class="col-md-2 col-lg-2 share-buttons">
+                            <h4>Share this page</h4>
+                            <script>
+                                (function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));
+                            </script> 
+                     
+                            <div class="fb-share-button" data-href="http://google.com/" data-layout="button"></div>
+                            <a href="https://twitter.com/share" class="twitter-share-button"{count}>Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </div> 
+                        -->
+                        <div class="col-md-4 col-lg-4 image-overlay">
+                            <div class="festival-image FlexEmbed FlexEmbed--3by1">
+                                <!--<img src="css/images/Wide.jpg">-->
+                            </div>
+                        </div>
+                </div>
+                
+                <div class="gc-horizontal-line"></div>
+                
+                <div class="main-info">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 main-buttons">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active main-info-nav" id="schedule"><span>Schedule</span></li>
+                                <li class="main-info-nav" id="rules"><span>Rules</span></li>
+                                <li class="main-info-nav" id="jury"><span>Jury</span></li>
+                                <li class="main-info-nav" id="practical-info"><span>Practical Information</span></li>
+                                <li class="main-info-nav" id="contact"><span>Contact</span></li>
+                                <li class="main-info-nav" id="news"><span>News</span></li>
+                                <li class="main-info-nav" id="register"><span>Register</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10 col-lg-10">
+                            <p class="main-info-content" id="schedule-content">Schedule</p>
+                            <p class="main-info-content" id="rules-content">Rules</p>                    
+                            <p class="main-info-content" id="jury-content">Jury</p>                                       
+                            <p class="main-info-content" id="practical-info-content">Practical Information</p>                    
+                            <p class="main-info-content" id="contact-content">Contact</p>                    
+                            <p class="main-info-content" id="news-content">News</p>                    
+                            <p class="main-info-content" id="register-content">Register</p>                    
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>   <!--close main-content--> 
+            
+        </div> <!-- close description-page-->       
+        <div class="footer">
+                    
+                <div class="footer-links">
+                    <ul class="row">
+                        <li class="foot-link col-md-offset-2 col-md-2" id="about-us"><a href="#">About Us</a></li>
+                        <li class="foot-link col-md-2" id="contact-us"><a href="#">Contact Us</a></li>
+                        <li class="foot-link col-md-2" id="advertising"><a href="#">Advertising</a></li>
+                        <li class="foot-link col-md-2" id="faq"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>	
+                
+                <div class="social-media">
+                    <ul>
+                        <li class="social-link" id="facebook">
+                            <a href ="http://www.facebook.com"><img src="css/icons/facebook48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="twitter">
+                            <a href="http://www.twitter.com"><img src="css/icons/twitter48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="linked-in">
+                            <a href="http://www.linkedin.com"><img src="css/icons/linkedin48px.png"/></a>
+                        </li>
+                        <li class="social-link" id="youtube">
+                            <a href="http://www.youtube.com"><img src="css/icons/youtube48px.png"/></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="company-name">
+                    <a href="">GuitarConnect</a>
+                </div>	
+                <div class="copyright">
+                    <a href="">©2016 Guitar Connect - All rights reserved</a>
+                </div>
+        </div>	
+    </body>
+</html>
