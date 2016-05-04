@@ -1,6 +1,3 @@
-.gc-nav-separation {
-	height: 100px;
-}
 
 .gc-login-form {
     padding-top: 50px;
@@ -17,33 +14,3 @@
 
 }
 
-form {
-    width: 55%;
-    padding 1em;
-    border 1px solid #CCC;
-    border-radius: 1em;
-}
-
-form div + div {
-    /* puts space between form elements */
-    margin-top: 1em;
-}
-
-input {
-    width: 250px;
-    
-    /* I took this shit from the mozilla guide on forms, 
-     * Not sure what all of it does */
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 1px solid #999;
-}
-
-input:focus {
-    border-color: #212834;
-}
-
-.question {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-}

@@ -6,6 +6,7 @@
 @import url('registration-form.css');
 @import url('login.css');
 @import url('festival-registration.css');
+@import url('forms.css');
 
 a:focus { 
     outline: none; 
