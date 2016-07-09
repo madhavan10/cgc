@@ -12,6 +12,7 @@
         <!-- My Style Sheets -->
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     </head>
     
     <body>
@@ -38,6 +39,8 @@
         <div class="gc-nav-separation"></div>
 
         <div class="gc-festival-registration">
+
+            <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
             <script src="js/festival-registration.js"></script>
             <form method="post" autocomplete="off">
                 <fieldset id="event-basics">
@@ -87,7 +90,7 @@
                         <label for="event-end-date">When does the event end?</label>
                         <br/>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker1'>
+                            <div class='input-group date' id='datetimepicker2'>
                                 <input type='text' class="form-control" required/>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -97,7 +100,7 @@
                     </div>
                     <script type="text/javascript">
                         $(function () {
-                            $('#datetimepicker1').datetimepicker();
+                            $('#datetimepicker2').datetimepicker();
                         });
                     </script>
                         
@@ -278,7 +281,9 @@
 
                 </fieldset>
 
-
+                <div class="gc-button">
+                    <button type="submit">Register My Event</button>
+                </div>
             </form>
         </div>
 

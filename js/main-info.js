@@ -48,6 +48,30 @@ var main = function() {
         $('#register-content').show();
     });
 
+    $('#teachers').click(function() {
+        $('.main-info-content').hide();
+        $('#teachers-content').show();
+    });
+    
+    $('#lessons').click(function() {
+        $('.main-info-content').hide();
+        $('#lessons-content').show();
+    });
+    
+    $('#other-guests').click(function() {
+        $('.main-info-content').hide();
+        $('#other-guests-content').show();
+    });
+    
+    $('#rules').click(function() {
+        $('.main-info-content').hide();
+        $('#rules-content').show();
+    });
+    
+    $('#jury').click(function() {
+        $('.main-info-content').hide();
+        $('#jury-content').show();
+    });
 };
 
 
