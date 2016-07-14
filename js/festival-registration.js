@@ -1,6 +1,7 @@
 var main = function() {
     $("fieldset").hide();
     $("#event-basics").show();
+    $("#practical-information-questions").show();
     $(".gc-event-radio").click(function() {
         if($("#festival-radio-button").is(":checked")) {
             $(".gc-event-questions").hide()    
