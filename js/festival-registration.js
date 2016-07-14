@@ -31,7 +31,28 @@ var main = function() {
         $("#festival-masterclass-questions").hide();
     });
 
-    
+    // default view
+    $("#festival-radio-button").click();
 };
+
+function submitForm() {
+  var radio_button = $('input[name=eventType]:checked')[0].id;
+  var eventName = $('#event-name').val();
+  var startDate = $('#datetimepicker1')[0].children[0].value;
+  var endDate = $('#datetimepicker2')[0].children[0].value;
+  var eventCountry = $('#event-country').val();
+  var eventCity = $('#event-city').val();
+  var eventDescription = $('#event-description').val();
+  var schedule = $('#schedule').val();
+
+  // festival questions
+  var guestList = $('#guest-list').val();
+  var master_class = $('input[name=whether-masterclasses]:checked')[0].id
+
+  // festival-masterclass
+  var master_class_teachers = $('#masterclass-teachers').val();
+  var master_class_pricing = $('#masterclass-pricing').val();
+  
+}
 
 $(document).ready(main);
