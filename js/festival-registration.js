@@ -38,7 +38,7 @@ var main = function() {
     $("#festival-radio-button").click();
 };
 
-function lolcat() {
+function submitFestivalRegistrationForm() {
   var masterclass_radio = $('input[name=whether-masterclasses]:checked')[0];
   var toSend = {
     radio_button : $('input[name=eventType]:checked')[0].id,
@@ -87,6 +87,7 @@ function lolcat() {
       data: JSON.stringify(toSend),
       processData: false,
   }).done(function(msg) {
+      // TODO redirect to created description page
       alert('posted, returned: ' + msg);
   });
   return false;
