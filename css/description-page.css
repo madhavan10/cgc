@@ -95,14 +95,14 @@
 
 .description {
     text-align: justify;
-	overflow: hidden;
-	height: 270px;
-	padding-top: 50px;
+    overflow: hidden;
+    height: 270px;
+    padding-top: 50px;
     margin-bottom: 0px;
-	font-family: 'Georgia';
-	font-weight: 300;
-	font-size: 16px;
-	left: 0.5%;
+    font-family: 'Georgia';
+    font-weight: 300;
+    font-size: 16px;
+    left: 0.5%;
 }
 
 .description:hover {
@@ -113,8 +113,8 @@
 }
 
 .share-buttons {
-    left: 2%; /* not all sure about this value, since the fb and tweet buttons have fixed widths... */
-    padding-top: 20px;
+    //left: 2%; /* not all sure about this value, since the fb and tweet buttons have fixed widths... */
+    //padding-top: 20px;
 }
 
 .twitter-share-button {
@@ -159,12 +159,12 @@
 }
 
 .gc-horizontal-line {
-	height: 1px;
-	width: 75%;
-	margin-bottom: 30px;
-	margin-top: 20px;
-	margin-left: 10%;
-	background: black;
+    height: 1px;
+    width: 75%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 10%;
+    background: black;
     background:-moz-linear-gradient(left, #FFFFFF 0%,#4e5f7c 50%,#FFFFFF 100%); 
     background:-webkit-linear-gradient(left, #FFFFFF 0%,#4e5f7c 50%,#FFFFFF 100%); 
     background:linear-gradient(left, #FFFFFF 0%,#4e5f7c 50%,#FFFFFF 100%);

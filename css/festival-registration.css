@@ -14,5 +14,72 @@
 
 }
 
+#event-basics {
+	padding-bottom:50px;
+	font-familly:" Lato";
+	
+}
+
+#event-basics legend {
+	font-size: 40px;
+	padding-bottom: 30px;
+	
+}
+
+legend {
+	padding-bottom: 30px;
+	font-size: 40px;
+}
+
+#festival-questions {
+	padding-bottom: 30px;
+}
+
+#festival-masterclass-questions {
+	padding-bottom: 50px;
+}
+
+#practical-information-questions {
+	padding-bottom: 50px;
+}
+
+#competition-questions {
+	padding-bottom: 50px;
+}
+
+#fc-masterclass-questions {
+	padding-bottom: 50px;
+}
 
 
+#workshop-questions {
+	padding-bottom: 70px;
+}
+
+.question {
+	font-size: 15px;
+	font-weight: 300;
+	font-family: 'Roboto';
+}
+
+#festival-radio-button {
+	font-style: normal;
+	font-size: 5px;
+}
+
+#competition-radio-button {
+}
+
+#festival-competition-radio-button {
+}
+
+#workshop-radio-button {
+}
+
+.question label{
+	padding-bottom: 3px;
+}
+
+.question input{
+	padding-bottom: 20px;
+}
