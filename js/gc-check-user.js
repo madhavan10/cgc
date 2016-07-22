@@ -1,7 +1,7 @@
 var main = function() {
    if(!(window.user === undefined)) {
         $('#gc-login-link').text(window.user.firstName);
-        $('#gc-list-your-own-link').attr('href', "login.html");
+        $("[href='festivalRegistration.html']").attr("href", "login.html");
    }
 };
 
