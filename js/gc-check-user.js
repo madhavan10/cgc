@@ -1,6 +1,6 @@
 var main = function() {
    if(!(user === undefined)) {
-        $('#login').text(user.firstName);
+        $('#gc-login-link').text(user.firstName);
    }
 };
 
