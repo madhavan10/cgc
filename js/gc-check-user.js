@@ -1,6 +1,6 @@
 var main = function() {
    if(!(user === undefined)) {
-        $('#login').hide();
+        $('#login').text(user.firstName);
    }
 };
 
