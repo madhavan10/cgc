@@ -72,6 +72,11 @@ var main = function() {
         $('.main-info-content').hide();
         $('#jury-content').show();
     });
+    
+    $('#prizes').click(function() {
+        $('.main-info-content').hide();
+        $('#prizes-content').show();
+    });
 };
 
 
