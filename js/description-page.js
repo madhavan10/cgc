@@ -80,6 +80,9 @@ var main = function() {
     $('#teachers-content').text(info.workshopTeachers);
     $('#lessons-content').text(info.workshopLessons);
     $('#other-guests-content').text(info.workshopOtherGuests);
+    $('#workshop-meals-content').text(info.workshopMeals);
+    $('#workshop-accommodation-content').text(info.workshopAccommodation);
+    $('#practice-facilities-content').text(info.workshopPracticeFacilities);
 
 
     $('#practical-info-content').text(info.eventFees
