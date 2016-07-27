@@ -6,13 +6,23 @@ var main = function() {
     $('#town').text(info.eventCity);
     $('#country').text(info.eventCountry);
     
-    var month = new Date(info.startDate).getMonth();
+    var monthNames = ["January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"];
+    
+    var startMonth = monthNames[new Date(info.startDate).getMonth()];
     var startDate = new Date(info.startDate).getDay();
+    var startYear = new Date(info.startDate).getYear();
+    
+    var endMonth = monthNames[new Date(info.endDate).getMonth()];
     var endDate = new Date(info.endDate).getDay(); 
-    var year = new Date(info.startDate).getYear();
-    $('#month').text(month);
-    $('#date').text(startDate);
-    $('#year').text(year);
+    var endYear = new Date(info.endDate).getYear();
+
+    $('#startMonth').text(startMonth);
+    $('#startDate').text(startDate);
+    $('#startYear').text(startYear);
+    $('#endMonth').text(endMonth);
+    $('#endDate').text(endDate);
+    $('#endYear').text(endYear);
     
     $('#gc-description-text').text(info.eventDescription);
 
