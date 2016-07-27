@@ -1,7 +1,43 @@
 var main = function() {
-   var info = JSON.parse(festival._rawJSON);
     
-   $('#gc-festival-name').text(info.eventName);
+    var info = JSON.parse(festival._rawJSON);
+     
+    if(info.radio_button === 'festival-radio-button') {
+        $('.workshop-nav').hide();
+        $('.competition-nav').hide();
+        $('.fc-nav').hide();
+        $('.festival-nav').show();
+    }
+    
+    if(info.radio_button === 'competition-radio-button') {
+        $('.workshop-nav').hide();
+        $('.fc-nav').hide();
+        $('.festival-nav').hide();
+        $('.competition-nav').show();
+    }
+    
+    if(info.radio_button === 'workshop-radio-button') {
+        $('.fc-nav').hide();
+        $('.festival-nav').hide();
+        $('.competition-nav').hide();
+        $('.workshop-nav').show();
+    }
+    
+    if(info.radio_button === 'workshop-radio-button') {
+        $('.fc-nav').hide();
+        $('.festival-nav').hide();
+        $('.competition-nav').hide();
+        $('.workshop-nav').show();
+    }
+    
+    if(info.radio_button === 'festival-competition-radio-button') {
+        $('.festival-nav').hide();
+        $('.competition-nav').hide();
+        $('.workshop-nav').hide();
+        $('.fc-nav').show();
+    }
+    
+    $('#gc-festival-name').text(info.eventName);
     
     $('#town').text(info.eventCity);
     $('#country').text(info.eventCountry);
