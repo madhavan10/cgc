@@ -35,7 +35,7 @@ var main = function() {
     $('#other-guests-content').text(info.workshopOtherGuests);
 
 
-    $('#practical-info-content').text(info.eventFees + <br><br>
+    $('#practical-info-content').text(info.eventFees + "<br><br>"
             + info.venueAddresses + "<br><br>"
             + info.accomodation + "<br><br>"
             + info.travelInfo + "<br><br>"
