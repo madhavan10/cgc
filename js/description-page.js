@@ -11,7 +11,7 @@ var main = function() {
     var endDate = new Date(info.endDate).getDay(); 
     var year = new Date(info.startDate).getYear();
     $('#month').text(month);
-    $('#date').text(starDate + "-" + endDate);
+    $('#date').text(startDate);
     $('#year').text(year);
     
     $('#gc-description-text').text(info.eventDescription);
