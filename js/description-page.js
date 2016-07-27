@@ -6,9 +6,9 @@ var main = function() {
     $('#town').text(info.eventCity);
     $('#country').text(info.eventCountry);
     
-    var month = new Date(info.startDate.getMonth());
-    var date = new Date(info.startDate.getDay());
-    var year = new Date(info.startDate.getYear());
+    var month = new Date(info.startDate).getMonth();
+    var date = new Date(info.startDate).getDay();
+    var year = new Date(info.startDate).getYear();
     $('#month').text(month);
     $('#date').text(date);
     $('#year').text(year);
@@ -35,6 +35,7 @@ var main = function() {
     $('#other-guests-content').text(info.workshopOtherGuests);
 
 
+<<<<<<< HEAD
     $('#practical-info-content').text(info.eventFees + "<br><br>"  
             + info.venueAddresses + "<br><br>"
             + info.accomodation + "<br><br>"
