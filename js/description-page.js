@@ -17,11 +17,11 @@ var main = function() {
 
     $('#schedule-content').text(info.schedule);
     $('#guests-content').text(info.guestList);
-    $('#masterclasses-content').text(info.masterclassTeachers + "<br><br>" 
+    $('#masterclasses-content').text(info.masterclassTeachers + "\n\n" 
             + info.masterclassPricing);
     
-    $('#competition-content').text(info.competitionRules + "<br><br>" 
-            + info.prizes + "<br><br>" 
+    $('#competition-content').text(info.competitionRules + "\n\n" 
+            + info.prizes + "\n\n" 
             + info.jury);
     
     //competition.html
@@ -34,10 +34,11 @@ var main = function() {
     $('#lessons-content').text(info.workshopLessons);
     $('#other-guests-content').text(info.workshopOtherGuests);
 
-    $('#practical-info-content').text(info.eventFees + "<br><br>"  
-            + info.venueAddresses + "<br><br>"
-            + info.accomodation + "<br><br>"
-            + info.travelInfo + "<br><br>"
+
+    $('#practical-info-content').text(info.eventFees + "\n\n"
+            + info.venueAddresses + "\n\n"
+            + info.accomodation + "\n\n"
+            + info.travelInfo + "\n\n"
             + info.otherFacilities);
     $('#contact-content').text(info.contactInformation);
     $('#register-content').text(info.howToRegister);
