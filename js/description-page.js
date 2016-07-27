@@ -34,8 +34,6 @@ var main = function() {
     $('#lessons-content').text(info.workshopLessons);
     $('#other-guests-content').text(info.workshopOtherGuests);
 
-
-<<<<<<< HEAD
     $('#practical-info-content').text(info.eventFees + "<br><br>"  
             + info.venueAddresses + "<br><br>"
             + info.accomodation + "<br><br>"
