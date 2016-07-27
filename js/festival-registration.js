@@ -55,7 +55,7 @@ function submitFestivalRegistrationForm() {
     howToRegister : $('#how-to-register').val(),
     contactInformation : $('#contact-information').val(),
     venueAddresses : $('#venue-addresses').val(),
-    accomodation : $('#accomodation').val(),
+    accommodation : $('#accommodation').val(),
     travelInfo : $('#travel-info').val(),
     otherFacilities : $('#other-facilities').val(),
 
@@ -74,7 +74,7 @@ function submitFestivalRegistrationForm() {
 
     // workshop questions
     workshopTeachers : $('#workshop-teachers').val(),
-    workshopAccomodation : $('#workshop-accomodation').val(),
+    workshopAccommodation : $('#workshop-accommodation').val(),
     workshopMeals : $('#workshop-meals').val(),
     workshopPracticeFacilities : $('#workshop-practice-facilities').val(),
     workshopLessons : $('#workshop-lessons').val(),
