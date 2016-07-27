@@ -47,7 +47,8 @@ var main = function() {
         $('.main-info-content').hide();
         $('#register-content').show();
     });
-
+    
+    //workshop
     $('#teachers').click(function() {
         $('.main-info-content').hide();
         $('#teachers-content').show();
@@ -63,6 +64,22 @@ var main = function() {
         $('#other-guests-content').show();
     });
     
+    $('#workshop-meals').click(function() {
+        $('.main-info-content').hide();
+        $('#workshop-meals-content').show();
+    });
+    
+    $('#workshop-accommodation').click(function() {
+        $('.main-info-content').hide();
+        $('#workshop-accommodation-content').show();
+    });
+    
+    $('#practice-facilities').click(function() {
+        $('.main-info-content').hide();
+        $('#practice-facilities-content').show();
+    });
+    
+    //competition
     $('#rules').click(function() {
         $('.main-info-content').hide();
         $('#rules-content').show();
