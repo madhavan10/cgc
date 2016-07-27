@@ -7,10 +7,11 @@ var main = function() {
     $('#country').text(info.eventCountry);
     
     var month = new Date(info.startDate).getMonth();
-    var date = new Date(info.startDate).getDay();
+    var startDate = new Date(info.startDate).getDay();
+    var endDate = new Date(info.endDate).getDay(); 
     var year = new Date(info.startDate).getYear();
     $('#month').text(month);
-    $('#date').text(date);
+    $('#date').text(starDate + "-" + endDate);
     $('#year').text(year);
     
     $('#gc-description-text').text(info.eventDescription);
