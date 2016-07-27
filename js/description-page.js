@@ -48,7 +48,7 @@ var main = function() {
 
     $('#practical-info-content').text(info.eventFees
             + info.venueAddresses
-            + info.accomodation
+            + info.accommodation
             + info.travelInfo
             + info.otherFacilities);
     $('#contact-content').text(info.contactInformation);
