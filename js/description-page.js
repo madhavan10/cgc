@@ -10,18 +10,18 @@ var main = function() {
         "July", "August", "September", "October", "November", "December"];
     
     var startMonth = monthNames[new Date(info.startDate).getMonth()];
-    var startDate = new Date(info.startDate).getDay();
+    var startDay = new Date(info.startDate).getDay();
     var startYear = new Date(info.startDate).getYear();
     
     var endMonth = monthNames[new Date(info.endDate).getMonth()];
-    var endDate = new Date(info.endDate).getDay(); 
+    var endDay = new Date(info.endDate).getDay(); 
     var endYear = new Date(info.endDate).getYear();
 
     $('#startMonth').text(startMonth);
-    $('#startDate').text(startDate);
+    $('#startDate').text(startDay);
     $('#startYear').text(startYear);
     $('#endMonth').text(endMonth);
-    $('#endDate').text(endDate);
+    $('#endDate').text(endDay);
     $('#endYear').text(endYear);
     
     $('#gc-description-text').text(info.eventDescription);
