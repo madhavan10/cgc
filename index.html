@@ -21,9 +21,18 @@
             
 
             <!--Scripts for fullcalendar--!>
-            <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+            <script src="/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
             <script>
 	        $(document).ready(function() {
+                    var cgcEvents = [];
+                    for(var i = 0; i < window.festivals.length; i++) {
+                        var thisEvent = JSON.parse(window.festivals[i]._rawJSON);
+                        cgcEvents.push({
+                            title: thisEvent.eventName,
+                            start: thisEvent.startDate,
+                            end: thisEvent.endDate
+                        });
+                    }
                     $('#calendar').fullCalendar({
 		        header: {
 			    left: 'prev,next today',
@@ -34,10 +43,11 @@
                         //defaultDate: '2016-02-17',
 		        editable: true,
 		        eventLimit: true, // allow "more" link when too many events
+                        events: cgcEvents
 	            });
 		
 	        });
-            </script> 
+            </script>
             <div class="gc-calendar">
                 <div id="calendar"></div>
             </div>
