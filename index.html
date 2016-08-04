@@ -30,7 +30,8 @@
                         cgcEvents.push({
                             title: thisEvent.eventName,
                             start: thisEvent.startDate,
-                            end: thisEvent.endDate
+                            end: thisEvent.endDate,
+                            url: "/festivals/" + thisEvent.eventName
                         });
                     }
                     $('#calendar').fullCalendar({
