@@ -20,7 +20,8 @@ var main = function() {
 
     $('#masterclasses').click(function() {
         $('.main-info-content').hide();
-        $('#masterclasses-content').show();
+        $('#masterclasses-teachers-content').show();
+        $('#masterclasses-pricing-content').show();
     });
     
     $('#competition').click(function() {
@@ -30,7 +31,11 @@ var main = function() {
     
     $('#practical-info').click(function() {
         $('.main-info-content').hide();
-        $('#practical-info-content').show();
+        $('#pi-eventFees-content').show();
+        $('#pi-venues-content').show();
+        $('#pi-accommodation-content').show();
+        $('#pi-travelInfo-content').show();
+        $('#pi-otherFacilities-content').show();
     });
     
     $('#contact').click(function() {

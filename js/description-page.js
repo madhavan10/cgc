@@ -64,8 +64,8 @@ var main = function() {
 
     $('#schedule-content').text(info.schedule);
     $('#guests-content').text(info.guestList);
-    $('#masterclasses-content').text(info.masterclassTeachers 
-            + info.masterclassPricing);
+    $('#masterclasses-teachers-content').text(info.masterclassTeachers); 
+    $('#masterclasses-pricing-content').text(info.masterclassPricing); 
     
     $('#competition-content').text(info.competitionRules
             + info.prizes
@@ -85,11 +85,11 @@ var main = function() {
     $('#practice-facilities-content').text(info.workshopPracticeFacilities);
 
 
-    $('#practical-info-content').text(info.eventFees
-            + info.venueAddresses
-            + info.accommodation
-            + info.travelInfo
-            + info.otherFacilities);
+    $('#pi-eventFees-content').text(info.eventFees);
+    $('#pi-venues-content').text(info.venueAddresses);
+    $('#pi-accommodation-content').text(info.accommodation);
+    $('#pi-travelInfo-content').text(info.travelInfo);
+    $('#pi-otherFacilities-content').text(info.otherFacilities);
     $('#contact-content').text(info.contactInformation);
     $('#register-content').text(info.howToRegister);
 
