@@ -26,7 +26,9 @@ var main = function() {
     
     $('#competition').click(function() {
         $('.main-info-content').hide();
-        $('#competition-content').show();
+        $('#rules-content').show();
+        $('#jury-content').show();
+        $('#prizes-content').show();
     });
     
     $('#practical-info').click(function() {

@@ -67,9 +67,11 @@ var main = function() {
     $('#masterclasses-teachers-content').text(info.masterclassTeachers); 
     $('#masterclasses-pricing-content').text(info.masterclassPricing); 
     
+    /*
     $('#competition-content').text(info.competitionRules
             + info.prizes
             + info.jury);
+    */
     
     //competition.html
     $('#rules-content').text(info.competitionRules);
