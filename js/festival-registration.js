@@ -5,45 +5,47 @@ var main = function() {
     $(".gc-event-radio").click(function() {
         if($("#festival-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();
-            $(".gc-required-question").removeAttr("required");
+            $(".gc-required-question").removeProp("required");
             $("#festival-questions").show();
-            $(".f-required").attr("required", true);
-            $(".pi-required").atrr("required", true):
+            $(".f-required").prop("required", true);
+            $(".pi-required").prop("required", true);
         }
         
         if($("#competition-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();   
-            $(".gc-required-question").removeAttr("required");
+            $(".gc-required-question").removeProp("required");
             $("#competition-questions").show();
-            $(".c-required").attr("required", true);
-            $(".pi-required").atrr("required", true):
+            $(".c-required").prop("required", true);
+            $(".pi-required").prop("required", true);
         }
         
         if($("#festival-competition-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();   
-            $(".gc-required-question").removeAttr("required");
+            $(".gc-required-question").removeProp("required");
             $("#festival-questions").show();
-            $(".f-required").attr("required", true);
+            $(".f-required").prop("required", true);
             $("#competition-questions").show();
-            $(".c-required").attr("required", true);
-            $(".pi-required").atrr("required", true):
+            $(".c-required").prop("required", true);
+            $(".pi-required").prop("required", true);
         }
 
         if($("#workshop-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();
-            $(".gc-required-question").removeAttr("required");
+            $(".gc-required-question").removeProp("required");
             $(".workshop-redundant").hide(); //the redundant question isn't req so no action needed
             $("#workshop-questions").show();
-            $(".w-required").atrr("required", true):
-            $(".pi-required").atrr("required", true):
+            $(".w-required").prop("required", true);
+            $(".pi-required").prop("required", true);
         }
     });
 
     $("#yes-masterclasses-radio").click(function() {
         $("#festival-masterclass-questions").show();
+        $(".mc-required").prop("required", true);
     });
     $("#no-masterclasses-radio").click(function() {
         $("#festival-masterclass-questions").hide();
+        $(".mc-required").removeProp("required");
     });
 
     // default view, clicking once doesn't work.

@@ -29,6 +29,27 @@ input:focus {
     border-color: #212834;
 }
 
+
+input:invalid {
+    border: 1px solid red;
+}
+
+/*
+input:valid {
+    border: 2px solid green
+}
+*/
+
+textarea:invalid {
+    border: 1px solid red;
+}
+
+/*
+textarea:valid {
+    border: 2px solid green
+}
+*/
+
 .question {
     font-family: 'Roboto', bold;
 }
