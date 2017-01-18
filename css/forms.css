@@ -12,7 +12,7 @@ form {
 
 form div + div {
     /* puts space between form elements */
-    margin-top: 1em;
+    
 }
 
 input {
@@ -34,28 +34,38 @@ input:invalid {
     border: 1px solid red;
 }
 
-/*
-input:valid {
-    border: 2px solid green
-}
-*/
+
 
 textarea:invalid {
     border: 1px solid red;
 }
 
-/*
-textarea:valid {
-    border: 2px solid green
-}
-*/
+
 
 .question {
-    font-family: 'Roboto', bold;
+    font-family: 'Roboto';
+	margin-top: 3em;
 }
 
-.gc-event-radio {
-	font-family: 'Roboto';
+.gc-radio-label {
 	font-weight: 400;
 }
 
+input[type=text] {
+	width: 80%;
+	border-radius: 3px;
+}
+
+textarea {
+	width: 50%;
+	border-radius: 3px;
+	
+}
+
+.gc-form-title {
+	padding-top: 30px;
+}
+
+.gc-button {
+	padding-bottom: 35px;
+}

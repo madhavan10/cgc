@@ -8,22 +8,22 @@
                 
             <form>
                 <fieldset id="event-basics">
-                    <legend>Your Event</legend>
+                    <h2 class="gc-form-title">Your Event</h2>
                     
                     <div class="question">
                         <label for="event-type">What is the type of your event?</label>
                         <br/>
                         <input id="festival-radio-button" class="gc-event-radio" type="radio" name="eventType" />
-                        <label for="festival">Guitar Festival</label>
+                        <label for="festival" class="gc-radio-label">Guitar Festival</label>
                         <br/>
                         <input id="competition-radio-button" class="gc-event-radio" type="radio" name="eventType" />
-                        <label for="competition">Guitar Competition</label>
+                        <label for="competition" class="gc-radio-label">Guitar Competition</label>
                         <br/>
                         <input id="festival-competition-radio-button" class="gc-event-radio" type="radio" name="eventType" />
-                        <label for="festival-competition">Guitar Festival and Competition</label>
+                        <label for="festival-competition" class="gc-radio-label">Guitar Festival and Competition</label>
                         <br/>
                         <input id="workshop-radio-button" class="gc-event-radio" type="radio" name="eventType" />
-                        <label for="workshop">Workshop or Academy</label>
+                        <label for="workshop" class="gc-radio-label">Workshop or Academy</label>
                     </div>
 
                     <div class="question">
@@ -93,8 +93,10 @@
                     </div>
                 </fieldset>
 
+
                 <fieldset id="festival-questions" class="gc-event-questions">
-                    <legend>Guitar Festival</legend>
+		 <div class="gc-horizontal-line"></div>
+                    <H2 class="gc-form-title">Guitar Festival</H2>
                     <div class="question">
                         <label for="guest-list">List the guests of your festival.</label>
                         <p class="gc-question-subtext">This includes any invited artists, teachers, artisans, or scholars.</p>
@@ -112,8 +114,10 @@
                     </div>
                 </fieldset>
 
+
                 <fieldset id="festival-masterclass-questions">
-                    <legend>Masterclasses</legend>
+		 <div class="gc-horizontal-line"></div>
+                    <H2 class="gc-form-title">Masterclasses</H2>
                     <div class="question">
                         <label for="masterclass-teachers">List the teachers who will be available for masterclasses.</label>
                         <br/>
@@ -126,10 +130,10 @@
                         <textarea id="masterclass-pricing" class="gc-required-question mc-required" required></textarea>
                     </div>
                 </fieldset>
-
                
                 <fieldset id="competition-questions" class="gc-event-questions">
-                    <legend>Competition</legend> 
+		 <div class="gc-horizontal-line"></div>
+                    <H2 class="gc-form-title">Competition</H2> 
                     <div class="question">
                         <label for="competition-rules">Detail the rules for the competition.</label>
                         <p class="gc-question-subtext">This includes eligibility, program requirements, etc.</p>
@@ -150,7 +154,8 @@
                 </fieldset>
 
                 <fieldset id="workshop-questions" class="gc-event-questions">
-                    <legend>Workshop or Academy</legend>
+		 <div class="gc-horizontal-line"></div>
+                    <h2 class="gc-form-title">Workshop or Academy</h2>
                     <div class="question">
                         <label for="workshop-teachers">Who will be teaching?</label>
                         <br/>
@@ -183,8 +188,12 @@
                     </div>
 
                 </fieldset>
+
+		   
+
                 <fieldset id="practical-information-questions">
-                    <legend>Practical Information</legend>
+		    <div class="gc-horizontal-line"></div>
+                    <h2 class="gc-form-title">Practical Information</h2>
                     <div class="question">
                         <label for="event-fees">What are the fees for participating in your event? Please provide details.</label>
                         <br/>

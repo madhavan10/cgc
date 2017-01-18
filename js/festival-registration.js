@@ -52,6 +52,8 @@ var main = function() {
     // possibly because not using $('input[name='...']).click(function...) for radio button click handler
     $("#festival-radio-button").click();
     $("#festival-radio-button").click();
+
+    $("textarea").val().replace(/\r\n/g, "<br />");
 };
 
 function submitFestivalRegistrationForm() {
