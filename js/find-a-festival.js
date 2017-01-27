@@ -6,9 +6,7 @@ var main = function() {
        arrayOfNames.push(thisEvent.eventName);
     }
     for(var i = 0; i < arrayOfNames.length; ++i) {
-        $(".gc-find-a-festival").append("<div>");
-        $(".gc-find-a-festival").append(arrayOfNames[i]);
-        $(".gc-find-a-festival").append("</div>");
+        $(".gc-find-a-festival").append("<div><a href=\"/festivals/" + arrayOfNames[i] + "\">" + arrayOfNames[i] + "</a></div>");
     }
 }
 $(document).ready(main);
