@@ -7,6 +7,7 @@
 @import url('login.css');
 @import url('festival-registration.css');
 @import url('forms.css');
+@import url('404.css')
 
 a:focus { 
     outline: none; 
@@ -24,7 +25,7 @@ body {
     font-weight: 500;
     height: 70px;
     background-color: #212834;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.02px;
     list-style-type: none;
     border-top: 0.01px #000000 solid;
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
@@ -33,12 +34,16 @@ body {
     
 }
 
+ul.row {
+ list-style-type: none;
+ }
 
 
-.main-navigation a:link, .main-navigation a:visited {
+
+.nav-item a:link, .nav-item a:visited {
     padding:17px 10px 13px 10px;
     text-decoration: none;
-    color: #fff;
+    color: #EDEDEE;
     outline: none;
     transition: height 0.2s ease-in-out 0s, line-height 0.2s ease-in-out 0s;
     transition-property: height, line-height;
@@ -47,10 +52,9 @@ body {
     transition-delay: 0s, 0s;
 }
 
-.main-navigation a:hover, .main-navigation a:active {
-    background-color: #fff;
-    color: #341E00;
-    height: 50px;
+.nav-item a:hover, .nav-item a:active {
+    color: #ffffff;
+    padding-bottom: 22px;
     border-width:0px 0px 4px 0px; 
     border-style: solid; 
     border-color: #E6C571;
@@ -62,14 +66,21 @@ body {
 
 .left-nav, .right-nav {
     display: inline;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+#logo {
+	margin-left: 11%;
+	margin-right: 3%;
+}
+
+
 .nav-item {
+	width: 12%;
     list-style-type: none;
     text-align: center;
-    padding: 25px;
+    padding-top: 25px;
 }
 
 #login {
@@ -85,14 +96,35 @@ body {
 }
 
 #login a:hover, #login a:active {
-    background-color: #fff;
-    color: #341E00;
+    color: #463217;
     height: 50px;
-    border-width:0px 0px 4px 0px; 
+    border-width: 0.14em 0.14em 0.14em 0.14em; 
     border-style: solid; 
     border-color: #E6C571;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 6px 6px 6px 6px;
 }
+
+#gc-logout {
+	padding-top: 25px;
+	margin-left: -2%;
+}
+
+#gc-logout a:link, #gc-logout a:visited {
+    padding:17px 10px 13px 10px;
+    text-decoration: none;
+    color: #cacacc;
+    outline: none;
+    transition: height 0.2s ease-in-out 0s, line-height 0.2s ease-in-out 0s;
+    transition-property: height, line-height;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s;
+}
+
+#gc-logout a:hover, #gc-logout a:active {
+    color: #EDEDEE;
+}
+
 
 .footer {
     background-color: #212834;

@@ -2,7 +2,6 @@
 .gc-login-form {
     padding-top: 50px;
     padding-bottom: 30px;
-    padding-left: 5%;
     background-color: #ffffff;
     margin: 0px 20% 120px 20%;
     box-shadow:
@@ -14,3 +13,34 @@
 
 }
 
+.gc-login {
+	display: inline-block;
+}
+
+.gc-form-title {
+	padding-left: 5%;
+	
+}
+
+.gc-registration-line {
+	margin-left: 5%;
+	margin-bottom: 35px;
+}
+
+
+#login-right {
+	margin-top: 100px;
+	float: right;
+	padding-right: 20%;	
+}
+
+#login-left {
+	padding-left: 15%;
+	float: left;
+	width: 60%;
+}
+
+#not-registered {
+	margin-top: 5px;
+	padding-left: 13%;
+}
