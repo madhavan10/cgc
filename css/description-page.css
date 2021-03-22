@@ -105,6 +105,10 @@
     left: 0.5%;
 }
 
+#gc-description-text {
+	white-space: pre-line;
+}
+
 .description:hover {
 	-webkit-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
         -moz-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
@@ -185,6 +189,14 @@
 .main-info li span:hover, .main-info li span:active {
         background-color: #E6C571;
         color: #32393f;
+}
+
+.main-info-content {
+	white-space: pre-line;
+}
+
+.tab-title {
+	font-weight: bold;
 }
 
 .nav > li > span {
