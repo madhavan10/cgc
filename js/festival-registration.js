@@ -55,6 +55,44 @@ var main = function() {
 };
 
 function submitFestivalRegistrationForm() {
+    
+    //check start date < end date, doesn't check time1 < time2
+    //first check non-empty
+    start_date = $('#datetimepicker1')[0].children[0].value;
+    end_date = $('#datetimepicker2')[0].children[0].value;
+    if (start_date === "" || end_date === "") {
+        alert("Please fill-in one or more required fields");
+        return;
+    }
+
+    sd_month = start_date.substring(0, 2);
+    sd_day = start_date.substring(3, 5);
+    sd_year = start_date.substring(6, 10);
+    sd_str = sd_year + sd_month + sd_day;
+
+    ed_month = end_date.substring(0, 2);
+    ed_day = end_date.substring(3, 5);
+    ed_year = end_date.substring(6, 10);
+    ed_str = ed_year + ed_month + ed_day;
+
+    if (ed_str.localeCompare(sd_str) < 0) {
+        alert("Please ensure your event's end-date is not prior to its start-date");
+        return;
+    }
+
+    //check required fields filled-in (except dates)
+    var requiredInputs = $(":input[required][id!=gc-dateTP1-input][id!=gc-dateTP2-input]");
+    var foundMissingInput = false;
+    for (i = 0; i < requiredInputs.length; i++) {
+        if (requiredInputs[i].value === "") { //only for <input type = "text"> or <textarea>
+            foundMissingInput = true;
+        }
+    }
+    if (foundMissingInput === true) {
+        alert("Please fill-in one or more required fields");
+        return;
+    }
+
     var masterclass_radio = $('input[name=whether-masterclasses]:checked')[0];
     var toSend = {
         radio_button : $('input[name=eventType]:checked')[0].id,
