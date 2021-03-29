@@ -56,8 +56,7 @@ var main = function() {
 
 function submitFestivalRegistrationForm() {
     
-    //check start date < end date, doesn't check time1 < time2
-    //first check non-empty
+    //first check dates non-empty
     start_date = $('#datetimepicker1')[0].children[0].value;
     end_date = $('#datetimepicker2')[0].children[0].value;
     if (start_date === "" || end_date === "") {
@@ -65,6 +64,9 @@ function submitFestivalRegistrationForm() {
         return;
     }
 
+    //check start date < end date
+    //not actually needed, datetimepicker script options do it
+    /*
     sd_month = start_date.substring(0, 2);
     sd_day = start_date.substring(3, 5);
     sd_year = start_date.substring(6, 10);
@@ -79,6 +81,7 @@ function submitFestivalRegistrationForm() {
         alert("Please ensure your event's end-date is not prior to its start-date");
         return;
     }
+    */
 
     //check required fields filled-in (except dates)
     var requiredInputs = $(":input[required][id!=gc-dateTP1-input][id!=gc-dateTP2-input]");
