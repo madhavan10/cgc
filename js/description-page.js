@@ -45,13 +45,14 @@ var main = function() {
     var monthNames = ["January", "February", "March", "April", "May", "June", 
         "July", "August", "September", "October", "November", "December"];
     
+    //Note: Use of Date constructor with timestring argument is not encouraged
     var startMonth = monthNames[new Date(info.startDate).getMonth()];
-    var startDay = new Date(info.startDate).getDate();
-    var startYear = (new Date(info.startDate).getYear()) + 1900;
+    var startDay = new Date(info.startDate).getDate(); 
+    var startYear = new Date(info.startDate).getFullYear();
     
     var endMonth = monthNames[new Date(info.endDate).getMonth()];
     var endDay = new Date(info.endDate).getDate(); 
-    var endYear = (new Date(info.endDate).getYear()) + 1900;
+    var endYear = new Date(info.endDate).getFullYear();
 
     $('#startMonth').text(startMonth);
     $('#startDate').text(startDay);
