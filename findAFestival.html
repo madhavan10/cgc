@@ -3,4 +3,12 @@
 <script src="/js/find-a-festival.js"></script>
 
 <div class="gc-find-a-festival">
+    <select id="gc-eventType-dropdown" onchange="selectEventType(this.value)" style="appearance: menulist-button">
+        <option selected disabled>Event Type</option>
+        <option>All</option>
+        <option value="festival">Festival</option>
+        <option value="competition">Competition</option>
+        <option value="workshop">Workshop/Academy</option>
+    </select>
+    <div id="gc-festival-list"></div>
 </div>

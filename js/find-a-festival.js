@@ -12,15 +12,33 @@ var main = function() {
     for(var i = 0; i < eventList.length; ++i) {
         var className;
         if(eventList[i].radio_button === "festival-radio-button") {
-            className = "gc-festival-listing";
+            className = "gc-festival-listing gc-event-listing";
         } else if (eventList[i].radio_button === "competition-radio-button") {
-            className = "gc-competition-listing";
+            className = "gc-competition-listing gc-event-listing";
         } else if (eventList[i].radio_button === "festival-competition-radio-button") {
-            className = "gc-festival-listing gc-competition-listing";
+            className = "gc-festival-listing gc-competition-listing gc-event-listing";
         } else {
-            className = "gc-workshop-listing";
+            className = "gc-workshop-listing gc-event-listing";
         }
-        $(".gc-find-a-festival").append("<div class=\"" + className + "\"><a href=\"/festivals/" + eventList[i].eventName + "\">" + eventList[i].eventName + "</a></div>");
+        $("#gc-festival-list").append("<div class=\"" + className + "\"><a href=\"/festivals/" + eventList[i].eventName + "\">" + eventList[i].eventName + "</a></div>");
     }
-}
+};
+
+var selectEventType = function(value) {
+    if (value==="festival") {
+        $(".gc-event-listing").hide();
+        $(".gc-festival-listing").show();
+    } else if (value==="competition") {
+        $(".gc-event-listing").hide();
+        $(".gc-competition-listing").show();
+    } else if (value==="workshop") {
+        $(".gc-event-listing").hide();
+        $(".gc-workshop-listing").show();
+    } else if (value==="All") {
+        $(".gc-event-listing").show();
+    } else {
+        alert(value);
+    }
+};
+
 $(document).ready(main);
