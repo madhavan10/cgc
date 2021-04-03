@@ -3,6 +3,9 @@
 <script src="/js/find-a-festival.js"></script>
 
 <div class="gc-find-a-festival">
+	<div class= "gc-find-a-festival-container">
+	<div class= "gc-eventType-dropdown-container">
+	<div class= "gc-eventType-select">
     <select id="gc-eventType-dropdown" onchange="selectEventType(this.value)"> 
         <option selected disabled>Event Type</option>
         <option>All</option>
@@ -10,5 +13,8 @@
         <option value="competition">Competition</option>
         <option value="workshop">Workshop/Academy</option>
     </select>
+    </div>
+    </div>
     <div id="gc-festival-list"></div>
+    </div>
 </div>

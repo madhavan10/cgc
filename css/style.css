@@ -9,6 +9,7 @@
 @import url('forms.css');
 @import url('404.css');
 @import url('find-a-festival.css');
+@import url('new-find-a-festival.css');
 
 a:focus { 
     outline: none; 
@@ -25,7 +26,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     height: 70px;
-    background-color: #212834;
+    background-color: #102542;
     letter-spacing: 0.02px;
     list-style-type: none;
     border-top: 0.01px #000000 solid;
@@ -128,7 +129,7 @@ ul.row {
 
 
 .footer {
-    background-color: #212834;
+    background-color: #102542;
     font-family: 'Roboto', sans-serif;
     padding: 15px;
     padding-top: 25px;
