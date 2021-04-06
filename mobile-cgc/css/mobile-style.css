@@ -1,0 +1,40 @@
+#gcm-main-navigation {
+    background-color: #102542;
+    height: 90px;
+}
+
+#gcm-nav-items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.gcm-nav-item {
+    color: #ffffff;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+@media (min-width: 640px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    #navbarSupportedContent {
+        display: inline;
+    }
+    
+    .navbar-collapse {
+        /*overrides flex-basis: 100% which causes nav-items to come below logo */
+        flex-basis: auto;
+    }
+
+    #gcm-nav-items {
+        display: flex-inline;
+        flex-direction: row;
+    }
+}
+
+body {
+    background-color: #f4faff;
+}
