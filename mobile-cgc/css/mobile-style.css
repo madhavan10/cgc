@@ -1,18 +1,33 @@
 #gcm-main-navigation {
-    background-color: #102542;
+    background: #102542;
     height: 90px;
 }
 
 #gcm-nav-items {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .gcm-nav-item {
     color: #ffffff;
-    padding-left: 4%;
-    padding-right: 4%;
+    /* "justify-content: space-around" takes care of padding */
+}
+
+.gcm-submenu {
+    list-style-type: none;
+    display: none;
+}
+
+.gcm-submenu-active .gcm-submenu {
+    background: #0d1c30;
+    display: block;
+}
+
+#navbarSupportedContent {
+    background: #102542;
 }
 
 @media (min-width: 640px) {
@@ -32,6 +47,16 @@
     #gcm-nav-items {
         display: flex-inline;
         flex-direction: row;
+    }
+
+    .gcm-nav-items {
+        position: relative;
+    }
+
+    .gcm-submenu-active .gcm-submenu {
+        /* this prevents the gcm-nav-items from shifting, idk */
+        position: absolute;
+        padding-right: 2%;
     }
 }
 
