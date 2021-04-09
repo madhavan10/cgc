@@ -1,0 +1,7 @@
+.gcm-section-header {
+    font-weight: 600;
+}
+
+.gcm-section-header > i.bi-chevron-down {
+    font-size: 12px;
+}
