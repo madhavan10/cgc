@@ -1,7 +1,44 @@
-.gcm-section-header {
-    font-weight: 600;
+
+#gcm-description-page {
+    padding: 1%;
 }
 
-.gcm-section-header > i.bi-chevron-down {
+.gcm-section-header {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.gcm-subtopic-header {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+i.gcm-main-info-topic-dropdown {
     font-size: 12px;
+}
+
+i.gcm-subtopic-dropdown {
+    font-size: 12px;
+}
+
+.gcm-horizontal-line {
+    height: 1px;
+    margin-top:;
+    margin-bottom: 4px;
+    width: 20%;
+    background: #797f80;
+}
+
+#gcm-description-text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gcm-main-info-topic {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gcm-subtopic-list {
+    list-style-type: none;
 }

@@ -43,6 +43,8 @@
                             </ul>
                         </li>
                         <li class="gcm-nav-item">LIST YOUR OWN</li>
+                        <li class="gcm-nav-item">LOG IN</li>
+                        <li class="gcm-nav-item">LOG OUT</li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +53,8 @@
         <div id="gcm-description-page">
             <h2 id="gcm-festival-name">Sevilla Guitar Festival and Competition</h2>
             <div class="gcm-festival-location">
-                <div class="gcm-section-header" id="gcm-festival-location-header">Takes place:</div>
+                <div class="gcm-section-header" id="gcm-festival-location-header">Where and When</div>
+                <div class="gcm-horizontal-line"></div>
                 <span id="town">Seville</span>
                 <span class="dot">,</span>
                 <span id="country">Spain</span>
@@ -70,12 +73,230 @@
             <div id="gcm-description-text">
                 <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-description-text-header">
                     <span>About</span>
-                    <i class="bi bi-chevron-down"></i>
+                    <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    <div class="gcm-horizontal-line"></div>
                 </div>
                 <span class="gcm-section-toggleable-content" id="gcm-description-text-content">Description text goes here...For though result and talent add are parish valley. Songs in oh other avoid it hours woman style. In myself family as if be agreed. Gay collected son him knowledge delivered put. Added would end ask sight and asked saw dried house. Property expenses yourself occasion endeavor two may judgment she. Me of soon rank be most head time tore. Colonel or passage to ability. 
 
         Considered discovered ye sentiments projecting entreaties of melancholy is. In expression an solicitude principles in do. Hard do me sigh with west same lady. Their saved linen downs tears son add music. Expression alteration entreaties mrs can terminated estimating. Her too add narrow having wished. To things so denied admire. Am wound worth water he linen at vexed.
                 </span>
+            </div>
+            <div id="gcm-main-info">
+                <!--General Fields-->
+                <div class="gcm-main-info-topic" id="gcm-schedule-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-schedule-header">
+                        <span>Schedule</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-schedule-content">Schedule content</span>
+                </div>
+                <!--Festival and FC fields-->
+                <div class="gcm-main-info-topic" id="gcm-guests-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-guests-header">
+                        <span>Guests</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-guests-content">Guests content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-masterclasses-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-masterclasses-header">
+                        <span>Masterclasses</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <ul class="gcm-subtopic-list" id="gcm-masterclasses-content">
+                        <li class="gcm-main-info-subtopic" id="gcm-masterclasses-teachers-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-masterclasses-teachers-subtopic-header">
+                                <span>Teachers</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-masterclasses-teachers-content">Teachers content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-masterclasses-fees-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-masterclasses-fees-subtopic-header">
+                                <span>Masterclass Fees</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-masterclasses-fees-content">Masterclass Fees content</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--FC field-->
+                <div class="gcm-main-info-topic" id="gcm-competition-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-competition-header">
+                        <span>Competition</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <ul class="gcm-subtopic-list" id="gcm-competition-content">
+                        <li class="gcm-main-info-subtopic" id="gcm-fc-competition-rules-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-fc-competition-rules-subtopic-header">
+                                <span>Rules</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-fc-competition-rules-content">Rules content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-fc-competition-prizes-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-fc-competition-prizes-subtopic-header">
+                                <span>Prizes</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-fc-competition-prizes-content">Prizes content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-fc-competition-jury-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-fc-competition-jury-subtopic-header">
+                                <span>Jury</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-fc-competition-jury-content">Jury content</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--Competition Fields-->
+                <div class="gcm-main-info-topic" id="gcm-rules-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-rules-header">
+                        <span>Rules</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-rules-content">Rules content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-prizes-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-prizes-header">
+                        <span>Prizes</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-prizes-content">Prizes content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-jury-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-jury-header">
+                        <span>Jury</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-jury-content">Jury content</span>
+                </div>
+                <!--Workshop Fields-->
+                <div class="gcm-main-info-topic" id="gcm-teachers-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-teachers-header">
+                        <span>Teachers</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-teachers-content">Teachers content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-lessons-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-lessons-header">
+                        <span>Lessons</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-lessons-content">Lessons content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-other-guests-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-other-guests-header">
+                        <span>Other Guests</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-other-guests-content">Other Guests content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-workshop-meals-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-workshop-meals-header">
+                        <span>Meals</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-workshop-meals-content">Meals content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-workshop-accommodation-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-workshop-accommodation-header">
+                        <span>Accommodation</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-workshop-accommodation-content">Accommodation content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-practice-facilities-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-practice-facilities-header">
+                        <span>Practice Facilities</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-practice-facilities-content">Practice Facilities content</span>
+                </div>
+                <!--General Fields-->
+                <div class="gcm-main-info-topic" id="gcm-practical-info-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-practical-info-header">
+                        <span>Practical Information</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <ul class="gcm-subtopic-list" id="gcm-practical-info-content">
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-event-fees-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-event-fees-subtopic-header">
+                                <span>Event Fees</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-event-fees-content">Event Fees content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-venue-addresses-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-venue-addresses-subtopic-header">
+                                <span>Venue Addresses</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-venue-addresses-content">Venue Addresses content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-accommodation-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-accommodation-subtopic-header">
+                                <span>Accommodation</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-accommodation-content">Accommodation content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-travel-info-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-travel-info-subtopic-header">
+                                <span>Travel Information</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-travel-info-content">Travel Information content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-other-facilities-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-other-facilities-subtopic-header">
+                                <span>Other Facilities</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-other-facilities-content">Other Facilities content</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-contact-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-contact-header">
+                        <span>Contact</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-contact-content">Contact content</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-news-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-news-header">
+                        <span>News</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-news-content">News content</span>
+                </div> 
+                <div class="gcm-main-info-topic" id="gcm-register-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-register-header">
+                        <span>Register</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                        <div class="gcm-horizontal-line"></div>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-register-content">Register content</span>
+                </div>
             </div>
         </div>
     </body>
