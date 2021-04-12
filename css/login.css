@@ -2,6 +2,7 @@
 .gc-login-form {
     padding-top: 50px;
     padding-bottom: 30px;
+    padding-left: 5%;
     background-color: #ffffff;
     margin: 0px 20% 120px 20%;
     box-shadow:
@@ -18,12 +19,13 @@
 }
 
 .gc-form-title {
-	padding-left: 5%;
+	padding-left: 8%;
 	
 }
 
+
 .gc-registration-line {
-	margin-left: 5%;
+	margin-left: 8%;
 	margin-bottom: 35px;
 }
 
@@ -35,12 +37,34 @@
 }
 
 #login-left {
-	padding-left: 15%;
+	padding-left: 16%;
 	float: left;
-	width: 60%;
+	width: 80%;
 }
 
 #not-registered {
 	margin-top: 5px;
 	padding-left: 13%;
+	padding-top: 5px;
+}
+
+#not-registered-form a {
+	color: #1D84B5;
+	padding-left: 13%;
+	
+}
+
+
+.input-sm {
+	padding-top:15px;
+	margin-bottom: -5px;
+	height: 20px;
+}
+
+#email {
+	width: 260%;
+}
+
+#password {
+	width: 260%;
 }
