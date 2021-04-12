@@ -1,3 +1,6 @@
+.description-page {
+    display: none;
+}
 
 #gcm-description-page {
     padding: 1%;
@@ -42,3 +45,4 @@ i.gcm-subtopic-dropdown {
 .gcm-subtopic-list {
     list-style-type: none;
 }
+
