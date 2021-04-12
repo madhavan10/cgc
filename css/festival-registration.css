@@ -16,7 +16,7 @@
 
 #event-basics {
 	padding-bottom:50px;
-	font-familly:" Lato";
+	font-familly:"Lato";
 	
 }
 
@@ -67,6 +67,10 @@ legend {
 	font-size: 5px;
 }
 
+.gc-event-radio hover {
+	background-color: #000000;
+}
+
 #competition-radio-button {
 }
 
@@ -81,5 +85,13 @@ legend {
 }
 
 .question input{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 1%;
+}
+
+#register-event {
+	padding-top: -30px;
+	margin-top: -50px;
 	padding-bottom: 20px;
 }
