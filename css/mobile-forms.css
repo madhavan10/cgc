@@ -1,0 +1,30 @@
+input:focus {
+    border-color: #212834;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+textarea:invalid {
+    border: 1px solid red;
+}
+
+input[type="text"] {
+    width: 80%;
+    border-radius: 3px;
+    padding-bottom: 10px;
+}
+
+input[type="radio"] {
+    width: 10%;
+}
+
+textarea {
+    width: 50%;
+    border-radius: 3px;	
+}
+
+.question {
+    margin-top: 15px;
+}

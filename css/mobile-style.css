@@ -1,4 +1,6 @@
 @import url('mobile-description.css');
+@import url('mobile-festival-registration.css');
+@import url('mobile-forms.css');
 
 #gcm-main-navigation {
     background: #102542;
@@ -268,6 +270,22 @@ body {
     .main-info-nav-list > li.active > span:hover {
         background-color: #19273f !important;
         color: #fff;
+    }
+
+    .gc-festival-registration {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        padding-left: 5%;
+        padding-right: 1%;
+        background-color: #ffffff;
+        margin: 0px 20% 70px 20%;
+        box-shadow:
+        inset 0 7em 10em -5em rgba(255,255,255,0.6),
+        0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+        0 1em 2em -0.75em rgba(100,100,100,0.75),
+        0 1em 3em -0.5em rgba(100,100,100,0.5),
+        0 3em 3em -0.25em rgba(100,100,100,0.2);
+
     }
 }
 
