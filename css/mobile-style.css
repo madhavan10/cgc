@@ -3,6 +3,7 @@
 #gcm-main-navigation {
     background: #102542;
     height: 90px;
+    z-index: 1000;
 }
 
 #gcm-nav-items {
@@ -15,7 +16,11 @@
 
 .gcm-nav-item {
     color: #ffffff;
-    /* "justify-content: space-around" takes care of padding */
+}
+
+.gcm-nav-item a:link, .gcm-nav-item a:visited {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .gcm-submenu {
