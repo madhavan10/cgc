@@ -5,7 +5,7 @@ var main = function() {
     $(".gc-event-radio").click(function() {
         if($("#festival-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();
-            $(".gc-required-question").removeProp("required");
+            $(".gc-required-question").prop("required", false);
             $("#festival-questions").show();
             $(".f-required").prop("required", true);
             $(".pi-required").prop("required", true);
@@ -13,7 +13,7 @@ var main = function() {
         
         if($("#competition-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();   
-            $(".gc-required-question").removeProp("required");
+            $(".gc-required-question").prop("required", false);
             $("#competition-questions").show();
             $(".c-required").prop("required", true);
             $(".pi-required").prop("required", true);
@@ -21,7 +21,7 @@ var main = function() {
         
         if($("#festival-competition-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();   
-            $(".gc-required-question").removeProp("required");
+            $(".gc-required-question").prop("required", false);
             $("#festival-questions").show();
             $(".f-required").prop("required", true);
             $("#competition-questions").show();
@@ -31,7 +31,7 @@ var main = function() {
 
         if($("#workshop-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();
-            $(".gc-required-question").removeProp("required");
+            $(".gc-required-question").prop("required", false);
             $(".workshop-redundant").hide(); //the redundant question isn't req so no action needed
             $("#workshop-questions").show();
             $(".w-required").prop("required", true);
@@ -45,7 +45,7 @@ var main = function() {
     });
     $("#no-masterclasses-radio").click(function() {
         $("#festival-masterclass-questions").hide();
-        $(".mc-required").removeProp("required");
+        $(".mc-required").prop("required", false);
     });
 
     // default view, clicking once doesn't work.
