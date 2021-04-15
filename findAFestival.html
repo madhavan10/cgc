@@ -1,20 +1,23 @@
 <div class="gc-nav-separation"></div>
 
 <script src="/js/find-a-festival.js"></script>
-
+<script src="/bower_components/moment/min/moment.min.js"></script>
+<script src="/js/bs4-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <div class="gc-find-a-festival">
-	<div class= "gc-find-a-festival-container">
-	<div class= "gc-eventType-dropdown-container">
-	<div class= "gc-eventType-select">
-    <select id="gc-eventType-dropdown" onchange="selectEventType(this.value)"> 
-        <option selected disabled>Event Type</option>
-        <option>All</option>
-        <option value="festival">Festival</option>
-        <option value="competition">Competition</option>
-        <option value="workshop">Workshop/Academy</option>
-    </select>
-    </div>
-    </div>
-    <div id="gc-festival-list"></div>
+    <div class= "gc-find-a-festival-container">
+        <div class= "gc-event-filters-container">
+            <select id="gc-eventType-dropdown" onchange="selectEventType(this.value)"> 
+                <option selected disabled>Event Type</option>
+                <option value="All">All</option>
+                <option value="festival">Festival</option>
+                <option value="competition">Competition</option>
+                <option value="workshop">Workshop/Academy</option>
+            </select>
+            <select id="gcm-eventDate-dropdown" onchange="selectEventsAllOrNew(this.value)">
+                <option selected value="upcoming">Upcoming Events</option>
+                <option value="all">All Events</option>
+            </select>
+        </div>
+        <div id="gc-festival-list"></div>
     </div>
 </div>

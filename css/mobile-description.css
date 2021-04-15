@@ -46,3 +46,6 @@ i.gcm-subtopic-dropdown {
     list-style-type: none;
 }
 
+.gcm-section-toggleable-content, .gcm-subtopic-content {
+    white-space: pre-line;
+}

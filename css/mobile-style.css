@@ -1,6 +1,7 @@
 @import url('mobile-description.css');
 @import url('mobile-festival-registration.css');
 @import url('mobile-forms.css');
+@import url('mobile-find-festival-by-list.css');
 
 #gcm-main-navigation {
     background: #102542;
