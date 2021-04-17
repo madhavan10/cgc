@@ -5,11 +5,25 @@ var main = function() {
        var thisEvent = JSON.parse(window.festivals[i]._rawJSON);
        eventList.push(thisEvent);
     }
+
     //sort alphabetically
     eventList.sort(function (e1, e2) {
         return (e1.eventName).localeCompare(e2.eventName);
     });
         
+    //sort by start date
+    eventList.sort(function (e1, e2) {
+        e1StartDate = new Date(e1.startDate);
+        e2StartDate = new Date(e2.startDate);
+        if (e1StartDate < e2StartDate) {
+            return -1;
+        } else if (e2StartDate < e1StartDate) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+
     var now = new Date();
     for(var i = 0; i < eventList.length; ++i) {
         var className = "";
@@ -31,9 +45,12 @@ var main = function() {
         } else {
             className += " gc-workshop-listing ";
         }
+        
+        var startDateStr = new Date(eventList[i].startDate).toDateString().substring(4); //substr removes day of week
+        var endDateStr = new Date(eventList[i].endDate).toDateString().substring(4);
 
         className += " gc-event-listing ";
-        $("#gc-festival-list").append("<div class=\"" + className + "\"><a href=\"/festivals/" + eventList[i].eventName + "\">" + eventList[i].eventName + "</a></div>");
+        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].eventName + "\">" + eventList[i].eventName + "</a></td><td>" + startDateStr + "</td><td>" + endDateStr + "</td></tr>");
     }
     
     $(".gc-event-listing").hide();

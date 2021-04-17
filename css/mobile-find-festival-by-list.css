@@ -1,25 +1,24 @@
 
 .gc-find-a-festival-container {
     /* margin: 10px 10% 30px 10%; */
-    margin-left: 1%;
+    max-width: 95%;
+    margin: auto;
     margin-top: 15px;
 }
 
 .gc-event-filters-container {
-    /* padding: 10px 8px 10px 14px; */
+    padding: 10px 0px 10px 0px;
     display: flex;
 }
 
-#gcm-event-ends-after-container {
-    display: flex;
-    flex-direction: column;
+#gcm-FAF-table {
+    table-layout: auto;
+    border: 1px solid #102542;
+    min-width: 45%;
 }
 
-#gcm-FAF-dateTP-container {
-    width: auto;
+#gcm-FAF-table th, #gcm-FAF-table td {
+    border: 1px solid #102542;
+    text-align: center;
+    padding: 5px;
 }
-
-#gcm-FAF-dateTP {
-    width: auto;
-}
-
