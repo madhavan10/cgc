@@ -1,0 +1,9 @@
+#gcm-my-events-table {
+    table-layout: auto;
+}
+
+#gcm-my-events-table td {
+    padding: 5px;
+    border: 1px solid;
+    text-align: center;
+}

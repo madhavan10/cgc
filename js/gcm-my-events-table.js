@@ -2,10 +2,10 @@ var main = function () {
     var myEvents = [];
     var e;
     for (e of window.festivals) {
-        eParsed = JSON.parse(e._rawJSON);
-        if (eParsed.owner === window.user.email) {
-            alert(eParsed.owner);
-            //TODO
+        var owner = e._ownerEmail;
+        if (owner === window.user.email) {
+            $("#gcm-my-events-table").append("<tr class=\"gcm-my-events-listing\"><td><a href=\"/festivals/" 
+                + e._festivalName + "\">" + JSON.parse(e._rawJSON).eventName + "</a></td><td><a href=\"#\">Edit</td></tr>");
         }
     }
 };
