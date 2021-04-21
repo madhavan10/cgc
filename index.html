@@ -26,7 +26,9 @@
                 end: Date.parse(getNextDate(thisEvent.endDate)), //end-date is exclusive
                 allDay: true,
                 //temporary url
-                url: "/festivals/" + thisEvent.eventName
+                url: "/festivals/" + thisEvent.eventName,
+                backgroundColor: "#102542",
+                borderColor: "#e6c571"
             });
         }
         var calendarElt = document.getElementById("calendar");
@@ -44,6 +46,8 @@
 </script>
 
 <div id="gcm-home-page">
-    <div id="calendar"></div>
+    <div id="gcm-calendar">
+        <div id="calendar"></div>
+    </div>
 </div>
  

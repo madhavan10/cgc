@@ -1,15 +1,23 @@
+@import url('mobile-home-page.css');
 @import url('mobile-description.css');
 @import url('mobile-festival-registration.css');
 @import url('mobile-forms.css');
 @import url('mobile-find-festival-by-list.css');
 
+
 #gcm-main-navigation {
     background: #102542;
-    height: 90px;
+    height: 80px;
     z-index: 1000;
 }
 
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 #gcm-nav-items {
+    margin-top: 1rem;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +26,7 @@
 }
 
 .gcm-nav-item {
+    padding-top: 12px;
     color: #ffffff;
 }
 
@@ -36,8 +45,20 @@
     display: block;
 }
 
+.gcm-submenu-item {
+    padding-top: 12px;
+}
+
+.gcm-last-submenu-item {
+    padding-bottom: 12px;
+}
+
 #navbarSupportedContent {
     background: #102542;
+}
+
+#gcm-footer {
+    margin-top: 10px;
 }
 
 body {
@@ -47,6 +68,9 @@ body {
 @media (min-width: 1042px) {
     
     /* HEADER */
+    #gcm-main-navigation {
+        box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    }
 
     .navbar-toggler {
         display: none;
@@ -64,10 +88,11 @@ body {
     #gcm-nav-items {
         display: flex-inline;
         flex-direction: row;
+        position: relative;
     }
 
-    .gcm-nav-items {
-        position: relative;
+    .gcm-nav-item {
+        padding: 0px 0px;
     }
 
     .gcm-submenu-active .gcm-submenu {
@@ -75,7 +100,7 @@ body {
         position: absolute;
         padding-right: 2%;
     }    
-    
+
     /* DESCRIPTION PAGE */
 
     #gcm-description-page {
@@ -300,6 +325,28 @@ body {
 
     .gc-find-a-festival-container {
     }
+
+    /* HOME PAGE */
+
+    #gcm-calendar {
+        width: 70%;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 2px;
+        box-shadow:
+            inset 0 7em 10em -5em rgba(255,255,255,0.6),
+            0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+            0 1em 2em -0.75em rgba(100,100,100,0.75),
+            0 1em 3em -0.5em rgba(100,100,100,0.5),
+            0 3em 3em -0.25em rgba(100,100,100,0.2);
+    }
 }
 
+@media (min-width: 1600px) {
+    /* HOME PAGE */
+
+    #gcm-calendar {
+        width: 60%;
+    }
+}
 

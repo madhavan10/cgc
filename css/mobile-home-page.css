@@ -1,0 +1,33 @@
+
+#gcm-calendar {
+    padding: 20px 1%;
+}
+
+/* FULL CALENDAR */
+
+.fc-theme-standard td, .fc-theme-standard th {
+    border: 1px solid #102542;
+}
+
+
+.fc-theme-standard .fc-scrollgrid {
+    border: 1px solid #102542;
+}
+
+.fc th {
+    background: #e6c571;
+}
+
+.fc a:hover {
+    color: #102542;
+}
+
+.fc-col-header-cell-cushion {
+    color: #102542;
+    text-decoration: none;
+}
+
+.fc .fc-daygrid-day-number {
+    color: #102542;
+    text-decoration: none;
+}
