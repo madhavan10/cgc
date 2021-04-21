@@ -4,6 +4,7 @@ var main = function() {
 
     if(!(window.user === undefined)) {
         $('#gcm-login-link').text(window.user.firstName);
+        $('#gcm-login-link').attr('href', 'myEvents.html');
         $('#gcm-logout').show();
     }
     else {

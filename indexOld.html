@@ -1,0 +1,81 @@
+         
+       <div class="home-page">
+            <div class = "gc-slider">
+                <div class="gc-slider-navigation">
+                    <div class="glyphicon glyphicon-chevron-left" id="gc-left-slide-arrow" aria-hidden="true"></div>
+                    <div class="glyphicon glyphicon-chevron-right" id="gc-right-slide-arrow" aria-hidden="true"></div>
+                </div>
+                <div class = "gc-slide-array">
+                    <div class = "gc-slide" id="gc-slide-0">
+                        <img class = "gc-slide-img" src = "css/images/1.jpg">
+                    </div>
+                    <div class = "gc-slide" id="gc-slide-1">
+                        <img class = "gc-slide-img" src = "css/images/2.jpg">
+                    </div>
+                    <div class = "gc-slide" id="gc-slide-2">
+                        <img class = "gc-slide-img" src = "css/images/3.jpg">
+                    </div>
+		    		<div class = "gc-slide" id="gc-slide-3">
+                        <img class = "gc-slide-img" src = "css/images/4.jpg">
+                    </div>
+		    		<div class = "gc-slide" id="gc-slide-4">
+                        <img class = "gc-slide-img" src = "css/images/5.jpg">
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!--Scripts for fullcalendar-->
+            <script src="/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+            <script>
+	        $(document).ready(function() {
+                    var cgcEvents = [];
+                    
+                    //works for mm/dd/yyy string
+                    var getNextDate = function (aDateString) {
+                        var nextDate = new Date(aDateString); 
+                        nextDate.setDate(nextDate.getDate() + 1);
+                        var months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+                        var nd_month_str = months[nextDate.getMonth()];
+                        var nd_day = nextDate.getDate();
+                        var nd_day_str;
+                        if (nd_day < 10) {
+                            nd_day_str = "0" + nd_day;
+                        } else {
+                            nd_day_str = "" + nd_day;
+                        }
+                        var nd_year = nextDate.getFullYear();
+                        return nd_month_str + "/" + nd_day_str + "/" + nd_year; 
+                    };
+
+                    for(var i = 0; i < window.festivals.length; i++) {
+                        var thisEvent = JSON.parse(window.festivals[i]._rawJSON);
+                        cgcEvents.push({
+                            title: thisEvent.eventName,
+                            start: thisEvent.startDate,
+                            end: getNextDate(thisEvent.endDate), //end-date is exclusive
+                            allDay: true,
+                            url: "/festivals/" + thisEvent.eventName
+                        });
+                    }
+                    $('#calendar').fullCalendar({
+		        header: {
+			    left: 'prev,next today',
+			    center: 'title',
+			    right: '0',
+		        },
+		        
+                        //defaultDate: '2016-02-17',
+		        editable: true,
+		        eventLimit: true, // allow "more" link when too many events
+                        events: cgcEvents
+	            });
+		
+	        });
+            </script>
+            <div class="gc-calendar">
+                <div id="calendar"></div>
+            </div>
+        </div> <!--close home-page--!>
+
