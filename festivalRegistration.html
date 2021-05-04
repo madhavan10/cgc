@@ -87,7 +87,7 @@
                                 {
                                     types: ['(cities)'],
                                     language: 'en',
-                                    fields: ['place_id', 'geometry', 'name']
+                                    fields: ['place_id', 'geometry', 'name', 'address_component']
                                 });
                             autocomplete.addListener("place_changed", onPlaceChanged);
                         }
@@ -95,9 +95,13 @@
                         function onPlaceChanged() {
                             var place = autocomplete.getPlace();
                             if(!place.geometry) {
-                                document.getElementById("event-city").placeholder("Enter a place");
+                                document.getElementById("event-city").value = "";
+                                alert("Not a valid place");
                             } else {
-                                alert(place.name);
+                                for (var i = 0; i < place.address_components.length; i++) {
+                                    if (place.address_components[i].types[0] === "country")
+                                        alert(place.address_components[i].long_name);
+                                }
                             }
                         }
                     </script>
