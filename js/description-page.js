@@ -38,6 +38,16 @@ var main = function() {
         $('.fc-nav').show();
     }
     
+    if(info.masterclass === 'undefined' || info.masterclass === 'no-masterclasses-radio') {
+        $("#gcm-masterclasses-topic").hide();
+        $("#masterclasses").hide();
+    }
+
+    if(info.workshopOtherGuests === "") {
+        $("#gcm-other-guests-topic").hide();
+        $("#other-guests").hide();
+    }
+
     $('#gc-festival-name').text(info.eventName);
     $('#gcm-festival-name').text(info.eventName);
     
@@ -112,19 +122,20 @@ var main = function() {
     $('#gcm-workshop-meals-content').text(info.workshopMeals);
     $('#workshop-accommodation-content').text(info.workshopAccommodation);
     $('#gcm-workshop-accommodation-content').text(info.workshopAccommodation);
+    $('#practice-facilities-content').text(info.workshopPracticeFacilities);
     $('#gcm-practice-facilities-content').text(info.workshopPracticeFacilities);
 
 
     $('#pi-eventFees-content').text(info.eventFees);
     $('#gcm-pi-event-fees-content').text(info.eventFees);
-    $('#pi-venues-content').text(info.venueAddresses);
-    $('#gcm-pi-venue-addresses-content').text(info.venueAddresses);
-    $('#pi-accommodation-content').text(info.accommodation);
-    $('#gcm-pi-accommodation-content').text(info.accommodation);
-    $('#pi-travelInfo-content').text(info.travelInfo);
-    $('#gcm-pi-travel-info-content').text(info.travelInfo);
-    $('#pi-otherFacilities-content').text(info.otherFacilities);
-    $('#gcm-pi-other-facilities-content').text(info.otherFacilities);
+    $('#pi-venues-content').text(info.venueAddresses === "" ? "No information available" : info.venueAddresses);
+    $('#gcm-pi-venue-addresses-content').text(info.venueAddresses === "" ? "No information available" : info.venueAddresses);
+    $('#pi-accommodation-content').text(info.accommodation === "" ? "No information available" : info.accommodation);
+    $('#gcm-pi-accommodation-content').text(info.accommodation === "" ? "No information available" : info.accommodation);
+    $('#pi-travelInfo-content').text(info.travelInfo === "" ? "No information available" : info.travelInfo);
+    $('#gcm-pi-travel-info-content').text(info.travelInfo === "" ? "No information available" : info.travelInfo);
+    $('#pi-otherFacilities-content').text(info.otherFacilities === "" ? "No information available" : info.otherFacilities);
+    $('#gcm-pi-other-facilities-content').text(info.otherFacilities === "" ? "No information available" : info.otherFacilities);
     $('#contact-content').text(info.contactInformation);
     $('#gcm-contact-content').text(info.contactInformation);
     $('#register-content').text(info.howToRegister);
