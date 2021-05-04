@@ -44,6 +44,7 @@ i.gcm-subtopic-dropdown {
 
 .gcm-subtopic-list {
     list-style-type: none;
+    margin-bottom: 0px; /* override */
 }
 
 .gcm-section-toggleable-content, .gcm-subtopic-content {
