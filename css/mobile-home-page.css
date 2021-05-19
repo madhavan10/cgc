@@ -9,6 +9,18 @@
 
 /* FULL CALENDAR */
 
+
+.fc--button {
+    /* removes button between month and week buttons */
+    display: none !important;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+    /* resets border radius for month button */
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+}
+
 .fc-theme-standard td, .fc-theme-standard th {
     border: 1px solid #102542;
 }
