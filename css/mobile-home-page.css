@@ -3,6 +3,10 @@
     padding: 20px 1%;
 }
 
+#gcm-calendar-event-type-filter {
+    background: #f4faff;
+}
+
 /* FULL CALENDAR */
 
 .fc-theme-standard td, .fc-theme-standard th {
