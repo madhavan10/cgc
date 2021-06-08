@@ -23,9 +23,13 @@
     text-align: center;
 }   
 
+.navbar-brand img {
+    max-width: 80px;
+    margin-left: 20px;
+}
 
 #gcm-main-navigation {
-    background: #102542;
+    background: #031c42;
     height: 80px;
     z-index: 1000;
 }
@@ -55,14 +59,24 @@
     color: #ffffff;
 }
 
+.gcm-has-submenu {
+    cursor: pointer;
+}
+
 .gcm-submenu {
     list-style-type: none;
     display: none;
 }
 
+
 .gcm-submenu-active .gcm-submenu {
-    background: #0d1c30;
+    margin-top: 25px;
+    background: #021127;
     display: block;
+    width: 155px;
+    margin-left: -20px;
+    border-radius: 0px 0px 10px 10px;
+    
 }
 
 .gcm-submenu-item {
@@ -74,7 +88,7 @@
 }
 
 #navbarSupportedContent {
-    background: #102542;
+    background: #031c42;
 }
 
 #gcm-footer {
