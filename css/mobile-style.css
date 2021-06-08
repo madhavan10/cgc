@@ -6,7 +6,7 @@
 @import url('mobile-my-events.css');
 @import url('flex-embed.css');
 
-
+/*
 .error-message {
     font-family: "Lato";
     padding: 30px 10% 30px 10%;
@@ -15,13 +15,14 @@
     line-height: 1.5em;
     height: 3em;
     overflow: hidden;
-   }
+}
 
 .gc-error {
     margin-top: 80px;
     display:inline-block;
     text-align: center;
 }   
+*/
 
 .navbar-brand img {
     max-width: 80px;
@@ -70,13 +71,11 @@
 
 
 .gcm-submenu-active .gcm-submenu {
-    margin-top: 25px;
     background: #021127;
     display: block;
     width: 155px;
     margin-left: -20px;
-    border-radius: 0px 0px 10px 10px;
-    
+    border-radius: 8px 8px 8px 8px;
 }
 
 .gcm-submenu-item {
@@ -139,6 +138,8 @@ body {
         /* this prevents the gcm-nav-items from shifting, idk */
         position: absolute;
         padding-right: 2%;
+        border-radius: 0px 0px 8px 8px;
+        margin-top: 25px;
     }    
 
     /* DESCRIPTION PAGE */
