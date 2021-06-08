@@ -6,19 +6,77 @@
     margin-top: 15px;
 }
 
+
+#gcm-eventType-dropdown {
+    background-color: #F4FAFF;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 5% 5px 1%;
+    border: solid 4px #1D3533;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    border-radius: 8px;
+}
+
+#gcm-eventDate-dropdown {
+    background-color: #F4FAFF;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 5% 5px 1%;
+    border: solid 4px #1D3533;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    border-radius: 8px;
+}
+
 .gc-event-filters-container {
-    padding: 10px 0px 10px 0px;
+    padding: 30px 0px 30px 0px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #gcm-FAF-table {
     table-layout: auto;
-    border: 1px solid #102542;
-    min-width: 45%;
+    min-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#gcm-FAF-table th, #gcm-FAF-table td {
-    border: 1px solid #102542;
+#gcm-FAF-table th {
     text-align: center;
-    padding: 5px;
+    background-color: #102542;
+    color: #ffffff;
+}
+
+#gcm-FAF-table td {
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+    background-color: #ffffff;
+}
+
+#gcm-FAF-table td a {
+    color: #111111; 
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#gcm-FAF-table td a:hover {
+    color: #333333;
+}
+ 
+
+#gcm-FAF-body {
+
+}
+
+#gcm-left-column {
+    border-radius: 10px 0px 0px 0px;
+
+}
+
+#gcm-right-column {
+    border-radius: 0px 10px 0px 0px;
 }

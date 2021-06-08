@@ -6,7 +6,7 @@
 <div class="gc-find-a-festival">
     <div class= "gc-find-a-festival-container">
         <div class= "gc-event-filters-container">
-            <select id="gc-eventType-dropdown" onchange="selectEventType(this.value)"> 
+            <select id="gcm-eventType-dropdown" onchange="selectEventType(this.value)"> 
                 <option selected disabled>Event Type</option>
                 <option value="All">All</option>
                 <option value="festival">Festival</option>
@@ -22,9 +22,9 @@
             <table id="gcm-FAF-table">
                 <thead>
                     <tr>
-                        <th>Event</th>
-                        <th>Start</th>
-                        <th>End</th>
+                        <th id="gcm-left-column">Event</th>
+                        <th id="gcm-middle-column">Start</th>
+                        <th id="gcm-right-column">End</th>
                     </tr>
                 </thead>
                 <tbody id="gcm-FAF-tbody">

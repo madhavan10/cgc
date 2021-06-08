@@ -2,18 +2,58 @@
     display: none;
 }
 
-#gcm-description-page {
-    padding: 1%;
+#gcm-festival-name {
+    text-align: center;
+    padding: 20px 5% 10px 5%;
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: underline #E6C571 2px;
+}
+
+.gcm-festival-location {
+    font-size: 16px;
+    color: #1D3533;
+    padding-bottom: 2px;
+    margin-left: 3%;
+}
+
+#gcm-festival-date {
+    color: #254441;
+    padding-bottom: 15px;
+    margin-left: 3%;
 }
 
 .gcm-section-header {
     font-weight: 600;
     font-size: 18px;
+    background-color: #080357;
+    border-radius: 8px;
+    color: #ffffff;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    margin: 5px 0px 5px 0px;
+}
+
+#gcm-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: 300px;
 }
 
 .gcm-subtopic-header {
     font-weight: 500;
     font-size: 16px;
+    padding: 5px 0px 5px 20px;
+    border: solid 4px #1D3533;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    width: 200px; 
+    border-radius: 10px;
 }
 
 i.gcm-main-info-topic-dropdown {
@@ -35,11 +75,15 @@ i.gcm-subtopic-dropdown {
 #gcm-description-text {
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .gcm-main-info-topic {
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .gcm-subtopic-list {
@@ -49,4 +93,19 @@ i.gcm-subtopic-dropdown {
 
 .gcm-section-toggleable-content, .gcm-subtopic-content {
     white-space: pre-line;
+}
+
+/* footbar */
+.gcm-footbar {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    height: 70px;
+    background-color: #ffffff;
+    list-style-type: none;
+    border-top: 0.01px #000000 solid;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
 }
