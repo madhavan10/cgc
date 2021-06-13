@@ -2,7 +2,6 @@
 
 <div id="gcm-home-page">
     <div id="gcm-calendar">
-        <div id="calendar"></div>
         <div id="gcm-calendar-event-filter-container">
             <select id="gcm-calendar-event-type-filter" onchange="calendarSelectEventType(this.value)">
                 <option selected disabled>Event Type</option>
@@ -12,6 +11,8 @@
                 <option value="workshop">Workshop/Academy</option>
             </select>
         </div>
+        <div id="calendar"></div>
+        
     </div>
     <script id="gcm-render-calendar-script">
         var cgcEvents = [];
@@ -27,6 +28,7 @@
                 right: "dayGridMonth, dayGridWeek"
             }
         });
+        
         document.addEventListener('DOMContentLoaded', function() {
             var getNextDate = function (aDateString) {
                 var nextDate = new Date(aDateString); 
@@ -53,7 +55,7 @@
                     allDay: true,
                     //temporary url
                     url: "/festivals/" + thisEvent.eventName,
-                    backgroundColor: "#102542",
+                    backgroundColor: "#3788d8",
                     borderColor: "#e6c571"
                 };
                 cgcEvents.push(thisCalendarEvent);
@@ -70,6 +72,13 @@
             }
             calendar.addEventSource(cgcEvents);
             calendar.render();
+            if (window.matchMedia("(min-width: 1042px)").matches) {
+                calendar.setOption('aspectRatio', 1.3);
+            } else {
+                calendar.setOption('aspectRatio', 0.6);
+            }
+          
+            
         });
     </script>
     <script src="/js/gcm-calendar-event-filter.js"></script>

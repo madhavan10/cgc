@@ -13,7 +13,7 @@
     font-weight: 500;
     font-size: 16px;
     padding: 5px 5% 5px 1%;
-    border: solid 4px #1D3533;
+    border: solid 4px #031c42;
     margin-top: 10px;
     margin-bottom: 3px;
     border-radius: 8px;
@@ -25,7 +25,7 @@
     font-weight: 500;
     font-size: 16px;
     padding: 5px 5% 5px 1%;
-    border: solid 4px #1D3533;
+    border: solid 4px #031c42;
     margin-top: 10px;
     margin-bottom: 3px;
     border-radius: 8px;
@@ -47,7 +47,7 @@
 
 #gcm-FAF-table th {
     text-align: center;
-    background-color: #102542;
+    background-color: #031c42;
     color: #ffffff;
 }
 

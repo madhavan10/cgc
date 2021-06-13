@@ -17,6 +17,9 @@
         <link rel="stylesheet" href="/fullcalendar-5.6.0/lib/main.css">
         <!-- My Style Sheets -->
         <link href="/css/mobile-style.css" rel="stylesheet" type="text/css" />
+        <!-- Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     </head>
 
     <body>
@@ -26,24 +29,24 @@
         <!-- my scripts -->
         <script src="/js/gcm-header-submenu.js"></script>
         <script src="/js/gcm-check-user.js"></script>
+        <script src="/js/gcm-sidebar.js"></script>
         
         <nav class="navbar navbar-dark" id="gcm-main-navigation">
             <!-- copy-pasted from example on bootstrap -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html"><img src="/css/images/Logo-CGC-New5.png"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" id="gcm-nav-toggle-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul id="gcm-nav-items">
-                        <li class="gcm-nav-item"><a href="/index.html">HOME</a></li>
+                        <li class="gcm-nav-item"><a id="gcm-nav-home" href="/index.html">HOME</a></li>
                         <li class="gcm-nav-item gcm-has-submenu">
-                            <span>FIND FESTIVAL</span>
+                            <div id="gcm-nav-faf">
+                            <span id="gcm-nav-faf">FIND FESTIVAL</span>
                             <i class="bi bi-chevron-compact-down"></i>
+                            </div>
                             <ul class="gcm-submenu">
-                                <li class="gcm-submenu-item"><a href="/findAFestival.html">LIST</a></li>
-                                <li class="gcm-submenu-item">CALENDAR</li>
-                                <li class="gcm-submenu-item gcm-last-submenu-item">MAP</li>
+                                <li class="gcm-submenu-item"><a id="gcm-nav-list" href="/findAFestival.html">LIST</a></li>
+                                <li class="gcm-submenu-item"><a id="gcm-nav-calendar" href="/index.html">CALENDAR</a></li>
+                                <li class="gcm-submenu-item gcm-last-submenu-item"><a id="gcm-nav-map" href="/map.html">MAP</a></li>
                             </ul>
                         </li>
                         <li class="gcm-nav-item"><a id="gcm-list-your-own-link" href="/festivalRegistration.html">LIST YOUR OWN</a></li>

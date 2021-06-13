@@ -1,10 +1,33 @@
 
+
+
 #gcm-calendar {
-    padding: 20px 1%;
+    padding: 20px 3%;
+}
+
+.fc-day-today {
+    background-color: #f4faff !important;
+}
+
+#calendar {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid;
+    border-color: #031c42;
 }
 
 #gcm-calendar-event-type-filter {
-    background: #f4faff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 0px 5px 20px;
+    border: solid 4px #1D3533;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 200px; 
+    border-radius: 10px;
+    background-color: #f4faff;
 }
 
 /* FULL CALENDAR */
@@ -22,28 +45,45 @@
 }
 
 .fc-theme-standard td, .fc-theme-standard th {
-    border: 1px solid #102542;
+    border: 1px solid #D6D6D6;
 }
 
 
 .fc-theme-standard .fc-scrollgrid {
-    border: 1px solid #102542;
+    border: 1px solid #D6D6D6;
 }
 
 .fc th {
-    background: #e6c571;
+    background: #ffffff;
 }
 
 .fc a:hover {
-    color: #102542;
+    color: #063275;
 }
 
 .fc-col-header-cell-cushion {
-    color: #102542;
+    color: #031c42;
     text-decoration: none;
 }
 
 .fc .fc-daygrid-day-number {
-    color: #102542;
+    color: #031c42;
     text-decoration: none;
+}
+
+@media (min-width: 1042px) {
+    #gcm-calendar {
+        background-color: #ffffff;
+    }
+    #calendar {
+        background-color: #ffffff;
+        padding: 12px;
+        border: 0px;
+    }
+    .fc-toolbar-title h2 {
+        font-size: 5px;
+    }
+    #gcm-calendar-event-type-filter {
+        background-color: #ffffff;
+    
 }

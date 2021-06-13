@@ -25,13 +25,13 @@
 */
 
 .navbar-brand img {
-    max-width: 80px;
-    margin-left: 20px;
+    max-width: 45px;
+    margin-left: 6px;
 }
 
 #gcm-main-navigation {
     background: #031c42;
-    height: 80px;
+    height: 55px;
     z-index: 1000;
 }
 
@@ -42,7 +42,7 @@
 }
 
 #gcm-nav-items {
-    margin-top: 1rem;
+    margin-top: 5px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -52,12 +52,21 @@
 
 .gcm-nav-item {
     padding-top: 12px;
+    color: #ebf6ff;
+}
+
+
+#gcm-nav-home:hover, #gcm-nav-faf:hover, #gcm-nav-list:hover, #gcm-nav-map:hover, #gcm-nav-calendar:hover {
+    color: #ffffff;
+}
+
+#gcm-list-your-own-link:hover, #gcm-login-link:hover, gcm-logout:hover {
     color: #ffffff;
 }
 
 .gcm-nav-item a:link, .gcm-nav-item a:visited {
     text-decoration: none;
-    color: #ffffff;
+    color: #ebf6ff;
 }
 
 .gcm-has-submenu {
@@ -74,6 +83,7 @@
     background: #021127;
     display: block;
     width: 155px;
+    margin-top: -100px;
     margin-left: -20px;
     border-radius: 8px 8px 8px 8px;
 }
@@ -91,17 +101,157 @@
 }
 
 #gcm-footer {
-    margin-top: 10px;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    background: #031c42;
+    display: flex;
+    overflow-x: auto;
+    z-index: 2;
 }
 
-.gcm-responsive-footer {
-    height: 100px;
-    background-color: #000000;
+.gcm-nav-low {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    letter-spacing: .07rem;
+    font-size: 13px;
+    color: #C8C4D4;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
     
 }
 
+#gcm-menu {
+    cursor: pointer;
+}
+
+
+.gcm-nav-low:hover {
+    color: #ffffff;
+}
+
+.gcm-nav-low-active {
+    color: #ffffff;
+}
+
+.gcm-nav-low-icon {
+    font-size: 15px;
+}
+
+/* The side navigation menu */
+#gcm-sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1; 
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 22em;
+  padding-bottom: 70px; 
+  transition: 0.5s;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* The navigation menu links */
+#gcm-sidenav a {
+  padding: 10px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #031c42;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+#gcm-sidenav a:hover {
+  color: #888888;
+}
+
+/* Position and style the close button (top right corner) */
+#gcm-sidenav .gcm-closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  #gcm-sidenav a {font-size: 14px;}
+}
+
+@media screen and (min-height: 450px) and (max-height: 570px) {
+    #gcm-sidenav {
+        padding-top: 17em;
+    }
+    #gcm-sidenav a {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-height: 660px) and (max-height: 770px) {
+    #gcm-sidenav {
+        padding-top: 24em;
+    }
+    #gcm-sidenav a {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-height: 770px) and (max-height: 830px) {
+    #gcm-sidenav {
+        padding-top: 30em;
+    }
+    #gcm-sidenav a {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (min-height: 830px) {
+    #gcm-sidenav {
+        padding-top: 33em;
+    }
+    #gcm-sidenav a {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-height: 910px) {
+    #gcm-sidenav {
+        padding-top: 36em;
+    }
+    #gcm-sidenav a {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (min-height: 1100px) {
+    #gcm-sidenav {
+        padding-top: 42em;
+    }
+    #gcm-sidenav a {
+        padding-top: 60px;
+    }
+}
+
+
 body {
     background-color: #f4faff;
+    margin: 0px 0px 55px 0px;
 }
 
 @media (min-width: 1042px) {
@@ -114,6 +264,10 @@ body {
     .navbar-toggler {
         display: none;
     }
+    
+    .navbar-brand {
+        margin-top: -6px;
+    }
 
     #navbarSupportedContent {
         display: inline;
@@ -123,6 +277,11 @@ body {
         /*overrides flex-basis: 100% which causes nav-items to come below logo */
         flex-basis: auto;
     }
+    
+    .navbar-brand img {
+        max-width: 55px;
+        margin-left: 10px;
+}
 
     #gcm-nav-items {
         display: flex-inline;
@@ -139,8 +298,14 @@ body {
         position: absolute;
         padding-right: 2%;
         border-radius: 0px 0px 8px 8px;
-        margin-top: 25px;
-    }    
+        margin-top: 18px;
+    } 
+    
+    /* MOBILE FOOTER */
+   
+    #gcm-footer {
+        display: none;
+    }   
 
     /* DESCRIPTION PAGE */
 
@@ -340,7 +505,7 @@ body {
     .main-info-nav-list > li.active > span,
     .main-info-nav-list > li.active > span:focus,
     .main-info-nav-list > li.active > span:hover {
-        background-color: #19273f !important;
+        background-color: #031c42 !important;
         color: #fff;
     }
     
@@ -387,7 +552,9 @@ body {
 
 @media (min-width: 1600px) {
     /* HOME PAGE */
-
+    #gcm-footer {
+        display: none;
+    }
     #gcm-calendar {
         width: 60%;
     }
