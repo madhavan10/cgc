@@ -1,6 +1,5 @@
-         
         <div class="gc-nav-separation"></div>
-
+        
         <div class="gc-festival-registration">
             <script src="/bower_components/moment/min/moment.min.js"></script>
             <script src="/js/bs4-datetimepicker/bootstrap-datetimepicker.min.js"></script>
@@ -79,6 +78,35 @@
                         <br/>
                         <input type="text" id="event-city" name="eventCity" required/>
                     </div>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
+                    <script>
+                        let autocomplete;
+                        let place;
+                        function initAutocomplete() {
+                            autocomplete = new google.maps.places.Autocomplete(document.getElementById("event-city"),
+                                {
+                                    types: ['(cities)'],
+                                    language: 'en',
+                                    fields: ['place_id', 'geometry', 'name', 'address_component']
+                                });
+                            autocomplete.addListener("place_changed", onPlaceChanged);
+                        }
+                        
+                        function onPlaceChanged() {
+                            place = autocomplete.getPlace();
+                            if(!place.geometry) {
+                                document.getElementById("event-city").value = "";
+                                alert("Not a valid place");
+                            } else {
+                                for (var i = 0; i < place.address_components.length; i++) {
+                                    if (place.address_components[i].types[0] === "country")
+                                        alert(place.address_components[i].long_name);
+                                }
+                            }
+                        }
+                    </script>
+
 
                     <div class="question">
                         <label for="event-description">Give a brief description of your event.</label>
