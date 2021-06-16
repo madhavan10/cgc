@@ -82,6 +82,7 @@
                     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
                     <script>
                         let autocomplete;
+                        let place;
                         function initAutocomplete() {
                             autocomplete = new google.maps.places.Autocomplete(document.getElementById("event-city"),
                                 {
@@ -93,7 +94,7 @@
                         }
                         
                         function onPlaceChanged() {
-                            var place = autocomplete.getPlace();
+                            place = autocomplete.getPlace();
                             if(!place.geometry) {
                                 document.getElementById("event-city").value = "";
                                 alert("Not a valid place");
