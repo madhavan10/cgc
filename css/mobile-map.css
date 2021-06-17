@@ -1,4 +1,15 @@
-#gcm-map {
-    height: 500px;
+#gcm-map-page {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+#gcm-map {
+    margin-top: 10px;
+    height: 500px;
+    border: 1px solid #031c42;
+}
+
+#gcm-map-filters-container {
+    display: flex;
+    margin-top: 10px;
+}

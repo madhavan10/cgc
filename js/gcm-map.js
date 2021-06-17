@@ -9,9 +9,17 @@ function initMap() {
     });
 
 
-    for (var i = 0; i < 2 /* window.festivals.length */; i++) {
+    for (var i = 0; i < window.festivals.length; i++) {
         var thisEvent = JSON.parse(window.festivals[i]._rawJSON);
-        var thisEventPos = thisEvent.eventLocation.geometry.location;
+        var thisEventPos; 
+        if (
+            thisEvent.eventLocation && thisEvent.eventLocation.geometry &&
+            thisEvent.eventLocation.geometry.location
+        ) {
+            thisEventPos = thisEvent.eventLocation.geometry.location;
+        } else {
+            continue;
+        }
         var thisEventCountry = "";
         for (var component of thisEvent.eventLocation.address_components) {
             if (component.types[0] === "country") {
@@ -49,4 +57,54 @@ function initMap() {
             this['infoWindow'].open(map, this);
         });
     }
+
+    selectMapEventsAllOrNew("upcoming");
 }
+
+var selectMapEventsAllOrNew = function (value) {
+    if (value === "upcoming") {
+        var now = new Date();
+        for (var marker of markers) {
+            if (new Date(marker['endDate']) < now) {
+                marker['infoWindow'].close();
+                marker.setMap(null);
+            }
+        }
+    } else if (value === "all") {
+        for (var marker of markers) {
+            marker.setMap(map);
+        }
+    }
+};
+
+var selectMapEventType = function (value) {
+    
+    for (var marker of markers) {
+        marker.setMap(map);
+    }
+
+    if (value === "festival") {
+        for (var marker of markers) {
+            if (marker['eventType'] !== "festival-radio-button" && 
+                marker['eventType'] !== "festival-competition-radio-button") {
+                marker['infoWindow'].close();
+                marker.setMap(null);
+            }
+        }
+    } else if (value === "competition") {
+        for (var marker of markers) {
+            if (marker['eventType'] !== "competition-radio-button" &&
+                marker['eventType'] !== "festival-competition-radio-button") {
+                marker['infoWindow'].close();
+                marker.setMap(null);
+            }
+        }
+    } else if (value === "workshop") {
+        for (var marker of markers) {
+            if (marker['eventType'] !== "workshop-radio-button") {
+                marker['infoWindow'].close();
+                marker.setMap(null);
+            }
+        }
+    }
+};

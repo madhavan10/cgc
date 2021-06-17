@@ -4,4 +4,17 @@
     <div id="gcm-map">
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&callback=initMap&libraries=places&v=weekly" async></script>
+    <div id="gcm-map-filters-container">
+        <select id="gcm-map-eventType-dropdown" onchange="selectMapEventType(this.value)"> 
+            <option selected disabled>Event Type</option>
+            <option value="All">All</option>
+            <option value="festival">Festival</option>
+            <option value="competition">Competition</option>
+            <option value="workshop">Workshop/Academy</option>
+        </select>
+        <select id="gcm-map-eventDate-dropdown" onchange="selectMapEventsAllOrNew(this.value)">
+            <option selected value="upcoming">Upcoming Events</option>
+            <option value="all">All Events</option>
+        </select>
+    </div>
 </div>
