@@ -27,7 +27,7 @@
 
 .navbar-brand img {
     max-width: 45px;
-    margin-left: 6px;
+    margin-left: 25%;
 }
 
 #gcm-main-navigation {
@@ -281,7 +281,7 @@ body {
     
     .navbar-brand img {
         max-width: 55px;
-        margin-left: 10px;
+        margin-left: 35%;
 }
 
     #gcm-nav-items {
