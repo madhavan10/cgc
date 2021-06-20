@@ -80,3 +80,12 @@
 #gcm-right-column {
     border-radius: 0px 10px 0px 0px;
 }
+
+#gcm-table-end {
+    max-width: 80%;
+    margin: auto;
+    background-color: #ffffff;
+    height: 20px;
+    border-radius: 0px 0px 15px 15px;
+    
+}

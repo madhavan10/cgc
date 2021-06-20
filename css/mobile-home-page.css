@@ -1,25 +1,28 @@
 
+.container-margin {
+  margin-left: 3%;
+}
 
 .container {
   width: 300px;
-  text-align: left;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /*Styling Selectbox*/
 .dropdown {
   width: 200px;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: 0 0 2px rgb(204, 204, 204);
   transition: all .1s ease;
   position: relative;
   height: 100%;
-  text-align: left;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   background-color: #031c42;
   color: #ffffff;
-
+  text-align: center;
 }
 .dropdown .select {
     cursor: pointer;
@@ -32,7 +35,8 @@
     cursor: pointer;
     transition: all .1s ease-in-out;
     float: right;
-    line-height: 20px
+    line-height: 20px;
+    
 }
 .dropdown:hover {
     box-shadow: 0 0 4px rgb(204, 204, 204);
@@ -64,6 +68,7 @@
     overflow-y: auto;
     z-index: 9;
     color: #ffffff;
+    text-align: center;
 }
 .dropdown .dropdown-menu li {
     padding: 10px;
@@ -86,14 +91,7 @@
     padding: 20px 3%;
 }
 
-.fc-day-today {
-    background-color: #f4faff !important;
-}
 
-.fc-toolbar-title {
-        font-size: 20px !important;
-        margin-top: -20px;
-    }
 
 #calendar {
     background-color: #ffffff;
@@ -118,6 +116,13 @@
 
 /* FULL CALENDAR */
 
+.fc-day-today {
+    background-color: #f4faff !important;
+}
+
+.fc-toolbar-title {
+        font-size: 20px !important;
+    }
 
 .fc--button {
     /* removes button between month and week buttons */
@@ -136,10 +141,51 @@
     background-color: #052A61 !important;
 }
 
+.fc-prev-button {
+    margin-bottom: 2px !important;
+}
+
 .fc-next-button {
     margin-left: 1px !important;
     border-radius: 4px !important;
+    margin-bottom: 2px !important;
+}
+
+.fc-dayGridMonth-button {
+    margin-bottom: 2px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.fc-dayGridWeek-button {
+    margin-bottom: 2px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.fc-toolbar-chunk {
     
+    text-align: center !important;
+}
+
+.fc-today-button {
+    text-align: center !important;
+    display: center;
+}
+.fc-button-primary {
+    text-align: center !important;
+    display: center;
+}
+
+.fc-button {
+    text-align: center !important;
+    display: center;
+}
+
+.fc-today-button {
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+    margin-bottom: 1px !important;
 }
 
 .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
@@ -175,7 +221,22 @@
     text-decoration: none;
 }
 
+@media (max-width: 451px) {
+    .fc-button-primary {
+        margin-left: 0 !important;} 
+}
+
 @media (min-width: 1042px) {
+    .container-margin {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .container {
+        width: 300px;
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
     #gcm-calendar {
         background-color: #ffffff;
     }
@@ -186,8 +247,17 @@
     }
     .fc-toolbar-title {
         font-size: 40px !important;
+        margin-top: -78px !important;
+    }
+    .fc-dayGridMonth-button {
+        margin-top: -72px !important;
+        margin-bottom: 37px !important;       
+    }
+
+    .fc-dayGridWeek-button {
+        margin-top: -107px !important;
     }
     #gcm-calendar-event-type-filter {
         background-color: #ffffff;
-    
+    }
 }
