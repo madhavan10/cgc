@@ -1,5 +1,86 @@
 
 
+.container {
+  width: 300px;
+  text-align: left;
+}
+
+/*Styling Selectbox*/
+.dropdown {
+  width: 200px;
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all .1s ease;
+  position: relative;
+  height: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #031c42;
+  color: #ffffff;
+
+}
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+.dropdown .select > i {
+    font-size: 13px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+.dropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    background-color: #052A61;
+}
+.dropdown:active {
+    background-color: #031c42;
+}
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #052A61;
+}
+.dropdown.active .select > i {
+    transform: rotate(-90deg)
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #031c42;
+    width: 100%;
+    left: 0;
+    margin-top: 0px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 0px 5px 5px;
+    overflow: hidden;
+    display: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 9;
+    color: #ffffff;
+}
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .1s ease-in-out;
+    cursor: pointer
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+    background-color: #052A61;
+}
+.dropdown .dropdown-menu li:active {
+    background-color: #052A61;
+}
+
 
 #gcm-calendar {
     padding: 20px 3%;
@@ -41,6 +122,24 @@
 .fc--button {
     /* removes button between month and week buttons */
     display: none !important;
+}
+
+.fc .fc-button-primary {
+    background-color: #031c42;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #052A61;
+}
+
+.fc .fc-button-active {
+    background-color: #052A61 !important;
+}
+
+.fc-next-button {
+    margin-left: 1px !important;
+    border-radius: 4px !important;
+    
 }
 
 .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
