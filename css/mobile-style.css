@@ -6,6 +6,7 @@
 @import url('mobile-my-events.css');
 @import url('mobile-map.css');
 @import url('flex-embed.css');
+@import url('mobile-aboutus.css');
 
 /*
 .error-message {
@@ -124,12 +125,17 @@
     white-space: nowrap;
     font-family: sans-serif;
     letter-spacing: .07rem;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 500;
     color: #C8C4D4;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     transition: background-color 0.1s ease-in-out;
     
+}
+
+#gcm-footer i {
+    font-size: 22px;
 }
 
 #gcm-menu {
@@ -161,7 +167,7 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 22em;
   padding-bottom: 70px; 
-  transition: 0.5s;
+  transition: 0.4s ease-in-out;
   box-shadow: 0 0 2px rgba(0,0,0,0.5);
   text-align: center;
 }
@@ -173,7 +179,9 @@
   font-size: 16px;
   color: #031c42;
   display: block;
+  overflow: none;
   transition: 0.3s;
+  width: 180px;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -181,14 +189,6 @@
   color: #888888;
 }
 
-/* Position and style the close button (top right corner) */
-#gcm-sidenav .gcm-closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
 
 
 @media screen and (max-height: 450px) {

@@ -1,0 +1,63 @@
+#gcm-aboutus-container {
+    padding-bottom: 30px; 
+    background: rgba(255,255,255, 1);
+    margin: 50px 10% 100px 10%;
+    box-shadow:
+    inset 0 7em 10em -5em rgba(255,255,255,0.6),
+    0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+    0 1em 2em -0.75em rgba(100,100,100,0.75),
+    0 1em 3em -0.5em rgba(100,100,100,0.5),
+    0 3em 3em -0.25em rgba(100,100,100,0.2);   
+}
+#gcm-aboutus-title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    
+}
+#gcm-aboutus-images {
+    text-align: center;
+    display: block;
+    overflow: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#gcm-aboutus-images img {
+    margin-top: 20px;
+    width: 22%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+#gcm-aboutus-text {
+    margin-left: 6%;
+    margin-right: 6%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+@media (max-width: 1042px) {
+    #gcm-aboutus-container {
+        box-shadow: none;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    #gcm-aboutus-images img {
+        width: 30%;
+    }
+    #gcm-aboutus-title {
+        background-color: #031c42;
+        color: #fff;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    #gcm-aboutus-title h2 {
+        font-size: 20px;
+    }
+}

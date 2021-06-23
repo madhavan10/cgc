@@ -18,7 +18,7 @@
   transition: all .1s ease;
   position: relative;
   height: 100%;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 16px;
   background-color: #031c42;
   color: #ffffff;
@@ -155,12 +155,14 @@
     margin-bottom: 2px !important;
     padding-top: 8px !important;
     padding-bottom: 8px !important;
+    font-weight: bold !important;
 }
 
 .fc-dayGridWeek-button {
     margin-bottom: 2px !important;
     padding-top: 8px !important;
     padding-bottom: 8px !important;
+    font-weight: bold !important;
 }
 
 .fc-toolbar-chunk {
@@ -186,6 +188,7 @@
     padding-top: 8px !important;
     padding-bottom: 7px !important;
     margin-bottom: 1px !important;
+    font-weight: bold !important;
 }
 
 .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
