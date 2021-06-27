@@ -102,8 +102,11 @@ function submitFestivalRegistrationForm() {
         eventName : $('#event-name').val(),
         startDate : $('#datetimepicker1')[0].children[0].value,
         endDate : $('#datetimepicker2')[0].children[0].value,
+        /* Simply using eventLocation
         eventCountry : $('#event-country').val(),
         eventCity : $('#event-city').val(),
+        */
+        eventLocation: place, //from place-autocomplete script
         eventDescription : $('#event-description').val(),
         schedule : $('#schedule').val(),
 
