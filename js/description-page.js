@@ -51,11 +51,20 @@ var main = function() {
     $('#gc-festival-name').text(info.eventName);
     $('#gcm-festival-name').text(info.eventName);
     
+    //deprecated
     $('#town').text(info.eventCity);
     $('#gcm-town').text(info.eventCity);
-    
     $('#country').text(info.eventCountry);
     $('#gcm-country').text(info.eventCountry);
+    
+    //current
+    if (info.eventLocation) {
+        $('#town').text(info.eventLocation.name);
+        $('#gcm-town').text(info.eventLocation.name);
+        var country = getCountryFromPlace(info.eventLocation);
+        $('#country').text(country);
+        $('#gcm-country').text(country);
+    }
     
     var monthNames = ["January", "February", "March", "April", "May", "June", 
         "July", "August", "September", "October", "November", "December"];
