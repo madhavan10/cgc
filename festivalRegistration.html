@@ -1,6 +1,5 @@
-         
         <div class="gc-nav-separation"></div>
-
+        
         <div class="gc-festival-registration">
             <script src="/bower_components/moment/min/moment.min.js"></script>
             <script src="/js/bs4-datetimepicker/bootstrap-datetimepicker.min.js"></script>
@@ -56,8 +55,21 @@
                     
                     <script type="text/javascript">
                         $(function () {
-                            $('#gc-dateTP1-input').datetimepicker({format: 'MM/DD/YYYY'});
-                            $('#gc-dateTP2-input').datetimepicker({format: 'MM/DD/YYYY', useCurrent: false});
+                            $('#gc-dateTP1-input').datetimepicker({
+                                format: 'MM/DD/YYYY',
+                                icons: {
+                                    previous: 'fas fa-chevron-left',
+                                    next: 'fas fa-chevron-right'
+                                }
+                            });
+                            $('#gc-dateTP2-input').datetimepicker({
+                                format: 'MM/DD/YYYY', 
+                                useCurrent: false,
+                                icons: {
+                                    previous: 'fas fa-chevron-left',
+                                    next: 'fas fa-chevron-right'
+                                }
+                            });
                             
                             $("#gc-dateTP1-input").on("dp.change", function (e) {
                                 $('#gc-dateTP2-input').data("DateTimePicker").minDate(e.date);
@@ -67,18 +79,44 @@
                             });
                         });
                     </script>
-                        
+                    
+                    <!-- not needed
                     <div class="question">
                         <label for="event-country">What country does your event take place in?</label>
                         <br/>
                         <input type="text" id="event-country" name="eventCountry" required/>
                     </div>
+                    -->
 
                     <div class="question">
                         <label for="event-city">What city does your event take place in?</label>
                         <br/>
                         <input type="text" id="event-city" name="eventCity" required/>
                     </div>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&libraries=places&callback=initAutocomplete" async defer></script>
+                    <script>
+                        let autocomplete;
+                        let place;
+                        function initAutocomplete() {
+                            autocomplete = new google.maps.places.Autocomplete(document.getElementById("event-city"),
+                                {
+                                    types: ['(cities)'],
+                                    language: 'en',
+                                    fields: ['place_id', 'geometry', 'name', 'address_component']
+                                });
+                            autocomplete.addListener("place_changed", onPlaceChanged);
+                        }
+                        
+                        function onPlaceChanged() {
+                            place = autocomplete.getPlace();
+                            if(!place.geometry) {
+                                document.getElementById("event-city").value = "";
+                                alert("Not a valid place");
+                            }
+                        }
+                    </script>
+
 
                     <div class="question">
                         <label for="event-description">Give a brief description of your event.</label>

@@ -62,6 +62,68 @@ var main = function() {
         e.classList.add("gcm-eventType-active");
     }
     $(".gcm-eventType-active.gcm-eventDate-active").show();
+    
+    //Event Type filter
+    $("#gcm-event-type-all-option").click(function () {
+        for (var e of $(".gc-event-listing")) {
+            e.classList.add("gcm-eventType-active");
+        }
+        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    });
+
+    $('#gcm-event-type-festival-option').click(function () {
+        $(".gc-event-listing").hide();
+        for (var e of $(".gc-event-listing")) {
+            e.classList.remove("gcm-eventType-active");
+        }
+        for (var e of $(".gc-festival-listing")) {
+            e.classList.add("gcm-eventType-active");
+        }
+        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    });
+
+    $('#gcm-event-type-competition-option').click(function () {
+        $(".gc-event-listing").hide();
+        for (var e of $(".gc-event-listing")) {
+            e.classList.remove("gcm-eventType-active");
+        }
+        for (var e of $(".gc-competition-listing")) {
+            e.classList.add("gcm-eventType-active");
+        }
+        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    });
+    
+    $('#gcm-event-type-workshop-option').click(function () {
+        $(".gc-event-listing").hide();
+        for (var e of $(".gc-event-listing")) {
+            e.classList.remove("gcm-eventType-active");
+        }
+        for (var e of $(".gc-workshop-listing")) {
+            e.classList.add("gcm-eventType-active");
+        }
+        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    });
+
+    //All or New Events Filter
+    $("#gcm-all-events-temporal-option").click(function () {
+        for (var e of $(".gc-event-listing")) {
+            e.classList.add("gcm-eventDate-active")
+        };
+        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    });
+
+    $("#gcm-upcoming-events-option").click(function () {
+        $(".gc-event-listing").hide();
+        for (var e of $(".gc-event-listing")) {
+            e.classList.remove("gcm-eventDate-active");
+        }
+        for (var e of $(".gcm-upcoming-listing")) {
+            e.classList.add("gcm-eventDate-active")
+        };
+        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    });
+
+
 };
 
 var selectEventType = function(value) {
@@ -91,6 +153,8 @@ var selectEventType = function(value) {
     }
     $(".gcm-eventType-active.gcm-eventDate-active").show();
 };
+
+
 
 var selectEventsAllOrNew = function (value) {
     $(".gc-event-listing").hide();
