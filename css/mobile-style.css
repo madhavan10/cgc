@@ -57,18 +57,17 @@
     color: #ebf6ff;
 }
 
-
-#gcm-nav-home:hover, #gcm-nav-faf:hover, #gcm-nav-list:hover, #gcm-nav-map:hover, #gcm-nav-calendar:hover {
-    color: #ffffff;
-}
-
-#gcm-list-your-own-link:hover, #gcm-login-link:hover, gcm-logout:hover {
-    color: #ffffff;
-}
-
 .gcm-nav-item a:link, .gcm-nav-item a:visited {
     text-decoration: none;
     color: #ebf6ff;
+}
+
+.gcm-nav-item a:hover {
+    color: #fff;
+}
+
+.gcm-nav-item:hover {
+    color: #fff;
 }
 
 .gcm-has-submenu {
