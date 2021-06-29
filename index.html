@@ -71,6 +71,7 @@
             //getting events
             for(var i = 0; i < window.festivals.length; i++) {
                 var thisEvent = JSON.parse(window.festivals[i]._rawJSON);
+                var thisEventType;
                 var thisCalendarEvent = {
                     title: thisEvent.eventName,
                     start: Date.parse(thisEvent.startDate),
@@ -78,19 +79,27 @@
                     allDay: true,
                     //temporary url
                     url: "/festivals/" + thisEvent.eventName,
-                    backgroundColor: "#3788d8",
-                    borderColor: "#e6c571"
+                    backgroundColor: "#031C42",
+                    borderColor: "#ffffff"
                 };
                 cgcEvents.push(thisCalendarEvent);
                 if (thisEvent.radio_button === "festival-radio-button") {
                     cgcFestivals.push(thisCalendarEvent);
+                    thisCalendarEvent.backgroundColor = "#031C42";
+                    thisCalendarEvent.borderColor = "#031C42";
                 } else if (thisEvent.radio_button === "festival-competition-radio-button") {
                     cgcFestivals.push(thisCalendarEvent);
                     cgcCompetitions.push(thisCalendarEvent);
+                    thisCalendarEvent.backgroundColor = "#3A4772";
+                    thisCalendarEvent.borderColor = "#3A4772";
                 } else if (thisEvent.radio_button === "competition-radio-button") {
                     cgcCompetitions.push(thisCalendarEvent);
+                    thisCalendarEvent.backgroundColor = "#A82428";
+                    thisCalendarEvent.borderColor = "#A82428";
                 } else if (thisEvent.radio_button === "workshop-radio-button") {
                     cgcWorkshops.push(thisCalendarEvent);
+                    thisCalendarEvent.backgroundColor = "#38807C";
+                    thisCalendarEvent.borderColor = "#38807C";
                 }
             }
             calendar.addEventSource(cgcEvents);
