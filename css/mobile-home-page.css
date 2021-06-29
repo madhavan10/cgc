@@ -30,12 +30,12 @@
     padding: 10px
 }
 .dropdown .select > i {
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
     cursor: pointer;
     transition: all .1s ease-in-out;
     float: right;
-    line-height: 20px;
+    line-height: 25px;
     
 }
 .dropdown:hover {
@@ -230,6 +230,43 @@
 }
 
 @media (min-width: 1042px) {
+    .container-margin {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .container {
+        width: 300px;
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    #gcm-calendar {
+        background-color: #ffffff;
+    }
+    #calendar {
+        background-color: #ffffff;
+        padding: 12px;
+        border: 0px;
+    }
+    .fc-toolbar-title {
+        font-size: 25px !important;
+        margin-top: -72px !important;
+        margin-left: 25px !important;
+    }
+    .fc-dayGridMonth-button {
+        margin-top: -72px !important;
+        margin-bottom: 37px !important;       
+    }
+
+    .fc-dayGridWeek-button {
+        margin-top: -107px !important;
+    }
+    #gcm-calendar-event-type-filter {
+        background-color: #ffffff;
+    }
+}
+
+@media (min-width: 1150px) {
     .container-margin {
         margin-top: 30px;
         margin-left: 0;
