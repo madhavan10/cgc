@@ -48,9 +48,14 @@ var main = function() {
         
         var startDateStr = new Date(eventList[i].startDate).toDateString().substring(4); //substr removes day of week
         var endDateStr = new Date(eventList[i].endDate).toDateString().substring(4);
+        var loc = "N/A";
+        if (eventList[i].eventLocation) {
+            loc = eventList[i].eventLocation.name + ", " + getCountryFromPlace(eventList[i].eventLocation);
+        }
 
         className += " gc-event-listing ";
-        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].eventName + "\">" + eventList[i].eventName + "</a></td><td>" + startDateStr + "</td><td>" + endDateStr + "</td></tr>");
+        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].eventName + "\">" 
+            + eventList[i].eventName + "</a></td><td>" + startDateStr + "</td><td>" + endDateStr + "</td><td>" + loc + "</td></tr>");
     }
     
     $(".gc-event-listing").hide();
@@ -63,67 +68,15 @@ var main = function() {
     }
     $(".gcm-eventType-active.gcm-eventDate-active").show();
     
-    //Event Type filter
-    $("#gcm-event-type-all-option").click(function () {
-        for (var e of $(".gc-event-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    //Event Type filter 
+    $(".gcm-faf-eventType-option").click(function () {
+        selectEventType($(this).attr("value"));
     });
 
-    $('#gcm-event-type-festival-option').click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventType-active");
-        }
-        for (var e of $(".gc-festival-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    //All or New Events Filter    
+    $(".gcm-faf-eventTemporality-option").click(function () {
+        selectEventsAllOrNew($(this).attr("value"));
     });
-
-    $('#gcm-event-type-competition-option').click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventType-active");
-        }
-        for (var e of $(".gc-competition-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-    
-    $('#gcm-event-type-workshop-option').click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventType-active");
-        }
-        for (var e of $(".gc-workshop-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-
-    //All or New Events Filter
-    $("#gcm-all-events-temporal-option").click(function () {
-        for (var e of $(".gc-event-listing")) {
-            e.classList.add("gcm-eventDate-active")
-        };
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-
-    $("#gcm-upcoming-events-option").click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventDate-active");
-        }
-        for (var e of $(".gcm-upcoming-listing")) {
-            e.classList.add("gcm-eventDate-active")
-        };
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-
-
 };
 
 var selectEventType = function(value) {

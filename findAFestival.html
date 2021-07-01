@@ -11,12 +11,12 @@
                     <span>Event Type</span>
                     <i class="bi bi-chevron-left"></i>
                 </div>
-                <input type="hidden">
+                <input type="hidden" onchange="selectEventType(this.value)">
                     <ul class="dropdown-menu">
-                        <li id="gcm-event-type-all-option" value="all">All</li>
-                        <li id="gcm-event-type-festival-option" value="festival">Festival</li>
-                        <li id="gcm-event-type-competition-option" value="competition">Competition</li>
-                        <li id="gcm-event-type-workshop-option" value="workshop">Workshop/Academy</li>
+                        <li class="gcm-faf-eventType-option" value="All">All</li>
+                        <li class="gcm-faf-eventType-option" value="festival">Festival</li>
+                        <li class="gcm-faf-eventType-option" value="competition">Competition</li>
+                        <li class="gcm-faf-eventType-option" value="workshop">Workshop/Academy</li>
                     </ul>
             </div>
         
@@ -25,10 +25,10 @@
                     <span>Upcoming Events</span>
                     <i class="bi bi-chevron-left"></i>
                 </div>
-                <input type="hidden">
+                <input type="hidden" onchange="selectEventsAllOrNew(this.value)">
                     <ul class="dropdown-menu">
-                        <li id="gcm-upcoming-events-option" value="upcomingEvents">Upcoming Events</li>
-                        <li id="gcm-all-events-temporal-option">All events</li>
+                        <li class="gcm-faf-eventTemporality-option" value="upcoming">Upcoming Events</li>
+                        <li class="gcm-faf-eventTemporality-option" value="all">All events</li>
                     </ul>
             </div>
         </div>
@@ -53,7 +53,8 @@
                     <tr>
                         <th id="gcm-left-column">Event</th>
                         <th id="gcm-middle-column">Start</th>
-                        <th id="gcm-right-column">End</th>
+                        <th>End</th>
+                        <th id="gcm-right-column">Location</th>
                     </tr>
                 </thead>
                 <tbody id="gcm-FAF-tbody">
