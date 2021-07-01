@@ -96,9 +96,9 @@
 #calendar {
     background-color: #ffffff;
     padding: 12px;
-    border-radius: 7px;
+    border-radius: 10px;
     border: 1px solid;
-    border-color: #031c42;
+    border-color: #e0e0e0;
 }
 
 #gcm-calendar-event-type-filter {
@@ -286,8 +286,8 @@
         border: 0px;
     }
     .fc-toolbar-title {
-        font-size: 40px !important;
-        margin-top: -78px !important;
+        font-size: 36px !important;
+        margin-top: -76px !important;
     }
     .fc-dayGridMonth-button {
         margin-top: -72px !important;
