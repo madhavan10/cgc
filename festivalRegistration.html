@@ -9,9 +9,9 @@
                 
             <form autocomplete="off">
                 <fieldset id="event-basics">
-                    <h2 class="gc-form-title">Your Event</h2>
+                    <h2 class="gc-festival-form-first-title">Your Event</h2>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="event-type">What is the type of your event?</label>
                         <br/>
                         <input id="festival-radio-button" class="gc-event-radio" type="radio" name="eventType" />
@@ -27,13 +27,13 @@
                         <label for="workshop-radio-button" class="gc-radio-label">Workshop or Academy</label>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="event-name">What is the name of the event?</label>
                         <br/>
                         <input type="text" id="event-name" name="eventName" required/>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="event-start-date">When does the event begin?</label>
                         <br/>
                         <div class="form-group">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="event-end-date">When does the event end?</label>
                         <br/>
                         <div class="form-group">
@@ -88,7 +88,7 @@
                     </div>
                     -->
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="event-city">What city does your event take place in?</label>
                         <br/>
                         <input type="text" id="event-city" name="eventCity" required/>
@@ -118,13 +118,13 @@
                     </script>
 
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="event-description">Give a brief description of your event.</label>
                         <br/>
                         <textarea id="event-description" required></textarea>
                     </div>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="schedule">What is the complete schedule for your event?</label>
                         <p class="gc-question-subtext">You may use any format you find acceptable.</p>
                         <textarea id="schedule" required></textarea>
@@ -134,14 +134,14 @@
 
                 <fieldset id="festival-questions" class="gc-event-questions">
 		 <div class="gc-horizontal-line"></div>
-                    <H2 class="gc-form-title">Guitar Festival</H2>
-                    <div class="question">
+                    <H2 class="gc-festival-form-title">Guitar Festival</H2>
+                    <div class="question question-festival-registration">
                         <label for="guest-list">List the guests of your festival.</label>
                         <p class="gc-question-subtext">This includes any invited artists, teachers, artisans, or scholars.</p>
                         <textarea id="guest-list" class="gc-required-question f-required" required></textarea>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="whether-masterclasses">Does your festival offer masterclasses to the participants?</label>
                         <br/>
                         <input id="yes-masterclasses-radio" type="radio" name="whether-masterclasses" />
@@ -155,14 +155,14 @@
 
                 <fieldset id="festival-masterclass-questions">
 		 <div class="gc-horizontal-line"></div>
-                    <H2 class="gc-form-title">Masterclasses</H2>
-                    <div class="question">
+                    <H2 class="gc-festival-form-title">Masterclasses</H2>
+                    <div class="question question-festival-registration">
                         <label for="masterclass-teachers">List the teachers who will be available for masterclasses.</label>
                         <br/>
                         <textarea id="masterclass-teachers" class="gc-required-question mc-required" required></textarea>
                     </div>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="masterclass-pricing">What are the fees for the masterclasses and how many classes does each student receive?</label>
                         <br/>
                         <textarea id="masterclass-pricing" class="gc-required-question mc-required" required></textarea>
@@ -171,20 +171,20 @@
                
                 <fieldset id="competition-questions" class="gc-event-questions">
 		 <div class="gc-horizontal-line"></div>
-                    <H2 class="gc-form-title">Competition</H2> 
-                    <div class="question">
+                    <H2 class="gc-festival-form-title">Competition</H2> 
+                    <div class="question question-festival-registration">
                         <label for="competition-rules">Detail the rules for the competition.</label>
                         <p class="gc-question-subtext">This includes eligibility, program requirements, etc.</p>
                         <textarea id="competition-rules" class="gc-required-question c-required" required></textarea>
                     </div>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="prizes">What are the prizes for the winners of the competition?</label>
                         <br/>
                         <textarea id="prizes" class="gc-required-question c-required" required></textarea>
                     </div>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="jury">What can you tell us about the jury?</label>
                         <p class="gc-question-subtext">Number of jury members, names of the jury members, etc.</p>
                         <textarea id="jury" class="gc-required-question c-required" required></textarea>
@@ -193,33 +193,33 @@
 
                 <fieldset id="workshop-questions" class="gc-event-questions">
 		 <div class="gc-horizontal-line"></div>
-                    <h2 class="gc-form-title">Workshop or Academy</h2>
-                    <div class="question">
+                    <h2 class="gc-festival-form-title">Workshop or Academy</h2>
+                    <div class="question question-festival-registration">
                         <label for="workshop-teachers">Who will be teaching?</label>
                         <br/>
                         <textarea id="workshop-teachers" class="gc-required-question w-required" required></textarea>
                     </div>
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="workshop-accommodation">What arrangements are there for the accommodation of participants during their stay?</label>
                         <br/>
                         <textarea id="workshop-accommodation" class="gc-required-question w-required" required></textarea>
                     </div>
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="workshop-meals">What are the meal arrangements for the participants?</label>
                         <br/>
                         <textarea id="workshop-meals" class="gc-required-question w-required" required></textarea>
                     </div>
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="workshop-practice-facilities">What practice facilities are available to the participants?</label>
                         <br/>
                         <textarea id="workshop-practice-facilities" class="gc-required-question w-required" required></textarea>
                     </div>
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="workshop-lessons">How many lessons does each student receive and with whom?</label>
                         <br/>
                         <textarea id="workshop-lessons" class="gc-required-question w-required" required></textarea>
                     </div>
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="workshop-other-guests">Will there be other guests present at the workshop apart from the teachers? Please detail.</label>
                         <p class="gc-question-subtext">Concertists, lecturers, artisans, etc.</p>
                         <textarea id="workshop-other-guests"></textarea>
@@ -231,51 +231,51 @@
 
                 <fieldset id="practical-information-questions">
 		    <div class="gc-horizontal-line"></div>
-                    <h2 class="gc-form-title">Practical Information</h2>
-                    <div class="question">
+                    <h2 class="gc-festival-form-title">Practical Information</h2>
+                    <div class="question question-festival-registration">
                         <label for="event-fees">What are the fees for participating in your event? Please provide details.</label>
                         <br/>
                         <textarea id="event-fees" class="gc-required-question pi-required" required></textarea>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="how-to-register">How can people register for your event?</label>
                         <p class="gc-question-subtext">Provide a link for online registration if applicable.</p>
                         <textarea id="how-to-register" class="gc-required-question pi-required" required></textarea>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="contact-information">What is the contact information for your event?</label>
                         <p class="gc-question-subtext">Email address, telephone numbers, website address.</p>
                         <textarea id="contact-information" class="gc-required-question pi-required" required></textarea>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="venue-addresses">Kindly provide the names and addresses of all the venues for the event.</label>
                         <br/>
                         <textarea id="venue-addresses"></textarea>
                     </div>
 
-                    <div class="question workshop-redundant">
+                    <div class="question question-festival-registration workshop-redundant">
                         <label for="accommodation">What arrangements are in place for the accommodation of the participants during their stay?</label>
                         <p class="gc-question-subtext">Do you have arrangements with nearby hotels, hostels, or host families?</p>
                         <textarea id="accommodation"></textarea>
                     </div>
                     
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="travel-info">What are the best ways for participants to travel to your event?</label>
                         <p class="gc-question-subtext">Nearby train stations, bus stations, airports, etc.</p>
                         <textarea id="travel-info"></textarea>
                     </div>
 
-                    <div class="question">
+                    <div class="question question-festival-registration">
                         <label for="other-facilities">Are there any other facilities available to the participants?</label>
                         <p class="gc-question-subtext">Practice rooms, cafeteria, etc.</p>
                         <textarea id="other-facilities"></textarea>
                     </div>
                 </fieldset>
  
-                <div class="gc-button">
+                <div class="button festival-registration-button">
                     <button type="button" onclick="submitFestivalRegistrationForm()">Register My Event</button>
                 </div>
 

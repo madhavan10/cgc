@@ -131,7 +131,7 @@
 @media (min-width: 1042px) {
     .gc-find-a-festival-container {
         padding: 20px;
-        margin: 30px 10% 15px 10%;
+        margin: 10px 10% 15px 10%;
         box-shadow:
         inset 0 7em 10em -5em rgba(255,255,255,0.6),
         0 0.3em 0.5em -0.2em rgba(100,100,100,1),
@@ -142,14 +142,14 @@
         background-color: #ffffff;
     }
     #gcm-left-column {
-        border-radius: 10px 0px 0px 10px;
+        border-radius: 4px 0px 0px 4px;
     }
     #gcm-right-column {
-        border-radius: 0px 10px 10px 0px;
+        border-radius: 0px 4px 4px 0px;
     }
     #gcm-FAF-table {
         min-width: 95%;
-    }
+        margin-top: 20px;    }
     
 }
     

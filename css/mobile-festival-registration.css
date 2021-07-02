@@ -1,15 +1,46 @@
+
+@media (max-width: 1042px) {
 .gc-festival-registration {
-    padding-top: 15px;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+    box-shadow: none;
+    margin-top: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 70px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    
+}
+
+.gc-festival-form-first-title {
+    background-color: #031c42;
+    color: #fff;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.question-festival-registration {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.gc-festival-form-title {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .question label{
     padding-bottom: 3px;
 }
 
-#datetimepicker1, #datetimepicker2 {
-    width: 60%;
+.input-group {
+    width: 50%;
 }
 
 #event-basics {
@@ -48,3 +79,8 @@
     padding-bottom: 70px;
 }
 
+.festival-registration-button {
+    margin-left: 5%;
+}
+
+}

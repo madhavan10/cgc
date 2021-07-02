@@ -3,8 +3,9 @@
     padding-top: 50px;
     padding-bottom: 30px;
     padding-left: 5%;
+    padding-right: 5%;
     background-color: #ffffff;
-    margin: 0px 20% 70px 20%;
+    margin: 10px 20% 70px 20%;
     box-shadow:
     inset 0 7em 10em -5em rgba(255,255,255,0.6),
     0 0.3em 0.5em -0.2em rgba(100,100,100,1),
@@ -17,7 +18,6 @@
 .gc-registration-line {
 	height: 1px;
 	width: 80%;
-	
 	margin-bottom: 70px;
 	background:-moz-linear-gradient(left, #7A7D7D 0%,#ffffff 100%); 
     background:-webkit-linear-gradient(left, #7A7D7D 0%,#ffffff 100%); 
@@ -34,7 +34,7 @@
 
 .input-sm {
 	font-size: 16px;
-	padding-top: 15px;
+	width: 240px;
 }
 
 
@@ -53,8 +53,12 @@
 	margin-bottom: 40px;
 }
 
+.registration-button {
+    margin-bottom: 30px;
+}
+
 .button button {
-	background-color: #212834;
+	background-color: #031c42;
 	color: #fff;
 	margin-top: 20px;
 	padding: 7px 10px;
@@ -65,4 +69,23 @@
 .button button:hover, .main-info li span:active {
         background-color: #353b46;
         color: #fff;
+}
+
+@media (max-width: 1042px) {
+    .gc-registration-form {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: none;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    .button-registration {
+        padding-left: 4%;
+    }
+    .question-registration {
+        padding-left: 4%;
+    }
+
 }

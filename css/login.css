@@ -2,8 +2,10 @@
 .gc-login-form {
     padding-top: 50px;
     padding-bottom: 30px;
+    padding-left: 4%;
+    padding-right: 4%;
     background-color: #ffffff;
-    margin: 0px 20% 120px 20%;
+    margin: 10px 20% 120px 20%;
     box-shadow:
     inset 0 7em 10em -5em rgba(255,255,255,0.6),
     0 0.3em 0.5em -0.2em rgba(100,100,100,1),
@@ -13,34 +15,59 @@
 
 }
 
-.gc-login {
-	display: inline-block;
+.gc-login form {
+	display: flex;
 }
 
 .gc-form-title {
-	padding-left: 5%;
-	
+	text-align: center;
+	color: #031C42;
 }
 
-.gc-registration-line {
-	margin-left: 5%;
-	margin-bottom: 35px;
-}
 
 
 #login-right {
-	margin-top: 100px;
-	float: right;
-	padding-right: 20%;	
+
+
 }
 
 #login-left {
-	padding-left: 15%;
-	float: left;
-	width: 60%;
+
+
 }
 
 #not-registered {
-	margin-top: 5px;
-	padding-left: 13%;
+	margin-top: 20px;
+}
+
+@media (max-width: 1042px) {
+    .gc-login-form {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: none;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    .gc-form-title {
+        background-color: #031c42;
+        color: #fff;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .gc-form-title h2 {
+        font-size: 20px;
+    }
+    .gc-login {
+        padding-left: 10px;
+    }
+    .button-login {
+        padding-left: 10px;
+    }
+    #not-registered {
+        padding-left: 10px;
+    }
 }
