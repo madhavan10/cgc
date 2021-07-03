@@ -2,11 +2,11 @@
 $('.dropdown').click(function () {
         $(this).attr('tabindex', 1).focus();
         $(this).toggleClass('active');
-        $(this).find('.dropdown-menu').slideToggle(400);
+        $(this).find('.dropdown-menu').slideToggle(200);
     });
     $('.dropdown').focusout(function () {
         $(this).removeClass('active');
-        $(this).find('.dropdown-menu').slideUp(400);
+        $(this).find('.dropdown-menu').slideUp(200);
     });
     $('.dropdown .dropdown-menu li').click(function () {
         $(this).parents('.dropdown').find('span').text($(this).text());

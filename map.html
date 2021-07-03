@@ -1,10 +1,38 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="/js/gcm-map.js"></script>
 <div id="gcm-map-page">
+    <div id="gcm-map-container">
     <div id="gcm-map">
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&callback=initMap&libraries=places&v=weekly" async></script>
-    <div id="gcm-map-filters-container">
+    <div class="container-buttons-list container-map">
+            <div class="dropdown dropdown-left">
+                <div class="select">
+                    <span>Event Type</span>
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <input type="hidden">
+                    <ul class="dropdown-menu">
+                        <li id="gcm-event-type-all-option" value="all">All</li>
+                        <li id="gcm-event-type-festival-option" value="festival">Festival</li>
+                        <li id="gcm-event-type-competition-option" value="competition">Competition</li>
+                        <li id="gcm-event-type-workshop-option" value="workshop">Workshop/Academy</li>
+                    </ul>
+            </div>
+        
+            <div class="dropdown dropdown-right" >
+                <div class="select">
+                    <span>Upcoming Events</span>
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <input type="hidden">
+                    <ul class="dropdown-menu">
+                        <li id="gcm-upcoming-events-option" value="upcomingEvents">Upcoming Events</li>
+                        <li id="gcm-all-events-temporal-option">All events</li>
+                    </ul>
+            </div>
+        </div>
+    <!--<div id="gcm-map-filters-container">
         <select id="gcm-map-eventType-dropdown" onchange="selectMapEventType(this.value)"> 
             <option selected disabled>Event Type</option>
             <option value="All">All</option>
@@ -16,5 +44,6 @@
             <option selected value="upcoming">Upcoming Events</option>
             <option value="all">All Events</option>
         </select>
+    </div> -->
     </div>
 </div>
