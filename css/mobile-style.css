@@ -313,41 +313,39 @@ body {
 
     #gcm-description-page {
         display: none;
+        
+    }
+    
+    #gcm-description-page:hover {
+        cursor: default;
     }
 
     .description-page {
         display: block;
+        
+    }
+    
+    #gc-description-text:hover {
+        cursor: pointer;
+    }
+    
+    .festival-title h1 {
+        color: #111111;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 20px;
+        padding-bottom: 60px;
+        font-size: 26px;
+        font-weight: 700;
+        top: 100px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
     }
 
-    .Article-coverImage {
+    .title-background {
         position: relative;
-        transition: height 0.3s ease 0s;
-        background: linear-gradient(
-          to bottom,
-          rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.3) 74%, rgba(0,0,0,1) 100%
-          ),url('background-images/Sevilla.jpg');
-        
-        background-position: 50%;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        background-size: cover;
-        max-width: 1920px;
-        max-height: 1080px;
-    }
-    .Article-coverImage h1 {
-        border-top: 2px #E6C571 solid;
-        position: absolute;
-        color: #FFFFE5;
-        font-family: 'Roboto', sans-serif;
-        text-shadow: 0px 0px 3px rgba(0, 0, 0, 1); /*rgba(245, 245, 255, 0.35) 0 0px 0px, rgba(0, 0, 30, 0.08) 0px 2px 2px, rgba(0, 0, 30, 0.20) 0px 2px 1px, rgba(0, 0, 30, 0.40) 0px 2px 1px, rgba(0, 0, 0, 0.08) -5px 5px 2px;*/ 
-        background: rgb(33, 40, 52); /* fallback color */
-        background: rgba(33, 40, 52, 0.5);
-        border-radius: 1.5px 1.5px 1.5px 1.5px;
-        top: 20%;
-        width: 75%;
-        margin-left: 12.5%;
-        text-align: center;
-        vertical-align: middle;
+        background-color: #021127;
+        height: 350px;
     }
 
     .FlexEmbed--2by1:before{
@@ -362,37 +360,51 @@ body {
     }
 
     .festival-location {
-            position:absolute;
-            bottom: 4%;
-            color: #fff;
-            left: 10.5%;
-            font-family: 'Roboto';
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 0px;
+            padding-right: 0px;
+
+            line-height: 2;
+            color: #222222;
             font-weight: 400;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 4px;
     }
+    
+    
+    #date-line {
+        height:1px;
+        width: 18px;
+        background-color: #444444;
+        margin: auto;
+        margin-top: 5px;
+        
+    }
+    
 
     #town, #country {
-            color: #E8E8E8;
-            font-size: 24px;
-            font-family: 'Roboto';
+            color: #111111;
+            font-size: 21px;
             font-weight: 300 bold;
      }
 
     #month, #date, #year {
-            color: #CECECE;
+            color: #111111;
             font-size: 24px;
-            font-family: 'Roboto';
             font-weight: 300;
     }
 
     .dot {
-            color: #E8E8E8;
+            color: #111111;
             font-size: 18px;
-            font-family: 'Roboto';
             font-weight: 300;
     }
 
     .main-content {
-        padding: 1% 0% 3% 1.5% ;
+        padding: 1% 1.5% 3% 1.5% ;
         position: relative; 
         background: rgba(255,255,255, 1);
         margin:-1% 10% 1% 10%;
@@ -422,33 +434,51 @@ body {
 
     #gc-description-text {
             white-space: pre-line;
+            border-radius: 10px;
     }
     
     .description:hover {
-            -webkit-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
-            -moz-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
-            box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
+            -webkit-box-shadow: inset 0px -4px 6px -6px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px -4px 6px -6px rgba(0,0,0,0.75);
+            box-shadow: inset 0px -4px 6px -6px rgba(0,0,0,0.75);
 
     }
 
     .twitter-share-button {
         vertical-align: bottom; /* align twitter button with fb button */
     }
-
+    
+    .festival-image-container {
+        padding-top: 10px;
+    }
+    
     .festival-image {
-        //position: relative;
         background-image: url('images/Wide.jpg');
         background-position: 100%;
         background-repeat: no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
-        //left: 9%;
-        width: 95%;
-        border: 3px #fff solid;
+        border-radius: 10px;
+        border: 10px #fff solid;
         -webkit-box-shadow: 0 8px 6px -6px black;
-               -moz-box-shadow: 0 8px 6px -6px black;
-                    box-shadow: 0 8px 6px -6px black;
+        -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 8px 6px -6px black;
+        max-width: 100%;
+        height: 300px;
+        padding-bottom: 20%;
+        margin: auto;
                     
+    }
+    
+    #share-page {
+        margin-top: 20px;
+        font-size: 21px;
+        font-weight: 400;
+        color: #222222;
+    }
+    
+    .share-buttons {
+        text-align: center;
     }
 
     .FlexEmbed--3by1:before{
@@ -457,8 +487,11 @@ body {
 
     .image-overlay {
         position: relative;
-        margin-top: -5.5%;
+        margin: auto;  
+        height: 300px;  
+        max-width: 600px;  
     }
+
 
     .gc-horizontal-line {
         height: 1px;
@@ -474,7 +507,6 @@ body {
 
     .main-info {
         margin-left: -2.2%;
-        font-family: 'Roboto';
         min-height: 550px;
         margin-bottom: 30px;
         
@@ -485,16 +517,25 @@ body {
     }
 
     .main-info li span:hover, .main-info li span:active {
-            background-color: #E6C571;
-            color: #32393f;
+            background-color: #052A61;
+            color: #ffffff;
+            cursor: pointer;
     }
 
     .main-info-content {
             white-space: pre-line;
+            padding: 40px 30px 30px 30px;
     }
 
     .tab-title {
             font-weight: bold;
+            font-size: 21px;
+            text-align: center;
+
+    }
+    
+    .main-buttons {
+        margin-top: 60px;
     }
 
     .nav > li > span {
@@ -529,6 +570,11 @@ body {
 
     }
     
+    .question-festival-registration label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
     .input-group {
         width: 50%;
     }
@@ -541,8 +587,8 @@ body {
     .gc-festival-form-title {
         text-align: center;
         color: #031C42;
-        padding-bottom: 20px;
-        padding-top: 50px;
+        padding-bottom: 30px;
+        padding-top: 80px;
     }
 
     /* FIND FESTIVAL LIST */
