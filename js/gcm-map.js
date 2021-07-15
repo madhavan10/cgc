@@ -310,6 +310,17 @@ function initMap() {
             position: thisEventPos
         }));
         
+        var imageUrl;
+        if (thisEvent.radio_button === "festival-radio-button")
+            imageUrl = "/css/images/guitar-festival.png";
+        else if (thisEvent.radio_button === "competition-radio-button")
+            imageUrl = "/css/images/guitar-competition.png";
+        else if (thisEvent.radio_button === "festival-competiton-radio-button")
+            imageUrl = "/css/images/guitar-festivalcompetition.png";
+        else imageUrl = "/css/images/guitar-workshop.png";
+        
+        markers[i].setIcon({url: imageUrl, scaledSize: new google.maps.Size(40, 40)});
+        
         markers[i]['infoWindow'] = new google.maps.InfoWindow({
             content: "<div><a href=\"/festivals/" + thisEvent.eventName + "\">" + thisEvent.eventName + "</a></div>" +
             "<div>" + startMonth + " " + startDay + ", " + startYear + " - " + endMonth + " " + endDay + ", " + endYear + "</div>" +
