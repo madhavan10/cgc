@@ -355,6 +355,7 @@ var selectMapEventsAllOrNew = function (value) {
         for (var marker of markers) {
             marker.setMap(map);
         }
+        selectMapEventType($("#gcm-map-eventType-dropdown")[0].value);
     }
 };
  
@@ -363,6 +364,10 @@ var selectMapEventType = function (value) {
     
     for (var marker of markers) {
         marker.setMap(map);
+    }
+    
+    if ($("#gcm-map-eventDate-dropdown")[0].value === "upcoming") {
+        selectMapEventsAllOrNew("upcoming");
     }
 
     if (value === "festival") {
