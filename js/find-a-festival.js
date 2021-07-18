@@ -129,9 +129,9 @@ var selectEventsAllOrNew = function (value) {
     $(".gcm-eventDate-active.gcm-eventType-active").show();
 };
 
-var tableSortDirections = ["asc", "asc", "asc", "asc"];
+var tableSortDirections = ["neutral", "neutral", "neutral", "neutral"];
 
-var sortTable = function (columnIndex) {
+var sortTable = function (columnIndex, elt) {
     var switching = true;
     while (switching) {
         switching = false;
@@ -139,7 +139,7 @@ var sortTable = function (columnIndex) {
         for (var i = 1; i < rows.length - 1; i++) {
             var cell1 = rows[i].getElementsByTagName("td")[columnIndex];
             var cell2 = rows[i + 1].getElementsByTagName("td")[columnIndex];
-            if (tableSortDirections[columnIndex] === "asc") {
+            if (["asc", "neutral"].includes(tableSortDirections[columnIndex])) {
                 if ([0, 3].includes(columnIndex)) {
                     //sorting by event name or location
                     if (cell1.innerHTML.toLowerCase() > cell2.innerHTML.toLowerCase()) {
@@ -171,10 +171,23 @@ var sortTable = function (columnIndex) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
         }
     }
-    if (tableSortDirections[columnIndex] === "asc")
+    
+    /*changing sort direction (asc or desc)
+    and changing icon to the right of column header*/
+    if (tableSortDirections[columnIndex] === "neutral") {
         tableSortDirections[columnIndex] = "desc";
-    else 
+        $(elt).children("i").removeClass("bi-chevron-right");
+        $(elt).children("i").addClass("bi-chevron-compact-down");
+    } else if (tableSortDirections[columnIndex] === "asc") {
+        tableSortDirections[columnIndex] = "desc";
+        $(elt).children("i").removeClass("bi-chevron-compact-up");
+        $(elt).children("i").addClass("bi-chevron-compact-down");
+    } else {
         tableSortDirections[columnIndex] = "asc";
+        $(elt).children("i").removeClass("bi-chevron-compact-down");
+        $(elt).children("i").addClass("bi-chevron-compact-up");
+    }
+    
 };
 
 $(document).ready(main);
