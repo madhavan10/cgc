@@ -48,9 +48,14 @@ var main = function() {
         
         var startDateStr = new Date(eventList[i].startDate).toDateString().substring(4); //substr removes day of week
         var endDateStr = new Date(eventList[i].endDate).toDateString().substring(4);
+        var loc = "N/A";
+        if (eventList[i].eventLocation) {
+            loc = eventList[i].eventLocation.name + ", " + getCountryFromPlace(eventList[i].eventLocation);
+        }
 
         className += " gc-event-listing ";
-        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].eventName + "\">" + eventList[i].eventName + "</a></td><td>" + startDateStr + "</td><td>" + endDateStr + "</td></tr>");
+        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].eventName + "\">" 
+            + eventList[i].eventName + "</a></td><td>" + startDateStr + "</td><td>" + endDateStr + "</td><td>" + loc + "</td></tr>");
     }
     
     $(".gc-event-listing").hide();
@@ -63,67 +68,15 @@ var main = function() {
     }
     $(".gcm-eventType-active.gcm-eventDate-active").show();
     
-    //Event Type filter
-    $("#gcm-event-type-all-option").click(function () {
-        for (var e of $(".gc-event-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    //Event Type filter 
+    $(".gcm-faf-eventType-option").click(function () {
+        selectEventType($(this).attr("value"));
     });
 
-    $('#gcm-event-type-festival-option').click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventType-active");
-        }
-        for (var e of $(".gc-festival-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
+    //All or New Events Filter    
+    $(".gcm-faf-eventTemporality-option").click(function () {
+        selectEventsAllOrNew($(this).attr("value"));
     });
-
-    $('#gcm-event-type-competition-option').click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventType-active");
-        }
-        for (var e of $(".gc-competition-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-    
-    $('#gcm-event-type-workshop-option').click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventType-active");
-        }
-        for (var e of $(".gc-workshop-listing")) {
-            e.classList.add("gcm-eventType-active");
-        }
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-
-    //All or New Events Filter
-    $("#gcm-all-events-temporal-option").click(function () {
-        for (var e of $(".gc-event-listing")) {
-            e.classList.add("gcm-eventDate-active")
-        };
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-
-    $("#gcm-upcoming-events-option").click(function () {
-        $(".gc-event-listing").hide();
-        for (var e of $(".gc-event-listing")) {
-            e.classList.remove("gcm-eventDate-active");
-        }
-        for (var e of $(".gcm-upcoming-listing")) {
-            e.classList.add("gcm-eventDate-active")
-        };
-        $(".gcm-eventType-active.gcm-eventDate-active").show();
-    });
-
-
 };
 
 var selectEventType = function(value) {
@@ -174,6 +127,67 @@ var selectEventsAllOrNew = function (value) {
         alert(value);
     }
     $(".gcm-eventDate-active.gcm-eventType-active").show();
+};
+
+var tableSortDirections = ["neutral", "neutral", "neutral", "neutral"];
+
+var sortTable = function (columnIndex, elt) {
+    var switching = true;
+    while (switching) {
+        switching = false;
+        var rows = document.getElementById("gcm-FAF-table").rows;
+        for (var i = 1; i < rows.length - 1; i++) {
+            var cell1 = rows[i].getElementsByTagName("td")[columnIndex];
+            var cell2 = rows[i + 1].getElementsByTagName("td")[columnIndex];
+            if (["asc", "neutral"].includes(tableSortDirections[columnIndex])) {
+                if ([0, 3].includes(columnIndex)) {
+                    //sorting by event name or location
+                    if (cell1.innerHTML.toLowerCase() > cell2.innerHTML.toLowerCase()) {
+                        switching = true;
+                        break;
+                    }
+                } else {
+                    //sorting by Date
+                    if (new Date(cell1.innerHTML) > new Date(cell2.innerHTML)) {
+                        switching = true;
+                        break;
+                    }
+                }
+            } else {
+                if ([0, 3].includes(columnIndex)) {
+                    if (cell1.innerHTML.toLowerCase() < cell2.innerHTML.toLowerCase()) {
+                        switching = true;
+                        break;
+                    }
+                } else {
+                    if (new Date(cell1.innerHTML) < new Date(cell2.innerHTML)) {
+                        switching = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (switching) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        }
+    }
+    
+    /*changing sort direction (asc or desc)
+    and changing icon to the right of column header*/
+    if (tableSortDirections[columnIndex] === "neutral") {
+        tableSortDirections[columnIndex] = "desc";
+        $(elt).children("i").removeClass("bi-chevron-right");
+        $(elt).children("i").addClass("bi-chevron-compact-down");
+    } else if (tableSortDirections[columnIndex] === "asc") {
+        tableSortDirections[columnIndex] = "desc";
+        $(elt).children("i").removeClass("bi-chevron-compact-up");
+        $(elt).children("i").addClass("bi-chevron-compact-down");
+    } else {
+        tableSortDirections[columnIndex] = "asc";
+        $(elt).children("i").removeClass("bi-chevron-compact-down");
+        $(elt).children("i").addClass("bi-chevron-compact-up");
+    }
+    
 };
 
 $(document).ready(main);
