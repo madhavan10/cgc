@@ -129,4 +129,52 @@ var selectEventsAllOrNew = function (value) {
     $(".gcm-eventDate-active.gcm-eventType-active").show();
 };
 
+var tableSortDirections = ["asc", "asc", "asc", "asc"];
+
+var sortTable = function (columnIndex) {
+    var switching = true;
+    while (switching) {
+        switching = false;
+        var rows = document.getElementById("gcm-FAF-table").rows;
+        for (var i = 1; i < rows.length - 1; i++) {
+            var cell1 = rows[i].getElementsByTagName("td")[columnIndex];
+            var cell2 = rows[i + 1].getElementsByTagName("td")[columnIndex];
+            if (tableSortDirections[columnIndex] === "asc") {
+                if ([0, 3].includes(columnIndex)) {
+                    //sorting by event name or location
+                    if (cell1.innerHTML.toLowerCase() > cell2.innerHTML.toLowerCase()) {
+                        switching = true;
+                        break;
+                    }
+                } else {
+                    //sorting by Date
+                    if (new Date(cell1.innerHTML) > new Date(cell2.innerHTML)) {
+                        switching = true;
+                        break;
+                    }
+                }
+            } else {
+                if ([0, 3].includes(columnIndex)) {
+                    if (cell1.innerHTML.toLowerCase() < cell2.innerHTML.toLowerCase()) {
+                        switching = true;
+                        break;
+                    }
+                } else {
+                    if (new Date(cell1.innerHTML) < new Date(cell2.innerHTML)) {
+                        switching = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (switching) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        }
+    }
+    if (tableSortDirections[columnIndex] === "asc")
+        tableSortDirections[columnIndex] = "desc";
+    else 
+        tableSortDirections[columnIndex] = "asc";
+};
+
 $(document).ready(main);
