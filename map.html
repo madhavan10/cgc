@@ -2,48 +2,48 @@
 <script src="/js/gcm-map.js"></script>
 <div id="gcm-map-page">
     <div id="gcm-map-container">
-    <div id="gcm-map">
-    </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&callback=initMap&libraries=places&v=weekly" async></script>
-    <div class="container-buttons-list container-map">
+        <div id="gcm-map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&callback=initMap&libraries=places&v=weekly" async></script>
+        <div class="container-buttons-list">
             <div class="dropdown dropdown-left">
                 <div class="select">
-                    <span>Event Type</span>
+                    <span id="map-eventType-menu-label">Event Type</span>
                     <i class="bi bi-chevron-left"></i>
                 </div>
-                <input type="hidden">
-                    <ul class="dropdown-menu">
-                        <li id="gcm-event-type-all-option" value="all">All</li>
-                        <li id="gcm-event-type-festival-option" value="festival">Festival</li>
-                        <li id="gcm-event-type-competition-option" value="competition">Competition</li>
-                        <li id="gcm-event-type-workshop-option" value="workshop">Workshop/Academy</li>
-                    </ul>
+                <input id="gcm-map-eventType-input" type="hidden"/>
+                <ul class="dropdown-menu">
+                    <li class="gcm-map-eventType-option" value="All">All</li>
+                    <li class="gcm-map-eventType-option" value="Festival">Festival</li>
+                    <li class="gcm-map-eventType-option" value="Competition">Competition</li>
+                    <li class="gcm-map-eventType-option" value="Workshop/Academy">Workshop/Academy</li>
+                </ul>
             </div>
         
             <div class="dropdown dropdown-right" >
                 <div class="select">
-                    <span>Upcoming Events</span>
+                    <span id="map-eventTemporality-menu-label">Upcoming Events</span>
                     <i class="bi bi-chevron-left"></i>
                 </div>
-                <input type="hidden">
-                    <ul class="dropdown-menu">
-                        <li id="gcm-upcoming-events-option" value="upcomingEvents">Upcoming Events</li>
-                        <li id="gcm-all-events-temporal-option">All events</li>
-                    </ul>
+                <input id="gcm-map-eventTemporality-input" type="hidden"/>
+                <ul class="dropdown-menu">
+                    <li class="gcm-map-eventTemporality-option" value="Upcoming Events">Upcoming Events</li>
+                    <li class="gcm-map-eventTemporality-option" value="All Events">All Events</li>
+                </ul>
             </div>
         </div>
-    <!--<div id="gcm-map-filters-container">
-        <select id="gcm-map-eventType-dropdown" onchange="selectMapEventType(this.value)"> 
-            <option selected disabled>Event Type</option>
-            <option value="All">All</option>
-            <option value="festival">Festival</option>
-            <option value="competition">Competition</option>
-            <option value="workshop">Workshop/Academy</option>
-        </select>
-        <select id="gcm-map-eventDate-dropdown" onchange="selectMapEventsAllOrNew(this.value)">
-            <option selected value="upcoming">Upcoming Events</option>
-            <option value="all">All Events</option>
-        </select>
-    </div> -->
+        <div id="gcm-map-filters-container">
+            <select id="gcm-map-eventType-dropdown" onchange="selectMapEventType(this.value)"> 
+                <option selected disabled value="Event Type">Event Type</option>
+                <option value="All">All</option>
+                <option value="Festival">Festival</option>
+                <option value="Competition">Competition</option>
+                <option value="Workshop/Academy">Workshop/Academy</option>
+            </select>
+            <select id="gcm-map-eventDate-dropdown" onchange="selectMapEventsAllOrNew(this.value)">
+                <option selected value="Upcoming Events">Upcoming Events</option>
+                <option value="All Events">All Events</option>
+            </select>
+        </div>
     </div>
+    <script src="/js/gc-selector.js"></script>
 </div>

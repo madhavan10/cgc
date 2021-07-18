@@ -69,16 +69,14 @@
     z-index: 9;
     color: #ffffff;
     text-align: center;
+    padding: 0;
+    list-style: none
 }
 .dropdown .dropdown-menu li {
     padding: 10px;
     transition: all .1s ease-in-out;
     cursor: pointer
 } 
-.dropdown .dropdown-menu {
-    padding: 0;
-    list-style: none
-}
 .dropdown .dropdown-menu li:hover {
     background-color: #052A61;
 }
@@ -86,12 +84,9 @@
     background-color: #052A61;
 }
 
-
 #gcm-calendar {
     padding: 20px 3%;
 }
-
-
 
 #calendar {
     background-color: #ffffff;
@@ -121,8 +116,8 @@
 }
 
 .fc-toolbar-title {
-        font-size: 20px !important;
-    }
+    font-size: 20px !important;
+}
 
 .fc--button {
     /* removes button between month and week buttons */
@@ -226,7 +221,8 @@
 
 @media (max-width: 451px) {
     .fc-button-primary {
-        margin-left: 0 !important;} 
+        margin-left: 0 !important;
+    } 
 }
 
 @media (min-width: 1042px) {
@@ -267,37 +263,8 @@
 }
 
 @media (min-width: 1150px) {
-    .container-margin {
-        margin-top: 30px;
-        margin-left: 0;
-    }
-    .container {
-        width: 300px;
-        text-align: left;
-        margin-left: 0;
-        margin-bottom: 0;
-    }
-    #gcm-calendar {
-        background-color: #ffffff;
-    }
-    #calendar {
-        background-color: #ffffff;
-        padding: 12px;
-        border: 0px;
-    }
     .fc-toolbar-title {
         font-size: 36px !important;
         margin-top: -76px !important;
-    }
-    .fc-dayGridMonth-button {
-        margin-top: -72px !important;
-        margin-bottom: 37px !important;       
-    }
-
-    .fc-dayGridWeek-button {
-        margin-top: -107px !important;
-    }
-    #gcm-calendar-event-type-filter {
-        background-color: #ffffff;
     }
 }

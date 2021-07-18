@@ -305,21 +305,21 @@ function initMap() {
         var endDay = new Date(thisEvent.endDate).getDate(); 
         var endYear = new Date(thisEvent.endDate).getFullYear();
         
-        markers.push(new google.maps.Marker({
-            map,
-            position: thisEventPos
-        }));
-        
         var imageUrl;
         if (thisEvent.radio_button === "festival-radio-button")
             imageUrl = "/css/images/guitar-festival.png";
         else if (thisEvent.radio_button === "competition-radio-button")
             imageUrl = "/css/images/guitar-competition.png";
-        else if (thisEvent.radio_button === "festival-competiton-radio-button")
+        else if (thisEvent.radio_button === "festival-competition-radio-button")
             imageUrl = "/css/images/guitar-festivalcompetition.png";
         else imageUrl = "/css/images/guitar-workshop.png";
         
-        markers[i].setIcon({url: imageUrl, scaledSize: new google.maps.Size(40, 40)});
+        markers.push(new google.maps.Marker({
+            map,
+            position: thisEventPos,
+            icon: {url: imageUrl, scaledSize: new google.maps.Size(40, 40)},
+            title: thisEvent.eventName
+        }));
         
         markers[i]['infoWindow'] = new google.maps.InfoWindow({
             content: "<div><a href=\"/festivals/" + thisEvent.eventName + "\">" + thisEvent.eventName + "</a></div>" +
@@ -338,39 +338,53 @@ function initMap() {
             this['infoWindow'].open(map, this);
         });
     }
-
-    selectMapEventsAllOrNew("upcoming");
+    
+    addMapClickListeners();
+    selectMapEventsAllOrNew("Upcoming Events");
 }
 
 var selectMapEventsAllOrNew = function (value) {
-    if (value === "upcoming") {
+    
+    $("#gcm-map-eventTemporality-input").attr("value", value);
+    $("#map-eventTemporality-menu-label").text(value);
+    document.getElementById("gcm-map-eventDate-dropdown").value = value;
+
+    if (value === "Upcoming Events") {
         var now = new Date();
+        now.setHours(0, 0, 0, 0);
         for (var marker of markers) {
             if (new Date(marker['endDate']) < now) {
                 marker['infoWindow'].close();
                 marker.setMap(null);
             }
         }
-    } else if (value === "all") {
+    } else if (value === "All Events") {
         for (var marker of markers) {
             marker.setMap(map);
         }
-        selectMapEventType($("#gcm-map-eventType-dropdown")[0].value);
+        selectMapEventType($("#gcm-map-eventType-input")[0].value);
     }
 };
  
 
 var selectMapEventType = function (value) {
     
+    $("#gcm-map-eventType-input").attr("value", value);
+    var selectElt = document.getElementById("gcm-map-eventType-dropdown");
+    if (["Festival", "Competition", "Workshop/Academy", "All"].includes(value)) {
+        selectElt.value = value;
+        $("#map-eventType-menu-label").text(value);
+    }
+
     for (var marker of markers) {
         marker.setMap(map);
     }
     
-    if ($("#gcm-map-eventDate-dropdown")[0].value === "upcoming") {
-        selectMapEventsAllOrNew("upcoming");
+    if ($("#gcm-map-eventTemporality-input")[0].value === "Upcoming Events") {
+        selectMapEventsAllOrNew("Upcoming Events");
     }
 
-    if (value === "festival") {
+    if (value === "Festival") {
         for (var marker of markers) {
             if (marker['eventType'] !== "festival-radio-button" && 
                 marker['eventType'] !== "festival-competition-radio-button") {
@@ -378,7 +392,7 @@ var selectMapEventType = function (value) {
                 marker.setMap(null);
             }
         }
-    } else if (value === "competition") {
+    } else if (value === "Competition") {
         for (var marker of markers) {
             if (marker['eventType'] !== "competition-radio-button" &&
                 marker['eventType'] !== "festival-competition-radio-button") {
@@ -386,7 +400,7 @@ var selectMapEventType = function (value) {
                 marker.setMap(null);
             }
         }
-    } else if (value === "workshop") {
+    } else if (value === "Workshop/Academy") {
         for (var marker of markers) {
             if (marker['eventType'] !== "workshop-radio-button") {
                 marker['infoWindow'].close();
@@ -396,4 +410,16 @@ var selectMapEventType = function (value) {
     }
 };
 
+var addMapClickListeners = function () {
+    $(".gcm-map-eventType-option").click(function () {
+        var value = $(this).attr("value");
+        $("#gcm-map-eventType-dropdown").attr("value", value); 
+        selectMapEventType(value);
+    });
 
+    $(".gcm-map-eventTemporality-option").click(function () {
+        var value = $(this).attr("value");
+        $("#gcm-map-eventDate-dropdown").attr("value", value); 
+        selectMapEventsAllOrNew(value);
+    });
+};

@@ -136,6 +136,16 @@
     
 }
 
+.dropdown-left {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.dropdown-right {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 #gcm-footer i {
     font-size: 22px;
 }

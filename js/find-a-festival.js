@@ -25,6 +25,7 @@ var main = function() {
     });
 
     var now = new Date();
+    now.setHours(0, 0, 0, 0);
     for(var i = 0; i < eventList.length; ++i) {
         var className = "";
         
