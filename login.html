@@ -2,40 +2,42 @@
         <div class="gc-nav-separation"></div>
         
         <div class="gc-login-form">
-            	<h2 class="gc-form-title">Log In</h2>
-    		    <div class="gc-horizontal-line"></div>
-    		    	<div class="gc-login">
-    		    	<form action="/login" method="post" autocomplete="off">
-        			<fieldset>
-    		    		<div id="login-left">
+            <h2 class="gc-form-title">Log In</h2>
+    	    <div class="gc-horizontal-line"></div>
+    	    <div class="gc-login">
+    		<form action="/login" method="post" autocomplete="off">
+        	    <fieldset>
+    		    	<div id="login-left">
                 	    <div class="question">
                 	        <label for="email">Email address</label>
                 	        <br/>
-        					<input class="input-sm" type="email" id="email" name="userEmail" />
+        			<input class="input-sm" type="email" id="email" name="userEmail" />
                 	    </div>
                    
 
-                    	<div class="question">
-                    	    <label for="password">Password</label>
-                    	    <br/>
-                    	    <input class="input-sm" type="password" id="password" name="userPassword" />
-                    	</div>
-                        </div>
-                    	<div id="login-right">
-                    
-                                <p><a href="https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id= 235611429010-lp0pudhgtv6o6tsen78q90h76ia31fp8.apps.googleusercontent.com&redirect_uri=https://classicalguitarcalendar.com/googleoauth&scope=https://www.googleapis.com/auth/userinfo.email">Login with google</a></p>
-                                <p><a href="https://www.facebook.com/dialog/oauth?client_id=2886318978362413&redirect_uri=https://classicalguitarcalendar.com/facebookoauth&scope=email">Login with facebook</a></p>
-                        </div>
+                    	    <div class="question">
+                    	        <label for="login-password">Password</label>
+                    	        <br/>
+                    	        <input class="input-sm" type="password" id="login-password" name="userPassword" />
+                    	    </div>
                         </div>
                     
                     	<div class="button button-login">
                     	    <button type="submit">Submit</button>
-                    	</div>           
+                    	</div>
 
-  					</fieldset>
-        		    </form>
-        		    <p id="not-registered">Not registered? <a href="registrationForm.html">Create an account</a></p>
-				</div>
-				
-            
-        </div> <!--close gc-registration-form--!>
+                    	<div id="login-right">
+                            <p><a href="https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id= 235611429010-lp0pudhgtv6o6tsen78q90h76ia31fp8.apps.googleusercontent.com&redirect_uri=https://classicalguitarcalendar.com/googleoauth&scope=https://www.googleapis.com/auth/userinfo.email">Login with google</a></p>
+                            <p><a href="https://www.facebook.com/dialog/oauth?client_id=2886318978362413&redirect_uri=https://classicalguitarcalendar.com/facebookoauth&scope=email">Login with facebook</a></p>
+                        </div>
+  		    </fieldset>
+        	</form>
+                <p id="not-registered">
+                    <span>Not registered?</span>
+                    <a href="/registrationForm.html">Create an account</a>
+                </p>
+                <div id="forgot-password">
+                    <a href="/forgotPassword.html">Forgot your password?</a>
+                </div>
+	    </div>
+        </div> <!--close gc-login-form--!>
