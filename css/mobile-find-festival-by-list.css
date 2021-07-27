@@ -81,6 +81,13 @@
     border-radius: 0px 10px 0px 0px;
 }
 
+.faf-table-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 #gcm-table-end {
     max-width: 80%;
     margin: auto;
@@ -88,13 +95,6 @@
     height: 20px;
     border-radius: 0px 0px 15px 15px;
     
-}
-
-.container-buttons-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 @media (min-width: 1042px) {

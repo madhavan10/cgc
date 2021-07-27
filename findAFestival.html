@@ -5,7 +5,7 @@
 <script src="/js/bs4-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <div class="gc-find-a-festival">
     <div class= "gc-find-a-festival-container">
-        <div class="container-buttons-list">
+        <div class="container-buttons-list faf-container-buttons-list">
             <div class="dropdown dropdown-left">
                 <div class="select">
                     <span>Event Type</span>
@@ -52,25 +52,25 @@
                 <thead>
                     <tr>
                         <th id="gcm-left-column">
-                            <span id="table-event-header" onclick="sortTable(0, this)">
+                            <span id="table-event-header" class="faf-table-header" onclick="sortTable(0, this)">
                                 <span>Event</span>
                                 <i class="bi bi-chevron-right"></i>
                             </span>
                         </th>
                         <th id="gcm-middle-column">
-                            <span onclick="sortTable(1, this)">
+                            <span class="faf-table-header" onclick="sortTable(1, this)">
                                 <span>Start</span>
                                 <i class="bi bi-chevron-right"></i>
                             </span>
                         </th>
                         <th>
-                            <span onclick="sortTable(2, this)">
+                            <span class="faf-table-header" onclick="sortTable(2, this)">
                                 <span>End</span>
                                 <i class="bi bi-chevron-right"></i>
                             </span>
                         </th>
                         <th id="gcm-right-column">
-                            <span onclick="sortTable(3, this)">
+                            <span class="faf-table-header" onclick="sortTable(3, this)">
                                 <span>Location</span>
                                 <i class="bi bi-chevron-right"></i>
                             </span>
