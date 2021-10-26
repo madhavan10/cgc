@@ -1,7 +1,7 @@
 
 .gc-login-form {
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     padding-left: 4%;
     padding-right: 4%;
     background-color: #ffffff;
@@ -15,18 +15,16 @@
 
 }
 
-.gc-login form {
-	display: flex;
+.gc-login-form a {
+    color: #4A91E8;
+    text-decoration: none;
 }
 
 #login-right {
-    margin-top: 15px;
+    margin-top: 35px;
+    padding-bottom: 10px;
 }
 
-#login-left {
-
-
-}
 
 #not-registered {
     margin-top: 20px;

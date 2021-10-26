@@ -128,7 +128,8 @@ ul.row {
 }
 
 
-.footer {
+#footer {
+    height: 200px;
     background-color: #102542;
     font-family: 'Roboto', sans-serif;
     padding: 15px;

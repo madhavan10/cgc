@@ -48,7 +48,8 @@
 	position: relative;
     margin: 10px 10% 30px 10%;
     width: 80%;
-    height: 400px;
+    min-height: 100%;
+    height: 1200px;
     z-index: 0; 
     padding-top: 30px;
     box-shadow:

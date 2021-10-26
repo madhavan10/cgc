@@ -1,0 +1,50 @@
+        <div class="gc-nav-separation"></div>
+        
+        <div class="gc-festival-registration">
+            <script src="/bower_components/moment/min/moment.min.js"></script>
+            <script src="/js/bs4-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+            <!--relied on bootstrap 3 - deprecated-->
+            <!--<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>-->
+            <script src="/js/festival-registration.js"></script>
+                
+            <form autocomplete="off">
+                <fieldset id="event-basics">
+                    <h2 class="gc-festival-form-first-title">Contact us</h2>
+                    
+                    
+
+                    <div class="question question-festival-registration">
+                        <label for="event-name">Name and surname</label>
+                        <br/>
+                        <input type="text" id="event-name" name="eventName" required/>
+                    </div>
+                    
+                    <div class="question">
+                            <label for="email">Email address</label>
+                            <br/>
+                    <input class="input-sm" type="email" id="email" name="userEmail" />
+                        </div>
+                    
+                    <div class="question question-festival-registration">
+                        <label for="event-name">The subject of your message</label>
+                        <br/>
+                        <input type="text" id="event-name" name="eventName" required/>
+                    </div>
+                    
+                    
+
+                    <div class="question question-festival-registration">
+                        <label for="event-description">Your message</label>
+                        <br/>
+                        <textarea id="event-description" required></textarea>
+                    </div>
+                    
+
+
+                <div class="button festival-registration-button">
+                    <button type="button" onclick="submitFestivalRegistrationForm()">Send your message</button>
+                </div>
+
+            </form>
+        </div>
+

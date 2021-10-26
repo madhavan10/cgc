@@ -7,8 +7,7 @@
     transition: height 0.3s ease 0s;
     background: linear-gradient(
       to bottom,
-      rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.3) 74%, rgba(0,0,0,1) 100%
-      ),url('background-images/Sevilla.jpg');
+      rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.3) 74%, rgba(0,0,0,1) 100%);
     
     background-position: 50%;
     background-repeat: no-repeat;

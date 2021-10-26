@@ -10,23 +10,26 @@
 @import url('login.css');
 @import url('registration-form.css');
 
-/*
+
 .error-message {
-    font-family: "Lato";
-    padding: 30px 10% 30px 10%;
-    margin-top: 50px;
-    font-size: 18px;
-    line-height: 1.5em;
-    height: 3em;
-    overflow: hidden;
+    margin: 50px 12% 30px 12%;
+    width: 76%;
+    box-shadow:
+        inset 0 7em 10em -5em rgba(255,255,255,0.6),
+        0 0.3em 0.5em -0.2em rgba(100,100,100,1),
+        0 1em 2em -0.75em rgba(100,100,100,0.75),
+        0 1em 3em -0.5em rgba(100,100,100,0.5),
+        0 3em 3em -0.25em rgba(100,100,100,0.2);
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
 }
 
 .gc-error {
-    margin-top: 80px;
-    display:inline-block;
     text-align: center;
+    min-height: 100%;
 }   
-*/
+
 
 .navbar-brand img {
     max-width: 45px;
@@ -96,12 +99,37 @@
     padding-top: 12px;
 }
 
+.gcm-submenu-item a {
+    padding: 5px 2em 5px 2em ;     
+    margin: -5px -2em -5px -2em;
+}
+
 .gcm-last-submenu-item {
     padding-bottom: 12px;
 }
 
 #navbarSupportedContent {
     background: #031c42;
+}
+
+#footer {
+    position: relative;
+    right: 0;
+    bottom: -55px;
+    left: 0;
+    height: 250px;
+    width: 100%;
+    background-color: #031c42;
+    padding: 15px;
+    padding-top: 25px;
+    letter-spacing: 0.2px;
+    
+}
+
+#footer-logo {
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 40px;
 }
 
 #gcm-footer {
@@ -115,6 +143,83 @@
     overflow-x: auto;
     z-index: 2;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-links-container-left {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links-container-right {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.footer-links {
+    color: #F5F5F5;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.footer-links:hover {
+    color: #E0E0E0;
+}
+
+.footer-links-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-copyright {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    color: #8D98A7;
+    font-size: 15px;
+    margin-left: -20px;
+}
+
+.footer-media-containers {
+    background-color: #031C42;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: solid 3px;
+    border-color: #D8BB76;
+    
+}
+
+.footer-media-containers img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.footer-media-containers img:hover {
+    background-color: #052A61;
+    border-radius: 8px;
+}
+
+
+.footer-media {
+    float: right;
+    margin-top: 10px;
+    display: flex;
+    
+    
+}
+
 
 .gcm-nav-low {
     display: flex;
@@ -141,6 +246,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: flex-end;
 }
 
 .dropdown-left {
@@ -305,8 +411,8 @@ body {
     }
     
     .navbar-brand img {
-        max-width: 55px;
-        margin-left: 35%;
+        max-width: 85px;
+        margin-left: 45%;
 }
 
     #gcm-nav-items {
@@ -342,34 +448,31 @@ body {
     .description-page {
         display: block;
     }
+    .cover-photo {
+        background-color: #031c42;
+    }
 
     .Article-coverImage {
         position: relative;
         transition: height 0.3s ease 0s;
         background: linear-gradient(
           to bottom,
-          rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.3) 74%, rgba(0,0,0,1) 100%
-          ),url('background-images/Sevilla.jpg');
-        
-        background-position: 50%;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        background-size: cover;
+          rgba(2,17,39,0) 0%, rgba(2,17,39,0) 65%, rgba(2,17,39,0.2) 74%, rgba(2,17,39,0.7) 100%
+          );
+        height: 300px;
         max-width: 1920px;
         max-height: 1080px;
     }
     .Article-coverImage h1 {
-        border-top: 2px #E6C571 solid;
         position: absolute;
-        color: #FFFFE5;
         font-family: 'Roboto', sans-serif;
-        text-shadow: 0px 0px 3px rgba(0, 0, 0, 1); /*rgba(245, 245, 255, 0.35) 0 0px 0px, rgba(0, 0, 30, 0.08) 0px 2px 2px, rgba(0, 0, 30, 0.20) 0px 2px 1px, rgba(0, 0, 30, 0.40) 0px 2px 1px, rgba(0, 0, 0, 0.08) -5px 5px 2px;*/ 
-        background: rgb(33, 40, 52); /* fallback color */
-        background: rgba(33, 40, 52, 0.5);
-        border-radius: 1.5px 1.5px 1.5px 1.5px;
+        text-decoration: underline #E6C571 1px;
+        text-underline-offset: 3px;
+        color: #fff;
         top: 20%;
         width: 75%;
         margin-left: 12.5%;
+        font-size: 35px;
         text-align: center;
         vertical-align: middle;
     }
@@ -390,28 +493,24 @@ body {
             bottom: 4%;
             color: #fff;
             left: 10.5%;
-            font-family: 'Roboto';
             font-weight: 400;
     }
 
     #town, #country {
             color: #E8E8E8;
             font-size: 24px;
-            font-family: 'Roboto';
             font-weight: 300 bold;
      }
 
     #month, #date, #year {
             color: #CECECE;
             font-size: 24px;
-            font-family: 'Roboto';
             font-weight: 300;
     }
 
     .dot {
             color: #E8E8E8;
             font-size: 18px;
-            font-family: 'Roboto';
             font-weight: 300;
     }
 
@@ -449,9 +548,12 @@ body {
     }
     
     .description:hover {
-            -webkit-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
-            -moz-box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
-            box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.75);
+            -webkit-box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
+            -moz-box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
+            border-radius: 8px;
+            cursor: pointer;
+
 
     }
 
@@ -498,7 +600,6 @@ body {
 
     .main-info {
         margin-left: -2.2%;
-        font-family: 'Roboto';
         min-height: 550px;
         margin-bottom: 30px;
         
@@ -509,12 +610,15 @@ body {
     }
 
     .main-info li span:hover, .main-info li span:active {
-            background-color: #E6C571;
-            color: #32393f;
+            background-color: #052A61;
+            color: #ffffff;
+            cursor: pointer;
     }
 
     .main-info-content {
             white-space: pre-line;
+            font-family: georgia;
+            padding-right: 60px;
     }
 
     .tab-title {
@@ -570,7 +674,9 @@ body {
     }
 
     /* FIND FESTIVAL LIST */
-
+    .gc-find-a-festival {
+        min-height: 600px;
+    }
     .gc-find-a-festival-container {
     }
 
@@ -590,6 +696,12 @@ body {
     }
     
    
+}
+
+@media (max-width: 1042px) {
+    #footer {
+        display: none;
+    }
 }
 
 @media (min-width: 1600px) {

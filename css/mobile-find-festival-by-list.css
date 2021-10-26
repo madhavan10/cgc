@@ -49,6 +49,7 @@
     text-align: center;
     background-color: #031c42;
     color: #ffffff;
+    cursor: pointer;
 }
 
 #gcm-FAF-table td {
@@ -89,8 +90,9 @@
 }
 
 #gcm-table-end {
-    max-width: 80%;
-    margin: auto;
+    min-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #ffffff;
     height: 20px;
     border-radius: 0px 0px 15px 15px;
