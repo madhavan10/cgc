@@ -317,7 +317,7 @@ function initMap() {
         markers.push(new google.maps.Marker({
             map,
             position: thisEventPos,
-            icon: {url: imageUrl, scaledSize: new google.maps.Size(40, 40)},
+            icon: {url: imageUrl, scaledSize: new google.maps.Size(18, 40)},
             title: thisEvent.eventName
         }));
         

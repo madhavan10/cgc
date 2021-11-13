@@ -2,8 +2,6 @@
 <script src="/js/gcm-map.js"></script>
 <div id="gcm-map-page">
     <div id="gcm-map-container">
-        <div id="gcm-map"></div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&callback=initMap&libraries=places&v=weekly" async></script>
         <div class="container-buttons-list map-container-buttons-list">
             <div class="dropdown dropdown-left">
                 <div class="select">
@@ -31,6 +29,9 @@
                 </ul>
             </div>
         </div>
+        <div id="gcm-map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&callback=initMap&libraries=places&v=weekly" async></script>
+        
         <div id="gcm-map-filters-container">
             <select id="gcm-map-eventType-dropdown" onchange="selectMapEventType(this.value)"> 
                 <option selected disabled value="Event Type">Event Type</option>
