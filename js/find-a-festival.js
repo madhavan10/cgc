@@ -130,7 +130,7 @@ var selectEventsAllOrNew = function (value) {
     $(".gcm-eventDate-active.gcm-eventType-active").show();
 };
 
-var tableSortDirections = ["neutral", "neutral", "neutral", "neutral"];
+var tableSortDirections = ["neutral", "desc", "neutral", "neutral"];
 
 var sortTable = function (columnIndex, elt) {
     var switching = true;
@@ -177,7 +177,6 @@ var sortTable = function (columnIndex, elt) {
     and changing icon to the right of column header*/
     if (tableSortDirections[columnIndex] === "neutral") {
         tableSortDirections[columnIndex] = "desc";
-        $(elt).children("i").removeClass("bi-chevron-right");
         $(elt).children("i").addClass("bi-chevron-compact-down");
     } else if (tableSortDirections[columnIndex] === "asc") {
         tableSortDirections[columnIndex] = "desc";
