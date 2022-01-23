@@ -2,6 +2,7 @@ var main = function() {
     $("fieldset").hide();
     $("#event-basics").show();
     $("#practical-information-questions").show();
+    $("#event-photo").show();
     $(".gc-event-radio").click(function() {
         if($("#festival-radio-button").is(":checked")) {
             $(".gc-event-questions").hide();
@@ -63,25 +64,6 @@ function submitFestivalRegistrationForm() {
         alert("Please fill-in one or more required fields");
         return;
     }
-
-    //check start date < end date
-    //not actually needed, datetimepicker script options do it
-    /*
-    sd_month = start_date.substring(0, 2);
-    sd_day = start_date.substring(3, 5);
-    sd_year = start_date.substring(6, 10);
-    sd_str = sd_year + sd_month + sd_day;
-
-    ed_month = end_date.substring(0, 2);
-    ed_day = end_date.substring(3, 5);
-    ed_year = end_date.substring(6, 10);
-    ed_str = ed_year + ed_month + ed_day;
-
-    if (ed_str.localeCompare(sd_str) < 0) {
-        alert("Please ensure your event's end-date is not prior to its start-date");
-        return;
-    }
-    */
 
     //check required fields filled-in (except dates)
     var requiredInputs = $(":input[required][id!=gc-dateTP1-input][id!=gc-dateTP2-input]");

@@ -1,7 +1,7 @@
 <div id="gc-contact-form" class="gc-form">
     <h2 class="gc-form-title">Contact us</h2>
     <div class="gc-horizontal-line"></div>
-    <form autocomplete="off">
+    <form action="/contact" method="post" autocomplete="off">
         <fieldset>
             <div class="question contact-form-item">
                 <div><label for="contact-name">Name</label></div>
@@ -20,7 +20,7 @@
             
             <div class="question contact-form-item">
                 <div><label for="contact-message">Your message</label></div>
-                <textarea id="contact-message" required></textarea>
+                <textarea id="contact-message" name="contact-message-body" required></textarea>
             </div>
 
             <div class="button contact-form-item">

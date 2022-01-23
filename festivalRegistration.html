@@ -227,8 +227,6 @@
 
                 </fieldset>
 
-		   
-
                 <fieldset id="practical-information-questions">
 		    <div class="gc-horizontal-line"></div>
                     <h2 class="gc-festival-form-title">Practical Information</h2>
@@ -274,7 +272,20 @@
                         <textarea id="other-facilities"></textarea>
                     </div>
                 </fieldset>
- 
+                
+                <fieldset id="event-photo">
+		    <div class="gc-horizontal-line"></div>
+                    <h2 class="gc-festival-form-title">Event Photo</h2>
+                    <div class="question question-festival-registration">
+                        <div>Would you like to upload a photo for your event?</div>
+                        <button type="button" id="event-photo-upload-button">
+                            <label style="cursor:pointer" for="event-photo-upload">Choose image</label>
+                        </button>
+                        <br/>
+                        <input type="file" style="display:none" id="event-photo-upload" name="event-photo" accept="image/png, image/jpeg" />
+                    </div>
+                </fieldset>
+                
                 <div class="button festival-registration-button">
                     <button type="button" onclick="submitFestivalRegistrationForm()">Register My Event</button>
                 </div>
