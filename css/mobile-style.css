@@ -214,15 +214,11 @@
     border-radius: 8px;
 }
 
-
 .footer-media {
     float: right;
     margin-top: 10px;
     display: flex;
-    
-    
 }
-
 
 .gcm-nav-low {
     display: flex;
@@ -688,6 +684,28 @@ body {
     }
 
     /* HOME PAGE */
+    #gc-slider {
+        display: block;
+        position: relative;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        height: 320px;
+    }
+    
+    .gc-slide {
+        margin: auto;
+    }
+
+    .gc-slide-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100%;
+        /* max-height: 100%; */
+    }
 
     #gcm-calendar {
         width: 70%;
@@ -716,6 +734,11 @@ body {
     #gcm-footer {
         display: none;
     }
+    
+    #gc-slider {
+        width: 60%;
+    }
+
     #gcm-calendar {
         width: 60%;
     }

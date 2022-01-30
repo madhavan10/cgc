@@ -14,6 +14,7 @@ var main = function() {
 
     setInterval(slide, 6000);
     
+    //TODO
     $('#gc-left-slide-arrow').click(function() {
         var prevSlide = $('.gc-active-slide').prev();
         if(prevSlide.length === 0) {
@@ -22,6 +23,7 @@ var main = function() {
         $('.gc-active-slide').hide().removeClass('gc-active-slide');
         prevSlide.show().addClass('gc-active-slide');
     });
+    //TODO
     $('#gc-right-slide-arrow').click(function() {
         var nextSlide = $('.gc-active-slide').next();
         if(nextSlide.length === 0) {
@@ -30,10 +32,6 @@ var main = function() {
         $('.gc-active-slide').hide().removeClass('gc-active-slide');
         nextSlide.show().addClass('gc-active-slide');
     });
-
-
-
-        
 };
 
 $(document).ready(main);
