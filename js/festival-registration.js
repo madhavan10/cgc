@@ -56,7 +56,17 @@ var main = function() {
 };
 
 function submitFestivalRegistrationForm() {
-    
+    encodingMap = {
+        //see https://en.wikipedia.org/wiki/Percent-encoding
+        "!":"%21", "#":"%23", "$":"%24", "%":"%25", "&":"%26", "'":"%27",
+        "(":"%28", ")":"%29", "*":"%2A", "+":"%2B", ",":"%2C", "/":"%2F",
+        ":":"%3A", ";":"%3B", "=":"%3D", "?":"%3F", "@":"%40", "[":"%5B",
+        "]":"%5D", "\n":"%0A", " ":"_", "\"":"%22", "\\":"%5C", ".":"%2E",
+        "<":"%3C", ">":"%3E", "`":"%60", "{":"%7B", "|":"%7C", "}":"%7D" 
+    };
+
+    event_name = $("#event-name").val() 
+
     //first check dates non-empty
     start_date = $('#datetimepicker1')[0].children[0].value;
     end_date = $('#datetimepicker2')[0].children[0].value;
