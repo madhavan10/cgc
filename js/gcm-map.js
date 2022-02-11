@@ -322,7 +322,7 @@ function initMap() {
         }));
         
         markers[i]['infoWindow'] = new google.maps.InfoWindow({
-            content: "<div><a href=\"/festivals/" + thisEvent.eventName + "\">" + thisEvent.eventName + "</a></div>" +
+            content: "<div><a href=\"/festivals/" + thisEvent.URISafeName + "\">" + thisEvent.eventName + "</a></div>" +
             "<div>" + startMonth + " " + startDay + ", " + startYear + " - " + endMonth + " " + endDay + ", " + endYear + "</div>" +
             "<div>" + thisEvent.eventLocation.name + ", " + thisEventCountry + "</div>"
         });

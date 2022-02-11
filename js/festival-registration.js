@@ -56,20 +56,10 @@ var main = function() {
 };
 
 function submitFestivalRegistrationForm() {
-    encodingMap = {
-        //see https://en.wikipedia.org/wiki/Percent-encoding
-        "!":"%21", "#":"%23", "$":"%24", "%":"%25", "&":"%26", "'":"%27",
-        "(":"%28", ")":"%29", "*":"%2A", "+":"%2B", ",":"%2C", "/":"%2F",
-        ":":"%3A", ";":"%3B", "=":"%3D", "?":"%3F", "@":"%40", "[":"%5B",
-        "]":"%5D", "\n":"%0A", " ":"_", "\"":"%22", "\\":"%5C", ".":"%2E",
-        "<":"%3C", ">":"%3E", "`":"%60", "{":"%7B", "|":"%7C", "}":"%7D" 
-    };
-
-    event_name = $("#event-name").val() 
 
     //first check dates non-empty
-    start_date = $('#datetimepicker1')[0].children[0].value;
-    end_date = $('#datetimepicker2')[0].children[0].value;
+    var start_date = $('#datetimepicker1')[0].children[0].value;
+    var end_date = $('#datetimepicker2')[0].children[0].value;
     if (start_date === "" || end_date === "") {
         alert("Please fill-in one or more required fields");
         return;
@@ -87,11 +77,35 @@ function submitFestivalRegistrationForm() {
         alert("Please fill-in one or more required fields");
         return;
     }
+    
+    /* not needed, backend library seems to take care of decoding
+    var encodingMap = {
+        //see https://en.wikipedia.org/wiki/Percent-encoding
+        "!":"%21", "#":"%23", "$":"%24", "%":"%25", "&":"%26", "'":"%27",
+        "(":"%28", ")":"%29", "*":"%2A", "+":"%2B", ",":"%2C", "/":"%2F",
+        ":":"%3A", ";":"%3B", "=":"%3D", "?":"%3F", "@":"%40", "[":"%5B",
+        "]":"%5D", "\n":"%0A", " ":"_", "\"":"%22", "\\":"%5C", ".":"%2E",
+        "<":"%3C", ">":"%3E", "`":"%60", "{":"%7B", "|":"%7C", "}":"%7D" 
+    };
+    */
+    //generate URISafeName for event
+    var encodingMap = {" " : "_", "\"" : "^", "/" : "|"};
+    var event_name = $("#event-name").val();
+    var URI_safe_name = "";
+    for(c of event_name) {
+        if(c in encodingMap) {
+            URI_safe_name += encodingMap[c];
+        } else {
+            URI_safe_name += c;
+        }
+    }
+    URI_safe_name += start_date.substring(6, 10); //add year
 
     var masterclass_radio = $('input[name=whether-masterclasses]:checked')[0];
     var toSend = {
         radio_button : $('input[name=eventType]:checked')[0].id,
-        eventName : $('#event-name').val(),
+        eventName : event_name,
+        URISafeName: URI_safe_name,
         startDate : $('#datetimepicker1')[0].children[0].value,
         endDate : $('#datetimepicker2')[0].children[0].value,
         /* Simply using eventLocation

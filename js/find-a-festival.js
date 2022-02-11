@@ -55,7 +55,7 @@ var main = function() {
         }
 
         className += " gc-event-listing ";
-        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].eventName + "\">" 
+        $("#gcm-FAF-tbody").append("<tr class=\"" + className + "\"><td><a href=\"/festivals/" + eventList[i].URISafeName + "\">" 
             + eventList[i].eventName + "</a></td><td>" + startDateStr + "</td><td>" + endDateStr + "</td><td>" + loc + "</td></tr>");
     }
     

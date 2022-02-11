@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             end: Date.parse(getNextDate(thisEvent.endDate)), //end-date is exclusive
             allDay: true,
             //temporary url
-            url: "/festivals/" + thisEvent.eventName,
+            url: "/festivals/" + thisEvent.URISafeName,
             backgroundColor: "#031C42",
             borderColor: "#ffffff"
         };
