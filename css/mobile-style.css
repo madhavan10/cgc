@@ -25,95 +25,6 @@
         border-radius: 2px;
 }
 
-#gc-splide-container {
-    background-color: #f4faff;
-    width: 70%;
-    margin: auto;
-    margin-top: 10px;
-}
-
-.splide {
-    
-}
-
-.splide__slide {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 6px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
- 
-}
-
-.splide__arrow.splide__arrow--prev {
-  left: 0;
-  
-}
-
-.splide__arrow svg{fill:rgba(0,0,0,0.0);height:2.5em;transition:fill .2s linear;width:2.5em}
-
-.splide__arrow.splide__arrow--next {
-  right: 0;
-  
-}
-
-.splide .splide__arrow {
-   
-  opacity: .9;
-
-}
-
-.splide__arrow:focus {outline:none}
-
-
-
-.splide__arrow {
-    background-color:  rgba(0,0,0,0.0);
-    height: 100%;
-    border-radius: 20px;
-    width: 20%;
-
-
-
-}
-
-.splide__slide--clone {
-    
-}
-
-.is-visible {
-    z-index: 999;
-    
-}
-
-.is-prev {
-    
-    
-}
-
-.is-next {
-    
-}
-
-.splide__pagination__page {
-    background: #ccc;
-    border: 0;
-    border-radius: 2.5px;
-    display: inline-block;
-    height: 5px;
-    margin: 3px;
-    padding: 0;
-    transition: all .2s linear;
-    width: 20px;
-}
-.splide__pagination__page.is-active {
-    background: #407FDD;
-}
-.splide__pagination__page:hover {
-    background: #407FDD;
-    cursor: pointer;
-    opacity: .9;
-}
-
 .gc-error {
     text-align: center;
     min-height: 100%;
@@ -654,23 +565,21 @@ body {
     }
 
     .festival-image {
-        //position: relative;
-        background-image: url('images/Wide.jpg');
-        background-position: 100%;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        background-size: cover;
-        //left: 9%;
-        width: 95%;
+        
+
+        
+        background-color: #fff;
+
+        width: 94%;
         border: 3px #fff solid;
         -webkit-box-shadow: 0 8px 6px -6px black;
                -moz-box-shadow: 0 8px 6px -6px black;
                     box-shadow: 0 8px 6px -6px black;
                     
     }
-
-    .FlexEmbed--3by1:before{
-        padding-bottom: 50%;
+    
+    .festival-image img {
+        width: 100%;
     }
 
     .image-overlay {
@@ -823,11 +732,6 @@ body {
     #gcm-footer {
         display: none;
     }
-    
-    #gc-slider {
-        width: 60%;
-    }
-
     #gcm-calendar {
         width: 60%;
     }

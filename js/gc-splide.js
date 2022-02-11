@@ -4,10 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
         cover:true, 
         heightRatio:0.50,
         type: 'loop',
-        padding: '12rem',
-        gap: '1.5rem',
-        autoplay: true,
-        
+        padding: '15%',
+        gap: '6%',
+        autoplay: true,       
     }).mount();
 });
 
