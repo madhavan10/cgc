@@ -505,7 +505,7 @@ body {
     .navbar-brand img {
         max-width: 85px;
         margin-left: 45%;
-}
+    }
 
     #gcm-nav-items {
         display: flex-inline;
@@ -830,6 +830,9 @@ body {
 
     #gcm-calendar {
         width: 60%;
+    }
+    #gc-splide-container {
+    width: 60%;
     }
 }
 

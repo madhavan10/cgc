@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         gap: '1.5rem',
         autoplay: true,
         
-        
     }).mount();
 });
 
