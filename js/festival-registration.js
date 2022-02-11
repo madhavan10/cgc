@@ -78,7 +78,7 @@ function submitFestivalRegistrationForm() {
         return;
     }
     
-    /* not needed, backend library seems to take care of decoding
+    /* only some needed
     var encodingMap = {
         //see https://en.wikipedia.org/wiki/Percent-encoding
         "!":"%21", "#":"%23", "$":"%24", "%":"%25", "&":"%26", "'":"%27",
@@ -89,7 +89,7 @@ function submitFestivalRegistrationForm() {
     };
     */
     //generate URISafeName for event
-    var encodingMap = {" " : "_", "\"" : "^", "/" : "|"};
+    var encodingMap = {" " : "_", "\"" : "^", "/" : "^O", "#" : "^H", "?" : "^Q", "%" : "^P"};
     var event_name = $("#event-name").val();
     var URI_safe_name = "";
     for(c of event_name) {
