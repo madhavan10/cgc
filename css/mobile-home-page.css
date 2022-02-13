@@ -1,6 +1,77 @@
 /* SLIDER */
-#gc-slider {
-    display: none;
+#gc-splide-container {
+    background-color: #f4faff;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.splide__slide {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ 
+}
+
+.splide__arrow.splide__arrow--prev {
+    left: 0;
+}
+
+.splide__arrow svg{
+    fill:rgba(0,0,0,0.0);
+    height:2.5em;
+    transition:fill .2s linear;
+    width:2.5em
+}
+
+.splide__arrow.splide__arrow--next {
+    right: 0;
+}
+
+.splide .splide__arrow {   
+    opacity: .9;
+}
+
+.splide__arrow:focus {
+    outline:none;
+}
+
+.splide__arrow {
+    background-color:  rgba(0,0,0,0.0);
+    height: 100%;
+    border-radius: 20px;
+    width: 15%;
+}
+
+.is-visible {
+    z-index: 999;
+}
+
+.is-prev, .is-next {
+    filter: grayscale(100%);
+}
+
+
+.splide__pagination__page {
+    background: #ccc;
+    border: 0;
+    border-radius: 2.5px;
+    display: inline-block;
+    height: 5px;
+    margin: 3px;
+    padding: 0;
+    transition: all .2s linear;
+    width: 20px;
+}
+
+.splide__pagination__page.is-active {
+    background: #407FDD;
+}
+
+.splide__pagination__page:hover {
+    background: #407FDD;
+    cursor: pointer;
+    opacity: .9;
 }
 
 .container-margin {
@@ -230,24 +301,33 @@
 }
 
 @media (min-width: 1042px) {
+    
     .container-margin {
         margin-top: 30px;
         margin-left: 0;
     }
+
     .container {
         width: 300px;
         text-align: left;
         margin-left: 0;
         margin-bottom: 0;
     }
+
+    #gc-splide-container {
+        width: 70%;
+    }
+
     #gcm-calendar {
         background-color: #ffffff;
     }
+
     #calendar {
         background-color: #ffffff;
         padding: 12px;
         border: 0px;
     }
+
     .fc-toolbar-title {
         font-size: 25px !important;
         margin-top: -72px !important;
@@ -257,10 +337,10 @@
         margin-top: -72px !important;
         margin-bottom: 37px !important;       
     }
-
     .fc-dayGridWeek-button {
         margin-top: -107px !important;
     }
+
     #gcm-calendar-event-type-filter {
         background-color: #ffffff;
     }
@@ -272,3 +352,4 @@
         margin-top: -76px !important;
     }
 }
+
