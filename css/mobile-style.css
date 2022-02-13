@@ -96,6 +96,9 @@
     margin-top: -100px;
     margin-left: -20px;
     border-radius: 8px 8px 8px 8px;
+    border: 2px solid;
+    border-top: 0px;
+    border-color: #fff;
 }
 
 .gcm-submenu-item {
