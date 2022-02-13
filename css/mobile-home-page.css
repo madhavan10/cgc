@@ -47,6 +47,11 @@
     z-index: 999;
 }
 
+.is-prev, .is-next {
+    filter: grayscale(100%);
+}
+
+
 .splide__pagination__page {
     background: #ccc;
     border: 0;
