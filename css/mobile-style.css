@@ -78,6 +78,10 @@
     color: #fff;
 }
 
+.gcm-logout {
+    display: none;
+}
+
 .gcm-has-submenu {
     cursor: pointer;
 }
