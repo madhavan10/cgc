@@ -319,8 +319,6 @@
   color: #888888;
 }
 
-
-
 @media screen and (max-height: 450px) {
   #gcm-sidenav a {font-size: 14px;}
 }
@@ -378,7 +376,6 @@
         padding-top: 60px;
     }
 }
-
 
 body {
     background-color: #f4faff;
@@ -492,29 +489,29 @@ body {
     }
 
     .festival-location {
-            position:absolute;
-            bottom: 4%;
-            color: #fff;
-            left: 10.5%;
-            font-weight: 400;
+        position:absolute;
+        bottom: 4%;
+        color: #fff;
+        left: 10.5%;
+        font-weight: 400;
     }
 
     #town, #country {
-            color: #E8E8E8;
-            font-size: 24px;
-            font-weight: 300 bold;
+        color: #E8E8E8;
+        font-size: 24px;
+        font-weight: 300 bold;
      }
 
     #month, #date, #year {
-            color: #CECECE;
-            font-size: 24px;
-            font-weight: 300;
+        color: #CECECE;
+        font-size: 24px;
+        font-weight: 300;
     }
 
     .dot {
-            color: #E8E8E8;
-            font-size: 18px;
-            font-weight: 300;
+        color: #E8E8E8;
+        font-size: 18px;
+        font-weight: 300;
     }
 
     .main-content {
@@ -547,17 +544,15 @@ body {
     }
 
     #gc-description-text {
-            white-space: pre-line;
+        white-space: pre-line;
     }
     
     .description:hover {
-            -webkit-box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
-            -moz-box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
-            box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
-            border-radius: 8px;
-            cursor: pointer;
-
-
+        -webkit-box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
+        -moz-box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
+        box-shadow: inset rgba(0, 0, 0, 0.11) 0px 0px 0px 1px;
+        border-radius: 8px;
+        cursor: pointer;
     }
 
     .twitter-share-button {
@@ -565,11 +560,7 @@ body {
     }
 
     .festival-image {
-        
-
-        
         background-color: #fff;
-
         width: 94%;
         border: 3px #fff solid;
         -webkit-box-shadow: 0 8px 6px -6px black;
@@ -607,23 +598,23 @@ body {
     }
 
     .main-info li span{
-            color: #424B54;
+        color: #424B54;
     }
 
     .main-info li span:hover, .main-info li span:active {
-            background-color: #052A61;
-            color: #ffffff;
-            cursor: pointer;
+        background-color: #052A61;
+        color: #ffffff;
+        cursor: pointer;
     }
 
     .main-info-content {
-            white-space: pre-line;
-            font-family: georgia;
-            padding-right: 60px;
+        white-space: pre-line;
+        font-family: georgia;
+        padding-right: 60px;
     }
 
     .tab-title {
-            font-weight: bold;
+        font-weight: bold;
     }
 
     .nav > li > span {
