@@ -53,32 +53,7 @@
                         </div>
                     </div>
                     
-                    <script type="text/javascript">
-                        $(function () {
-                            $('#gc-dateTP1-input').datetimepicker({
-                                format: 'MM/DD/YYYY',
-                                icons: {
-                                    previous: 'fas fa-chevron-left',
-                                    next: 'fas fa-chevron-right'
-                                }
-                            });
-                            $('#gc-dateTP2-input').datetimepicker({
-                                format: 'MM/DD/YYYY', 
-                                useCurrent: false,
-                                icons: {
-                                    previous: 'fas fa-chevron-left',
-                                    next: 'fas fa-chevron-right'
-                                }
-                            });
-                            
-                            $("#gc-dateTP1-input").on("dp.change", function (e) {
-                                $('#gc-dateTP2-input').data("DateTimePicker").minDate(e.date);
-                            });
-                            $("#gc-dateTP2-input").on("dp.change", function (e) {
-                                $('#gc-dateTP1-input').data("DateTimePicker").maxDate(e.date);
-                            });
-                        });
-                    </script>
+                    <script src="/js/date-time-picker-init.js"></script>
                     
                     <!-- not needed
                     <div class="question">
@@ -95,28 +70,7 @@
                     </div>
 
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASDUyYhbUq-Y1xVP-1RTspPO2ZVACYzo4&libraries=places&callback=initAutocomplete" async defer></script>
-                    <script>
-                        let autocomplete;
-                        let place;
-                        function initAutocomplete() {
-                            autocomplete = new google.maps.places.Autocomplete(document.getElementById("event-city"),
-                                {
-                                    types: ['(cities)'],
-                                    language: 'en',
-                                    fields: ['place_id', 'geometry', 'name', 'address_component']
-                                });
-                            autocomplete.addListener("place_changed", onPlaceChanged);
-                        }
-                        
-                        function onPlaceChanged() {
-                            place = autocomplete.getPlace();
-                            if(!place.geometry) {
-                                document.getElementById("event-city").value = "";
-                                alert("Not a valid place");
-                            }
-                        }
-                    </script>
-
+                    <script src="/js/place-autocomplete.js"></script>
 
                     <div class="question question-festival-registration">
                         <label for="event-description">Give a brief description of your event.</label>

@@ -55,8 +55,6 @@ var main = function() {
     $("#festival-radio-button").click();
 };
 
-var errorMsg;
-
 function submitFestivalRegistrationForm() {
 
     //first check dates non-empty
