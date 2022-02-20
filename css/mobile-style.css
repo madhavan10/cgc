@@ -52,7 +52,7 @@
 }
 
 #gcm-nav-items {
-    margin-top: 5px;
+    margin-top: 7px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -402,6 +402,7 @@ body {
     .navbar-brand {
         margin-top: -6px;
         width: 12%;
+        margin-left: 65px;
     }
 
     #navbarSupportedContent {
@@ -411,6 +412,8 @@ body {
     .navbar-collapse {
         /*overrides flex-basis: 100% which causes nav-items to come below logo */
         flex-basis: auto;
+        flex-grow: .4;
+        margin-right: 100px;
     }
     
     .navbar-brand img {
@@ -422,6 +425,7 @@ body {
         display: flex-inline;
         flex-direction: row;
         position: relative;
+        font-size: .9rem;
     }
 
     .gcm-nav-item {
@@ -434,7 +438,7 @@ body {
         padding-right: 2%;
         border-radius: 0px 0px 8px 8px;
         margin-top: 18px;
-    } 
+    }   
     
     /* MOBILE FOOTER */
    

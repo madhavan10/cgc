@@ -23,6 +23,11 @@ textarea {
     border-radius: 3px;	
 }
 
+#gc-add-photo button{
+    background-color: #7E9FF8;
+    margin-bottom: 30px;
+}
+
 .question {
     margin-top: 15px;
 }

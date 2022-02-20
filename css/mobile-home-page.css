@@ -48,7 +48,7 @@
 }
 
 .is-prev, .is-next {
-    filter: grayscale(100%);
+    
 }
 
 
@@ -170,6 +170,7 @@
 
 #gcm-calendar {
     padding: 20px 3%;
+    font-size: .8rem;
 }
 
 #calendar {
@@ -309,6 +310,12 @@
     } 
 }
 
+@media (max-width: 600px) {
+    .splide__pagination {
+        display: none;
+    }
+}
+
 @media (min-width: 1042px) {
     
     .container-margin {
@@ -329,6 +336,7 @@
 
     #gcm-calendar {
         background-color: #ffffff;
+        font-size: 1rem;
     }
 
     #calendar {
