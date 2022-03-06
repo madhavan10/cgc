@@ -11,6 +11,10 @@ function initAutocomplete() {
 }
 
 function onPlaceChanged() {
+    if (place) {
+        alert("error: place was not reset when input text changed");
+        return;
+    }
     place = autocomplete.getPlace();
     if(!place.geometry) {
         document.getElementById("event-city").value = "";

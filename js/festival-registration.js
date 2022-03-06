@@ -48,11 +48,16 @@ var main = function() {
         $("#festival-masterclass-questions").hide();
         $(".mc-required").prop("required", false);
     });
+    
+    $("#festival-radio-button").click();
 
-    // default view, clicking once doesn't work.
-    // possibly because not using $('input[name='...']).click(function...) for radio button click handler
-    $("#festival-radio-button").click();
-    $("#festival-radio-button").click();
+    $("#event-city").change(function() {
+        place = null; // place var is from place-autocomplete.js
+    });
+
+    if (window.festival) {
+        loadVarsEditFestival();
+    }
 };
 
 function submitFestivalRegistrationForm() {
@@ -78,6 +83,14 @@ function submitFestivalRegistrationForm() {
         return;
     }
     
+    //check that event city is a valid location according to Google Maps
+    if (!place || !place.geometry) {
+        var eventCityVal = document.getElementById("event-city").value;
+        alert("Event city (" + eventCityVal + ") is not a valid place.");
+        document.getElementById("event-city").value = "";
+        return;
+    }
+    
     /* only some needed
     var encodingMap = {
         //see https://en.wikipedia.org/wiki/Percent-encoding
@@ -92,14 +105,20 @@ function submitFestivalRegistrationForm() {
     var encodingMap = {" " : "_", "\"" : "^", "/" : "^O", "#" : "^H", "?" : "^Q", "%" : "^P"};
     var event_name = $("#event-name").val();
     var URI_safe_name = "";
-    for(c of event_name) {
-        if(c in encodingMap) {
-            URI_safe_name += encodingMap[c];
-        } else {
-            URI_safe_name += c;
+    if(window.festival) {
+        //edit festival
+        URI_safe_name = JSON.parse(window.festival._rawJSON).URISafeName;
+    } else {
+        //register festival
+        for(c of event_name) {
+            if(c in encodingMap) {
+                URI_safe_name += encodingMap[c];
+            } else {
+                URI_safe_name += c;
+            }
         }
+        URI_safe_name += start_date.substring(6, 10); //add year
     }
-    URI_safe_name += start_date.substring(6, 10); //add year
 
     var masterclass_radio = $('input[name=whether-masterclasses]:checked')[0];
     var toSend = {
@@ -108,10 +127,7 @@ function submitFestivalRegistrationForm() {
         URISafeName: URI_safe_name,
         startDate : $('#datetimepicker1')[0].children[0].value,
         endDate : $('#datetimepicker2')[0].children[0].value,
-        /* Simply using eventLocation
-        eventCountry : $('#event-country').val(),
         eventCity : $('#event-city').val(),
-        */
         eventLocation: place, //from place-autocomplete script
         eventDescription : $('#event-description').val(),
         schedule : $('#schedule').val(),
@@ -145,11 +161,17 @@ function submitFestivalRegistrationForm() {
         workshopPracticeFacilities : $('#workshop-practice-facilities').val(),
         workshopLessons : $('#workshop-lessons').val(),
         workshopOtherGuests : $('#workshop-other-guests').val(),
-  };
+    };
+    
+    var formSubmitURL;
+    if (window.festival)
+        formSubmitURL = "/editFestival";
+    else
+        formSubmitURL = "registerFestival";
 
   $.ajax({
       method: "POST",
-      url: "registerFestival",
+      url: formSubmitURL,
       data: JSON.stringify(toSend),
       processData: false,
   }).done(function(msg) {
@@ -172,5 +194,47 @@ function submitFestivalRegistrationForm() {
   });
   return false;
 }
+
+var loadVarsEditFestival = function () {
+    var info = JSON.parse(window.festival._rawJSON);
+    $("#" + info.radio_button).click();
+
+    $("#event-name").prop("value", info.eventName);
+    $("#datetimepicker1")[0].children[0].value = info.startDate;
+    $("#datetimepicker2")[0].children[0].value = info.endDate;
+    $("#event-city").prop("value", info.eventCity);
+    // place var is from place-autocomplete.js
+    place = info.eventLocation;
+    $("#event-description").prop("value", info.eventDescription);
+    $("#schedule").prop("value", info.schedule);
+
+    $("#event-fees").prop("value", info.eventFees);
+    $("#how-to-register").prop("value", info.howToRegister);
+    $("#contact-information").prop("value", info.contactInformation);
+    $("#venue-addresses").prop("value", info.venueAddresses);
+    $("#accommodation").prop("value", info.accommodation);
+    $("#travel-info").prop("value", info.travelInfo);
+    $("#other-facilities").prop("value", info.otherFacilities);
+
+    $("#guest-list").prop("value", info.guestList);
+    if (info.masterclass === "yes-masterclasses-radio")
+        $("#yes-masterclasses-radio").prop("checked", true);
+    else if (info.masterclass === "no-masterclasses-radio")
+        $("#no-masterclasses-radio").prop("checked", true);
+
+    $("#masterclass-teachers").prop("value", info.masterclassTeachers);
+    $("#masterclass-pricing").prop("value", info.masterclassPricing);
+
+    $("#competition-rules").prop("value", info.competitionRules);
+    $("#prizes").prop("value", info.prizes);
+    $("#jury").prop("value", info.jury);
+    
+    $("#workshop-teachers").prop("value", info.workshopTeachers);
+    $("#workshop-accommodation").prop("value", info.workshopAccommodation);
+    $("#workshop-meals").prop("value", info.workshopMeals);
+    $("#workshop-practice-facilities").prop("value", info.workshopPracticeFacilities);
+    $("#workshop-lessons").prop("value", info.workshopLessons);
+    $("#workshop-other-guests").prop("value", info.workshopOtherGuests); 
+};
 
 $(document).ready(main);
