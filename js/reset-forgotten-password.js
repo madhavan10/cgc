@@ -1,4 +1,14 @@
 var main = function () {
+    var pathname = window.location.pathname;
+    var tokenString = window.location.search;
+    var expectedStartStr = "?token=";
+    if (pathname === "/resetpassword" && tokenString.startsWith(expectedStartStr)) {
+        tokenString = tokenString.substring(expectedStartStr.length);
+    } else {
+        tokenString = "";
+        alert("Invalid token");
+    }
+    document.getElementById("reset-password-token").value = tokenString;
     $("#new-password,#re-enter-new-password").focus(function () {
         $("#passwords-dont-match").hide();
     });

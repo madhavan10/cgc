@@ -169,30 +169,30 @@ function submitFestivalRegistrationForm() {
     else
         formSubmitURL = "registerFestival";
 
-  $.ajax({
-      method: "POST",
-      url: formSubmitURL,
-      data: JSON.stringify(toSend),
-      processData: false,
-  }).done(function(msg) {
-      // TODO redirect to created description page
-      alert('posted, returned: ' + msg);
-      window.location.href = "/festivals/" + URI_safe_name;
-  }).fail(function(error) {
-      var userResponse;
-      if(error.responseText == "You must verify your email address to register an event.") {
-          userResponse = confirm(error.responseText + " Go to email verification page now?");
-          if(userResponse === true)
-              window.location.href = "/verify.html";
-      } else if(error.responseText == "You must login to register an event.") {
-          userReponse = confirm(error.responseText + " Go to login page now?");
-          if(userResponse === true)
-              window.location.href = "/login.html";
-      } else {
-          alert(error.responseText);
-      }
-  });
-  return false;
+    $.ajax({
+        method: "POST",
+        url: formSubmitURL,
+        data: JSON.stringify(toSend),
+        processData: false,
+    }).done(function(msg) {
+        // TODO redirect to created description page
+        alert('posted, returned: ' + msg);
+        window.location.href = "/festivals/" + URI_safe_name;
+    }).fail(function(error) {
+        var userResponse;
+        if(error.responseText == "You must verify your email address to register an event.") {
+            userResponse = confirm(error.responseText + " Go to email verification page now?");
+            if(userResponse === true)
+                window.location.href = "/verify.html";
+        } else if(error.responseText == "You must login to register an event.") {
+            userResponse = confirm(error.responseText + " Go to login page now?");
+            if(userResponse === true)
+                window.location.href = "/login.html";
+        } else {
+            alert(error.responseText);
+        }
+    });
+    return false;
 }
 
 var loadVarsEditFestival = function () {
