@@ -1,5 +1,7 @@
 var main = function() {
     
+    $(".gcm-submenu")[0].classList.add("gcm-submenu-description-page");
+
     var info = JSON.parse(festival._rawJSON);
      
     if(info.radio_button === 'festival-radio-button') {
