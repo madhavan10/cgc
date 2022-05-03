@@ -1,6 +1,7 @@
-class EventListing extends React.Component {
+class EventListing extends React.PureComponent {
     constructor(props) {
         super(props);
+
         //set event temporality
         let endDate = this.props.eventInfo.endDate;
         let now = new Date();
@@ -34,6 +35,7 @@ class EventListing extends React.Component {
     }
     
     render() {
+        console.log("re-render event listing");
         let display = this.props.display;
         if (display.upcomingOnly && !this.upcomingOnly || !["All", this.eventType].includes(display.eventType)) {
             return null;
@@ -60,7 +62,8 @@ class EventListing extends React.Component {
     }
 }
 
-class EventTable extends React.Component {
+
+class EventTable extends React.PureComponent {
     getEventListings() {
         const listings = [];
         for (let event of this.props.eventList) {
@@ -76,10 +79,9 @@ class EventTable extends React.Component {
                         <th>
                             <span id="table-event-header" className="faf-table-header">
                                 <span>Event</span>
-                                <i></i>
                             </span>
                         </th>
-                        <th id="gcm-middle-column">
+                        <th>
                             <span className="faf-table-header">
                                 <span>Start</span>
                                 <i className="bi bi-chevron-compact-down"></i>
@@ -88,13 +90,11 @@ class EventTable extends React.Component {
                         <th>
                             <span className="faf-table-header">
                                 <span>End</span>
-                                <i></i>
                             </span>
                         </th>
                         <th id="gcm-right-column">
                             <span className="faf-table-header">
                                 <span>Location</span>
-                                <i></i>
                             </span>
                         </th>
                     </tr>
@@ -116,10 +116,9 @@ for(let event of window.festivals) {
 reactEventList.sort((e1, e2) => (e1.eventName).localeCompare(e2.eventName));
 
 //sort by start date
-
 reactEventList.sort(function (e1, e2) {
-    e1StartDate = new Date(e1.startDate);
-    e2StartDate = new Date(e2.startDate);
+    let e1StartDate = new Date(e1.startDate);
+    let e2StartDate = new Date(e2.startDate);
     if (e1StartDate < e2StartDate) {
         return -1;
     } else if (e2StartDate < e1StartDate) {
@@ -128,7 +127,6 @@ reactEventList.sort(function (e1, e2) {
         return 0;
     }
 });
-
 
 let display = {
     eventType: "All",
@@ -144,7 +142,11 @@ for (const option of eventTypeOptions) {
     option.addEventListener(
         "click", 
         () => {
-            display.eventType = option.getAttribute("value");
+            let newEventType = option.getAttribute("value");
+            if (display.eventType !== newEventType) {
+                // immutability pattern
+                display = Object.assign({}, display, {eventType: newEventType});
+            }
             const eventTable = <EventTable eventList={reactEventList} display={display}/>;
             root.render(eventTable);
         }
@@ -155,7 +157,11 @@ for (const option of temporalityOptions) {
     option.addEventListener(
         "click", 
         () => {
-            display.upcomingOnly = (option.getAttribute("value") === "upcoming") ? true : false;
+            let newUpcomingOnly = option.getAttribute("value") === "upcoming" ? true : false;
+            if (display.upcomingOnly !== newUpcomingOnly) {
+                // immutability pattern
+                display = Object.assign({}, display, {upcomingOnly: newUpcomingOnly});
+            }
             const eventTable = <EventTable eventList={reactEventList} display={display}/>;
             root.render(eventTable);
         }
