@@ -1,5 +1,43 @@
 class EventListing extends React.Component {
+    constructor(props) {
+        super(props);
+        //set event temporality
+        let endDate = this.props.eventInfo.endDate;
+        let now = new Date();
+        now.setHours(0, 0, 0, 0);
+        this.upcomingOnly = false;
+        //Note: Use of Date constructor with timestring argument is not encouraged
+        if (new Date(endDate) >= now) {
+            this.upcomingOnly = true;
+        }
+
+        //set event type
+        let typeString = this.props.eventInfo.radio_button;
+        let temp;
+        switch (typeString) {
+            case "festival-radio-button":
+                temp = "festival";
+                break;
+            case "competition-radio-button":
+                temp = "competition";
+                break;
+            case "festival-competition-radio-button":
+                temp = "fc";
+                break;
+            case "workshop-radio-button":
+                temp = "workshop";
+                break;
+            default:
+                alert("Invalid event-type: " + typeString);
+        }
+        this.eventType = temp;
+    }
+    
     render() {
+        let display = this.props.display;
+        if (display.upcomingOnly && !this.upcomingOnly || !["All", this.eventType].includes(display.eventType)) {
+            return null;
+        }
         let info = this.props.eventInfo;
         let startDateStr = new Date(info.startDate).toDateString().substring(4); //substr removes day of week 
         let endDateStr = new Date(info.endDate).toDateString().substring(4);
@@ -24,9 +62,9 @@ class EventListing extends React.Component {
 
 class EventTable extends React.Component {
     getEventListings() {
-        let listings = [];
+        const listings = [];
         for (let event of this.props.eventList) {
-            listings.push(<EventListing key={event.URISafeName} eventInfo={event} />);
+            listings.push(<EventListing key={event.URISafeName} eventInfo={event} display={this.props.display} />);
         }
         return listings;
     }
@@ -73,4 +111,53 @@ let reactEventList = [];
 for(let event of window.festivals) {
     reactEventList.push(JSON.parse(event._rawJSON));
 }
-root.render(<EventTable eventList={reactEventList} />);
+
+//sort alphabetically
+reactEventList.sort((e1, e2) => (e1.eventName).localeCompare(e2.eventName));
+
+//sort by start date
+
+reactEventList.sort(function (e1, e2) {
+    e1StartDate = new Date(e1.startDate);
+    e2StartDate = new Date(e2.startDate);
+    if (e1StartDate < e2StartDate) {
+        return -1;
+    } else if (e2StartDate < e1StartDate) {
+        return 1;
+    } else {
+        return 0;
+    }
+});
+
+
+let display = {
+    eventType: "All",
+    upcomingOnly: true,
+};
+
+root.render(<EventTable eventList={reactEventList} display={display}/>);
+
+const eventTypeOptions = document.querySelectorAll(".gcm-faf-eventType-option");
+const temporalityOptions = document.querySelectorAll(".gcm-faf-eventTemporality-option");
+
+for (const option of eventTypeOptions) {
+    option.addEventListener(
+        "click", 
+        () => {
+            display.eventType = option.getAttribute("value");
+            const eventTable = <EventTable eventList={reactEventList} display={display}/>;
+            root.render(eventTable);
+        }
+    );
+}
+
+for (const option of temporalityOptions) {
+    option.addEventListener(
+        "click", 
+        () => {
+            display.upcomingOnly = (option.getAttribute("value") === "upcoming") ? true : false;
+            const eventTable = <EventTable eventList={reactEventList} display={display}/>;
+            root.render(eventTable);
+        }
+    );
+}
