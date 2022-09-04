@@ -233,11 +233,13 @@
                     <div class="question question-festival-registration">
                         <div>Would you like to upload a photo for your event?</div>
                         <div class="button festival-registration-button" id="gc-add-photo">
-                        <button  type="button"  id="event-photo-upload-button">
-                            <label style="cursor:pointer" for="event-photo-upload">Choose Image</label>
-                        </button>
-                        <br/>
-                        <input type="file" style="display:none" id="event-photo-upload" name="event-photo" accept="image/png, image/jpeg" />
+                            <button type="button" id="event-photo-upload-button">
+                                <label style="cursor:pointer" for="event-photo-upload">Choose Image</label>
+                            </button>
+                            <input type="file" style="opacity:0;width:1px" id="event-photo-upload" name="event-photo" accept="image/png, image/jpeg" />
+                            <div id="event-photo-preview">
+                                <span>No image selected</span>
+                            </div>
                         </div>
                     </div>
                 </fieldset>

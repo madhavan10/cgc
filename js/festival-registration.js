@@ -1,3 +1,4 @@
+const photoUploadInputId = "event-photo-upload";
 var main = function() {
     $("fieldset").hide();
     $("#event-basics").show();
@@ -54,6 +55,9 @@ var main = function() {
     $("#event-city").change(function() {
         place = null; // place var is from place-autocomplete.js
     });
+    
+    // ES 2015 syntax used
+    $(`#${photoUploadInputId}`).change(handleImageDisplay);
 
     if (window.festival) {
         loadVarsEditFestival();
@@ -168,11 +172,22 @@ function submitFestivalRegistrationForm() {
         formSubmitURL = "/editFestival";
     else
         formSubmitURL = "registerFestival";
+    
+    //create a form data object to send
+    let formData = new FormData();
+    formData.append("regular_data", JSON.stringify(toSend));
+    if (handleImageDisplay() === true) {
+        formData.append("event_photo", document.getElementById(photoUploadInputId).files[0]);
+    } else {
+        // debug
+        alert("Submitting the form without event photo");
+    }
 
     $.ajax({
         method: "POST",
         url: formSubmitURL,
-        data: JSON.stringify(toSend),
+        contentType: "multipart/form-data",
+        data: formData,
         processData: false,
     }).done(function(msg) {
         // TODO redirect to created description page
@@ -236,5 +251,33 @@ var loadVarsEditFestival = function () {
     $("#workshop-lessons").prop("value", info.workshopLessons);
     $("#workshop-other-guests").prop("value", info.workshopOtherGuests); 
 };
+
+var handleImageDisplay = function () {
+    let valid = false;
+    const input = document.getElementById(photoUploadInputId);
+    const preview = document.getElementById("event-photo-preview");
+    while(preview.firstChild) {
+        preview.removeChild(preview.firstChild);
+    }
+    const div = document.createElement("div");
+    if (input.files.length === 1) {
+        const imageFile = input.files[0];
+        if (!["image/png", "image/jpeg"].includes(imageFile.type)) {
+            div.textContent = "Incompatible file type. Valid types are PNG and JPEG.";
+        } else {
+            const image = document.createElement("img");
+            image.src = URL.createObjectURL(imageFile);
+            image.style.maxHeight = "100%";
+            image.style.maxWidth = "100%";
+            div.textContent = imageFile.name;
+            preview.appendChild(image);
+            valid = true;
+        }
+        preview.appendChild(div);
+    } 
+    return valid;
+}
+
+
 
 $(document).ready(main);
