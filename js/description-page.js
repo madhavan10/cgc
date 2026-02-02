@@ -3,9 +3,7 @@ var main = function() {
     $(".gcm-submenu")[0].classList.add("gcm-submenu-description-page");
 
     var info = JSON.parse(festival._rawJSON);
-    
-    info.radio_button = 'festival-radio-button';
-    
+     
     if(info.radio_button === 'festival-radio-button') {
         $('.workshop-nav').hide();
         $('.competition-nav').hide();
@@ -46,6 +44,12 @@ var main = function() {
         $("#gcm-masterclasses-topic").hide();
         $("#masterclasses").hide();
     }
+
+    // force festival type
+    $('.workshop-nav').hide();
+    $('.competition-nav').hide();
+    $('.fc-nav').hide();
+    $('.festival-nav').show();
 
     if(info.workshopOtherGuests === "") {
         $("#gcm-other-guests-topic").hide();
