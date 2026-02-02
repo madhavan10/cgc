@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Classical Guitar Calendar</title>
+
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap5/bootstrap.css" rel="stylesheet">
+        <!--Bootstrap 4 datetimepicker-->
+        <link href="/css/bs4-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <!-- Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link href="/css/fontawesome5/css/all.min.css" rel="stylesheet">
+        <!-- FullCalendar -->
+        <link rel="stylesheet" href="/fullcalendar-5.6.0/lib/main.css">
+        <!-- Splide -->
+        <link rel="stylesheet" href="/splide-3.6.12/dist/css/splide.min.css">
+        <!-- My Style Sheets -->
+        <link href="/css/mobile-style.css" rel="stylesheet" type="text/css" />
+        <!-- CGC Favicon -->
+        <link rel="icon" type="image/png" href="/css/icons/favicon.png" />
+    </head>
+
+    <body>
+        <script src="/js/jquery-3.6.0.js"></script>
+        <script src="/js/bootstrap5/bootstrap.js"></script>
+
+        <!-- my scripts -->
+        <script src="/js/gcm-global-functions.js"></script>
+        <script src="/js/gcm-header-submenu.js"></script>
+        <script src="/js/gcm-check-user.js"></script>
+        <script src="/js/gcm-sidebar.js"></script>
+        <script src="/js/gcm-nav-low.js"></script>
+        
+        <nav class="navbar navbar-dark" id="gcm-main-navigation">
+            <!-- copy-pasted from example on bootstrap -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html"><img src="/css/images/Logo-CGC-New5.png"/></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="gcm-nav-items">
+                        <li id="faf-menu" class="gcm-nav-item gcm-has-submenu">
+                            <span id="gcm-nav-faf">FIND FESTIVAL</span>
+                            <i class="bi bi-chevron-compact-down"></i>
+                            <ul class="gcm-submenu">
+                                <li class="gcm-submenu-item"><a id="gcm-nav-list" href="/findAFestival.html">LIST</a></li>
+                                <li class="gcm-submenu-item"><a id="gcm-nav-calendar" href="/index.html">CALENDAR</a></li>
+                                <li class="gcm-submenu-item gcm-last-submenu-item"><a id="gcm-nav-map" href="/map.html">MAP</a></li>
+                            </ul>
+                        </li>
+                        <li class="gcm-nav-item"><a class="gcm-list-your-own-link" href="/festivalRegistration.html">LIST YOUR OWN</a></li>
+                        <li class="gcm-nav-item"><a class="gcm-login-link" href="/login.html">LOG IN</a></li>
+                        <li class="gcm-nav-item gcm-logout"><a href="/logout">LOG OUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!--modified script to include mobile-->
+        <script src="/js/description-page.js"></script>
+        <script src="/js/gcm-description.js"></script>
+        <div id="gcm-description-page">
+            <h2 id="gcm-festival-name">New India Guitar Festival 2026</h2>
+            <div id="gcm-photo-container">
+                <img id="gcm-photo" src="/css/images/Wide.jpg">
+            </div>
+            <div class="gcm-festival-location">
+                <span id="gcm-town">New Delhi</span>
+                <span class="gcm-dot">,</span>
+                <span id="gcm-country">India</span>
+            </div>
+            <div id="gcm-festival-date">
+                <span id="gcm-startMonth">March</span>
+                <span id="gcm-startDate">19</span>
+                <span class="gcm-dot">,</span>
+                <span id="gcm-startYear">2026</span>
+                <span class="gcm-dot">-</span>
+                <span id="gcm-endMonth">March</span>
+                <span id="gcm-endDate">22</span>
+                <span class="gcm-dot">,</span>
+                <span id="gcm-endYear">2026</span>
+            </div>
+            <div id="gcm-share-buttons"><!--tbd--></div>
+            <div id="gcm-description-text">
+                <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-description-text-header">
+                    <span>About</span>
+                    <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                </div>
+                <span class="gcm-section-toggleable-content" id="gcm-description-text-content"> A 4-day weekend of classical guitar masterclasses and concerts - a ‘festival’ designed to attract classical guitarists - students, amateurs and aspiring musicians from Delhi and outside Delhi to attend concerts by classical guitarists from India, South Korea and Europe who have studied, taught and performed widely, inspiring young classical musicians and provide a platform to explore opportunities that lie in store for them in the future.
+</span>
+            </div>
+            <div id="gcm-main-info">
+                <!--General Fields-->
+                <div class="gcm-main-info-topic" id="gcm-schedule-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-schedule-header">
+                        <span>Schedule</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-schedule-content">Thursday, 19th March:
+- Daytime; Masterclasses at Delhi School of Music
+- Evening; Samrat Majumder, Ji Hyung Park feat. Madhavan Somanathan in concert at the Little Theatre Group Auditorium Near Mandi House
+
+Friday, 20th March: 
+- Daytime; Masterclasses at Delhi School of Music
+- Evening; Madhavan Somanathan opening for Alexander Ramirez, guitar, and Sheila Arnold, piano, in concert at Delhi School of Music.
+
+Saturday 21st March:
+- Eid-al-fitr
+- Morning; Extra-curricular activity (visit to India Gate)
+- Afternoon; Public masterclasses at Madhavan Sir's house (F-7/10 Vasant Vihar, Basement Right)
+- Evening; Concert of the Participants Part 1 (Under-15) at Madhavan Sir's house.
+
+Sunday, 22nd March:
+- Daytime; Masterclasses at Delhi School of Music
+- Evening; Youth Mentors' concert at Delhi School of Music</span>
+                </div>
+                <!--Festival and FC fields-->
+                <div class="gcm-main-info-topic fc-nav festival-nav" id="gcm-guests-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-guests-header">
+                        <span>Guests</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-guests-content">Alexander Ramirez (guitar)
+Sheila Arnold (piano)
+Samrat Majumder (guitar)
+Madhavan Somanathan (guitar)
+Ji Hyung Park (guitar)</span>
+                </div>
+                <div class="gcm-main-info-topic fc-nav festival-nav" id="gcm-masterclasses-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-masterclasses-header">
+                        <span>Masterclasses</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <ul class="gcm-subtopic-list" id="gcm-masterclasses-content">
+                        <li class="gcm-main-info-subtopic" id="gcm-masterclasses-teachers-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-masterclasses-teachers-subtopic-header">
+                                <span>Teachers</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-masterclasses-teachers-content">- Ji Hyung Park
+- Madhavan Somanathan
+- Alexander Ramirez
+- Sheila Arnold
+- Samrat Majumder</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-masterclasses-fees-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-masterclasses-fees-subtopic-header">
+                                <span>Masterclass Fees</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-masterclasses-fees-content">One masterclass is included with the package for active participants</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--FC field-->
+                <div class="gcm-main-info-topic fc-nav" id="gcm-competition-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-competition-header">
+                        <span>Competition</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <ul class="gcm-subtopic-list" id="gcm-competition-content">
+                        <li class="gcm-main-info-subtopic" id="gcm-fc-competition-rules-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-fc-competition-rules-subtopic-header">
+                                <span>Rules</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-fc-competition-rules-content">Rules content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-fc-competition-prizes-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-fc-competition-prizes-subtopic-header">
+                                <span>Prizes</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-fc-competition-prizes-content">Prizes content</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-fc-competition-jury-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-fc-competition-jury-subtopic-header">
+                                <span>Jury</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-fc-competition-jury-content">Jury content</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--Competition Fields-->
+                <div class="gcm-main-info-topic competition-nav" id="gcm-rules-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-rules-header">
+                        <span>Rules</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-rules-content">Rules content</span>
+                </div>
+                <div class="gcm-main-info-topic competition-nav" id="gcm-prizes-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-prizes-header">
+                        <span>Prizes</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-prizes-content">Prizes content</span>
+                </div>
+                <div class="gcm-main-info-topic competition-nav" id="gcm-jury-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-jury-header">
+                        <span>Jury</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-jury-content">Jury content</span>
+                </div>
+                <!--Workshop Fields-->
+                <div class="gcm-main-info-topic workshop-nav" id="gcm-teachers-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-teachers-header">
+                        <span>Teachers</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-teachers-content">Teachers content</span>
+                </div>
+                <div class="gcm-main-info-topic workshop-nav" id="gcm-lessons-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-lessons-header">
+                        <span>Lessons</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-lessons-content">Lessons content</span>
+                </div>
+                <div class="gcm-main-info-topic workshop-nav" id="gcm-other-guests-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-other-guests-header">
+                        <span>Other Guests</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-other-guests-content">Other Guests content</span>
+                </div>
+                <div class="gcm-main-info-topic workshop-nav" id="gcm-workshop-meals-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-workshop-meals-header">
+                        <span>Meals</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-workshop-meals-content">Meals content</span>
+                </div>
+                <div class="gcm-main-info-topic workshop-nav" id="gcm-workshop-accommodation-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-workshop-accommodation-header">
+                        <span>Accommodation</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-workshop-accommodation-content">Accommodation content</span>
+                </div>
+                <div class="gcm-main-info-topic workshop-nav" id="gcm-practice-facilities-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-practice-facilities-header">
+                        <span>Practice Facilities</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-practice-facilities-content">Practice Facilities content</span>
+                </div>
+                <!--General Fields-->
+                <div class="gcm-main-info-topic" id="gcm-practical-info-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-practical-info-header">
+                        <span>Practical Info</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <ul class="gcm-subtopic-list" id="gcm-practical-info-content">
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-event-fees-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-event-fees-subtopic-header">
+                                <span>Event Fees</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-event-fees-content">active participants: Rs. 4,500/-
+passive participants: Rs. 3,500/-
+
+Passive package includes tickets to concert @ Little Theatre Group Auditorium on the 19th of March, reserved seats in front at DSM concerts, access to all public masterclasses and lectures/workshops.
+
+Parents and/or guardians are not recommended to buy the passive package for themselves but to buy tickets to any paid concerts separately, unless of course they wish to be part of the educational experience.
+
+Active package includes passive package and one masterclass</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-venue-addresses-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-venue-addresses-subtopic-header">
+                                <span>Venue Addresses</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-venue-addresses-content">Delhi School of Music @ 8, Nyaya Marg, Chanakya Puri - 110021, New Delhi
+
+Little Theatre Group Auditorium @ Copernicus Marg, opposite Doordarshan Bhawan, Mandi House - 110001, New Delhi</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-accommodation-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-accommodation-subtopic-header">
+                                <span>Accommodation</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-accommodation-content">Hostel arrangements for participants are being made at the earliest. Kindly contact us at bosesethiguitarfoundation@gmail.com mentioning size of group seeking hostel accommodations and details about all members of the party or for other general inquiries.
+</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-travel-info-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-travel-info-subtopic-header">
+                                <span>Travel Info</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-travel-info-content">Airports: Indira Gandhi International Airport (Terminals 1-3)
+Train stations: New Delhi, Old Delhi, Hazrat Nizamuddin</span>
+                        </li>
+                        <li class="gcm-main-info-subtopic" id="gcm-pi-other-facilities-subtopic">
+                            <div class="gcm-subtopic-header" id="gcm-pi-other-facilities-subtopic-header">
+                                <span>Other Facilities</span>
+                                <i class="gcm-subtopic-dropdown bi bi-chevron-down"></i>
+                            </div>
+                            <span class="gcm-subtopic-content" id="gcm-pi-other-facilities-content">Lunch package - vegetarian meal (4 days): Total Rs 1333/- per head</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-contact-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-contact-header">
+                        <span>Contact</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-contact-content">Email: bosesethiguitarfoundation@gmail.com
+Instagram: @newindiaguitar</span>
+                </div>
+                <div class="gcm-main-info-topic" id="gcm-news-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-news-header">
+                        <span>News</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-news-content">News content</span>
+                </div> 
+                <div class="gcm-main-info-topic" id="gcm-register-topic">
+                    <div class="gcm-section-header gcm-section-header-with-toggle" id="gcm-register-header">
+                        <span>Register</span>
+                        <i class="gcm-main-info-topic-dropdown bi bi-chevron-down"></i>
+                    </div>
+                    <span class="gcm-section-toggleable-content" id="gcm-register-content">A link to the registration form will be posted here on February 3rd, 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- desktop version --> 
+        <script src="/js/main-info.js"></script>
+        <script src="/js/text-expand.js"></script>
+        <div class="description-page">    
+            <div class="cover-photo">
+                
+                <div class="Article-coverImage FlexEmbed FlexEmbed--2by1 row-fluid">
+                    <div class="festival-title">
+                        <h1 id='gc-festival-name'>New India Guitar Festival 2026</h1> 
+                    </div>
+                    <div class="festival-location">
+                        <span>
+                            <span id="town">New Delhi</span>
+                            <span class="dot">,</span>
+                            <span id="country">India</span>
+                            <span class="dot">:</span>
+                            <span id="startMonth">March</span>
+                            <span id="startDate">19</span>
+                            <span class="dot">,</span>
+                            <span id="startYear">2026</span>
+                            <span class="dot">-</span>
+                            <span id="endMonth">March</span>
+                            <span id="endDate">22</span>
+                            <span class="dot">,</span>
+                            <span id="endYear">2026</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-content">
+
+                <div class="row">
+                        
+                    <div class="col-md-3 col-lg-3 share-buttons">
+                            <h4>Share this page</h4>
+                            <script>
+                                (function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));
+                            </script> 
+                     
+                            <div class="fb-share-button" data-href="http://google.com/" data-layout="button"></div>
+                            <a href="https://twitter.com/share" class="twitter-share-button"{count}>Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div> 
+ 
+
+                    <div id='gc-description-text' class="col-md-6 col-lg-5 description">
+                            <p>A 4-day weekend of classical guitar masterclasses and concerts - a ‘festival’ designed to attract classical guitarists - students, amateurs and aspiring musicians from Delhi and outside Delhi to attend concerts by classical guitarists from India, South Korea and Europe who have studied, taught and performed widely, inspiring young classical musicians and provide a platform to explore opportunities that lie in store for them in the future.
+
+        </p>
+                        </div>
+                    
+                       
+                        <div class="col-md-4 col-lg-4 image-overlay">
+                            <div class="festival-image FlexEmbed FlexEmbed--3by1">
+                                <img class="zoom" src="/css/images/1.jpg">
+                            </div>
+                        </div>
+                    </div> <!-- close row -->
+                
+                <div class="gc-horizontal-line"></div>
+                
+                <div class="main-info">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 main-buttons">
+                            <ul class="nav nav-pills flex-column main-info-nav-list">
+                                <!--General Fields-->
+                                <li class="active main-info-nav" id="schedule"><span>Schedule</span></li>
+                                <!--Festival and FC field-->
+                                <li class="main-info-nav fc-nav festival-nav" id="guests"><span>Guests</span></li>
+                                <li class="main-info-nav fc-nav festival-nav" id="masterclasses"><span>Masterclasses</span></li>
+                                <!--FC field-->
+                                <li class="main-info-nav fc-nav" id="competition"><span>Competition</span></li>
+                                <!--Competition Fields-->
+                                <li class="main-info-nav competition-nav" id="rules"><span>Rules</span></li>
+                                <li class="main-info-nav competition-nav" id="prizes"><span>Prizes</span></li>
+                                <li class="main-info-nav competition-nav" id="jury"><span>Jury</span></li>
+                                <!--Workshop Fields-->
+                                <li class="main-info-nav workshop-nav" id="teachers"><span>Teachers</span></li>
+                                <li class="main-info-nav workshop-nav" id="lessons"><span>Lessons</span></li>
+                                <li class="main-info-nav workshop-nav" id="other-guests"><span>Other Guests</span></li>
+                                <li class="main-info-nav workshop-nav" id="workshop-meals"><span>Meals</span></li>
+                                <li class="main-info-nav workshop-nav" id="workshop-accommodation"><span>Accommodation</span></li>
+                                <li class="main-info-nav workshop-nav" id="practice-facilities"><span>Practice Facilities</span></li>
+                                <!--General Fields-->
+                                <li class="main-info-nav" id="practical-info"><span>Practical Info</span></li>
+                                <li class="main-info-nav" id="contact"><span>Contact</span></li>
+                                <li class="main-info-nav" id="news"><span>News</span></li>
+                                <li class="main-info-nav" id="register"><span>Register</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10 col-lg-10">
+                            <div class="main-info-topic" id="gc-schedule-topic">
+                            	<p class="tab-title">Schedule</p>
+                                <div class="main-info-content" id="schedule-content"></div>
+                                
+                            </div>
+
+                            <div class="main-info-topic" id="gc-guests-topic">
+                            	<p class="tab-title">Guests</p>
+                                <div class="main-info-content" id="guests-content"></div>                   
+                            </div>
+
+                            <!--festival and fc-->
+
+                            <div class="main-info-topic" id="gc-masterclasses-topic">
+                            	<p class="tab-title">Teachers</p>
+                                <div class="main-info-content" id="masterclasses-teachers-content"></div>
+                                <p></p>
+                            	<p class="tab-title">Masterclass fees</p>
+                                <div class="main-info-content" id="masterclasses-pricing-content"></div>
+                            </div>
+
+                            <!--festival competition-->
+
+                            <div class="main-info-topic" id="gc-competition-topic">
+                            	<p class="tab-title">Competition</p>
+                                <div class="main-info-content" id="competition-content"></div>
+                            </div>
+
+                            <!--competition-->
+
+                            <div class="main-info-topic" id="gc-rules-topic">
+                            	<p class="tab-title">Rules</p>
+                                <div class="main-info-content" id="rules-content"></div>
+                                <p></p>
+                            </div>
+
+                            <div class="main-info-topic" id="gc-prizes-topic">
+                            	<p class="tab-title">Prizes</p>
+                                <div class="main-info-content" id="prizes-content"></div>
+                                <p></p>
+                            </div>
+
+                            <div class="main-info-topic" id="gc-jury-topic">
+                            	<p class="tab-title">Jury</p>
+                                <div class="main-info-content" id="jury-content"></div>
+                                <p></p>
+                            </div>
+
+                            <!--workshop-->
+                            <div class="main-info-topic" id="gc-teachers-topic">
+                            	<p class="tab-title">Teachers</p>
+                                <div class="main-info-content" id="teachers-content"></div>                    
+                            </div>
+
+                            <div class="main-info-topic" id="gc-lessons-topic">
+                            	<p class="tab-title">Lessons</p>
+                                <div class="main-info-content" id="lessons-content"></div>       
+                            </div>
+
+                            <div class="main-info-topic" id="gc-other-guests-topic">
+                            	<p class="tab-title">Other Guests</p>
+                                <div class="main-info-content" id="other-guests-content"></div>                                        
+                            </div>
+
+                            <div class="main-info-topic" id="gc-workshop-meals-topic">
+                            	<p class="tab-title">Workshop Meals</p>
+                                <div class="main-info-content" id="workshop-meals-content"></div>       
+                            </div>
+
+                            <div class="main-info-topic" id="gc-workshop-accommodation-topic">
+                            	<p class="tab-title">Workshop Accommodation</p>
+                                <div class="main-info-content" id="workshop-accommodation-content"></div>       
+                            </div>
+
+                            <div class="main-info-topic" id="gc-practice-facilities-topic">
+                            	<p class="tab-title">Practice Facilities</p>
+                                <div class="main-info-content" id="practice-facilities-content"></div>
+                            </div>
+
+                            <!--general-->
+                            
+                            <div class="main-info-topic" id="gc-practical-information-topic"> <!--not sure about this-->
+                            	<p class="tab-title">Event Fees</p>
+                                <div class="main-info-content" id="pi-eventFees-content"></div>
+                                <p></p>
+                            	<p class="tab-title">Venue Addresses</p>
+                                <div class="main-info-content" id="pi-venues-content"></div>                    
+                                <p></p>
+                            	<p class="tab-title">Accommodation</p>
+                                <div class="main-info-content" id="pi-accommodation-content"></div>                    
+                                <p></p>
+                            	<p class="tab-title">Travel Information</p>
+                                <div class="main-info-content" id="pi-travelInfo-content"></div>                    
+                                <p></p>
+                            	<p class="tab-title">Other Facilities</p>
+                                <div class="main-info-content" id="pi-otherFacilities-content"></div>
+                            </div>
+
+                            <div class="main-info-topic" id="gc-contact-topic">
+                            	<p class="tab-title">Contact</p>
+                                <div class="main-info-content" id="contact-content"></div>                    
+                            </div>
+
+                            <div class="main-info-topic" id="gc-news-topic">
+                            	<p class="tab-title">News</p>
+                                <div class="main-info-content" id="news-content"></div>
+                            </div>
+
+                            <div class="main-info-topic" id="gc-register-topic">
+                            	<p class="tab-title">Register</p>
+                                <div class="main-info-content" id="register-content"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>   <!--close main-content-->
+            
+        </div> <!-- close description-page-->   
+        <script src="/js/medium-zoom.min.js"></script>
+        <script src="/js/zoom.js"></script>
+       <div id="gcm-sidenav">
+            <a href="aboutus.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a class="gcm-list-your-own-link" href="/festivalRegistration.html">List Your Own</a>
+            <a class="gcm-login-link" href="/login.html">Log In</a>
+            <a class="gcm-logout-link" href="/login.html">Log Out</a>
+        </div>
+        <nav id="gcm-footer">
+            <a href="/index.html" id="gcm-nav-low-calendar" class="gcm-nav-low">
+                <i class="material-icons gcm-nav-low-icon">event</i>
+                <span class="gcm-nav-low-text ">Calendar</span>
+            </a>
+            <a href="/map.html" id="gcm-nav-low-map" class="gcm-nav-low">
+                <i class="material-icons gcm-nav-low-icon">travel_explore</i>
+                <span class="gcm-nav-low-text">Map</span>
+            </a>
+            <a href="/findAFestival.html" id="gcm-nav-low-list" class="gcm-nav-low">
+                <i class="material-icons gcm-nav-low-icon">list_alt</i>
+                <span class="gcm-nav-low-text">List</span>
+            </a>
+            <div class="gcm-nav-low" id="gcm-menu" onclick="toggleNav()" >
+                <i class="material-icons gcm-nav-low-icon">menu</i>
+                <span class="gcm-nav-low-text">Menu</span>
+            </div>
+        </nav>
+        <div id="footer">
+            <div class="footer-container">
+                <a href="index.html"><img src="/css/images/Logo-CGC-New5.png" alt="" id="footer-logo"></a>
+                <div class="footer-links-container-left">
+                <a href="/index.html" class="footer-links">
+                    <span class="footer-links-text">Calendar</span>
+                </a>
+                <a href="findAFestival.html" class="footer-links">
+                    <span class="footer-links-text">List</span>
+                </a>
+                <a href="/map.html" class="footer-links">
+                    <span class="footer-links-text">Map</span>
+                </a>
+                </div>
+                <div class="footer-links-container-right">
+                <a href="festivalRegistration.html" class="footer-links">
+                    <span class="footer-links-text">List Your Own</span>
+                </a>
+                <a href="/aboutus.html" class="footer-links">
+                    <span class="footer-links-text">About</span>
+                </a>
+                <a href="/contact.html" class="footer-links">
+                    <span class="footer-links-text">Contact</span>
+                </a>
+                </div>
+            <div class="footer-media">
+                <div class="footer-media-containers">
+                <a href="facebook.com"><img src="/css/icons/facebook.png" class="footer-media-icon"></a>
+                </div>
+                <div class="footer-media-containers">
+                <a href="youtube.com"><img src="/css/icons/youtube.png" class="footer-media-icon"></a>
+                </div>
+                <div class="footer-media-containers">
+                <a href="twitter.com"><img src="/css/icons/twitter.png" class="footer-media-icon"></a>
+                </div>
+            </div>
+            </div>
+            
+            
+            <div class="footer-copyright">
+                <span class="footer-copyright-text">© Copyright 2021 GuitarConnect, inc. All Rights Reserved.</span>
+            </div>
+        </div>
+    </body>
+</html>
