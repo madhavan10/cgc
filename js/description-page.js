@@ -8,10 +8,8 @@ var main = function() {
     $('.fc-nav').hide();
     $('.festival-nav').show();
 
-    if(info.workshopOtherGuests === "") {
-        $("#gcm-other-guests-topic").hide();
-        $("#other-guests").hide();
-    }
+    $("#gcm-other-guests-topic").hide();
+    $("#other-guests").hide();
 
     $('#gc-festival-name').text(info.eventName);
     $('#gcm-festival-name').text(info.eventName);
