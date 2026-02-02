@@ -2,49 +2,6 @@ var main = function() {
     
     $(".gcm-submenu")[0].classList.add("gcm-submenu-description-page");
 
-    var info = JSON.parse(festival._rawJSON);
-     
-    if(info.radio_button === 'festival-radio-button') {
-        $('.workshop-nav').hide();
-        $('.competition-nav').hide();
-        $('.fc-nav').hide();
-        $('.festival-nav').show();
-    }
-    
-    if(info.radio_button === 'competition-radio-button') {
-        $('.workshop-nav').hide();
-        $('.fc-nav').hide();
-        $('.festival-nav').hide();
-        $('.competition-nav').show();
-    }
-    
-    if(info.radio_button === 'workshop-radio-button') {
-        $('.fc-nav').hide();
-        $('.festival-nav').hide();
-        $('.competition-nav').hide();
-        $('.workshop-nav').show();
-    }
-    
-    //duplicate code?
-    if(info.radio_button === 'workshop-radio-button') {
-        $('.fc-nav').hide();
-        $('.festival-nav').hide();
-        $('.competition-nav').hide();
-        $('.workshop-nav').show();
-    }
-    
-    if(info.radio_button === 'festival-competition-radio-button') {
-        $('.festival-nav').hide();
-        $('.competition-nav').hide();
-        $('.workshop-nav').hide();
-        $('.fc-nav').show();
-    }
-    
-    if(info.masterclass === 'undefined' || info.masterclass === 'no-masterclasses-radio') {
-        $("#gcm-masterclasses-topic").hide();
-        $("#masterclasses").hide();
-    }
-
     // force festival type
     $('.workshop-nav').hide();
     $('.competition-nav').hide();
