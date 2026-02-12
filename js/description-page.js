@@ -5,9 +5,9 @@ var main = function() {
     // force fc type
     
     $('.workshop-nav').hide();
-    $('.competition-nav').show();
+    $('.competition-nav').hide();
     $('.festival-nav').show();
-    //$('.fc-nav').show();
+    $('.fc-nav').show();
 
     $("#gcm-other-guests-topic").hide();
     $("#other-guests").hide();
