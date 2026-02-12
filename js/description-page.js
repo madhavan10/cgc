@@ -3,10 +3,10 @@ var main = function() {
     $(".gcm-submenu")[0].classList.add("gcm-submenu-description-page");
 
     // force festival type
+    $('.festival-nav').hide();
     $('.workshop-nav').hide();
     $('.competition-nav').hide();
-    $('.fc-nav').hide();
-    $('.festival-nav').show();
+    $('.fc-nav').show();
 
     $("#gcm-other-guests-topic").hide();
     $("#other-guests").hide();
