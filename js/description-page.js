@@ -12,6 +12,7 @@ var main = function() {
     $("#gcm-other-guests-topic").hide();
     $("#other-guests").hide();
 
+    /*
     $('#gc-festival-name').text(info.eventName);
     $('#gcm-festival-name').text(info.eventName);
     
@@ -66,13 +67,14 @@ var main = function() {
     $('#gcm-masterclasses-teachers-content').text(info.masterclassTeachers); 
     $('#masterclasses-pricing-content').text(info.masterclassPricing); 
     $('#gcm-masterclasses-fees-content').text(info.masterclassPricing); 
-    
+  */
+
     /*
     $('#competition-content').text(info.competitionRules
             + info.prizes
             + info.jury);
     */
-    
+    /*
     //competition.html
     $('#rules-content').text(info.competitionRules);
     $('#gcm-fc-competition-rules-content').text(info.competitionRules);
@@ -114,7 +116,7 @@ var main = function() {
     $('#register-content').text(info.howToRegister);
     $('#gcm-register-content').text(info.howToRegister);
 
-            
+       */     
 };
 
 $(document).ready(main);
