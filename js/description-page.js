@@ -6,7 +6,7 @@ var main = function() {
     
     $('.workshop-nav').hide();
     $('.competition-nav').hide();
-    $('.festival-nav').show();
+    $('.festival-nav').hide();
     $('.fc-nav').show();
 
     $("#gcm-other-guests-topic").hide();
